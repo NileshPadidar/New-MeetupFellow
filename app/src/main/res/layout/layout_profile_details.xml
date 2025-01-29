@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/inner_img_xxl"
+        android:background="@drawable/group_2"
+        tools:ignore="spUsage">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorMenuAddress"
+            android:textSize="@dimen/text_size_button_s"
+            android:layout_marginTop="@dimen/inner_img_xl"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/label_xtube_text"/>
+
+    <TextView
+            android:id="@+id/tvXtube"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xs"
+            android:layout_marginTop="@dimen/inner_img_s"
+            android:fontFamily="@font/montserrat_regular"
+            tools:text="@string/app_name"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorMenuHeaderBottom"
+            android:layout_marginTop="@dimen/inner_img_l"/>
+
+    <TextView
+            android:id="@+id/tvLabelTwitter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorMenuAddress"
+            android:textSize="@dimen/text_size_button_s"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginTop="@dimen/inner_img_xl_2"
+            android:text="@string/label_twitter_text"/>
+
+    <TextView
+            android:id="@+id/tvTwitter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorTwitter"
+            android:textSize="@dimen/text_size_button_xs"
+            android:layout_marginTop="@dimen/inner_img_s"
+            android:drawableRight="@drawable/twitter"
+            android:fontFamily="@font/montserrat_regular"
+            android:maxLines="1"
+            android:ellipsize="end"
+            tools:text="@string/app_name"
+            android:drawableEnd="@drawable/twitter"/>
+
+    <View
+            android:id="@+id/viewTwitter"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorMenuHeaderBottom"
+            android:layout_marginTop="@dimen/inner_img_l"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorMenuAddress"
+            android:textSize="@dimen/text_size_button_s"
+            android:layout_marginTop="@dimen/inner_img_xl_2"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/label_sex_text"/>
+
+    <TextView
+            android:id="@+id/tvSex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xs"
+            android:layout_marginTop="@dimen/inner_img_s"
+            android:fontFamily="@font/montserrat_regular"
+            tools:text="@string/app_name"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorMenuHeaderBottom"
+            android:layout_marginTop="@dimen/inner_img_l"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorMenuAddress"
+            android:textSize="@dimen/text_size_button_s"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/inner_img_xl_2"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/label_current_location_text"/>
+
+    <TextView
+            android:id="@+id/tvCurrentLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xs"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/inner_img_s"
+            android:fontFamily="@font/montserrat_regular"
+            tools:text="@string/app_name"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:visibility="gone"
+            android:background="@color/colorMenuHeaderBottom"
+            android:layout_marginTop="@dimen/inner_img_l"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorMenuAddress"
+            android:textSize="@dimen/text_size_button_s"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/inner_img_xl_2"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/label_hometown_text"/>
+
+    <TextView
+            android:id="@+id/tvHometown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xs"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/inner_img_s"
+            android:fontFamily="@font/montserrat_regular"
+            tools:text="@string/app_name"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:visibility="gone"
+            android:background="@color/colorMenuHeaderBottom"
+            android:layout_marginTop="@dimen/inner_img_l"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorMenuAddress"
+            android:textSize="@dimen/text_size_button_s"
+            android:layout_marginTop="@dimen/inner_img_xl_2"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/label_height_weight_text"/>
+
+    <TextView
+            android:id="@+id/tvHeightWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xs"
+            android:layout_marginTop="@dimen/inner_img_s"
+            android:fontFamily="@font/montserrat_regular"
+            tools:text="@string/app_name"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorMenuHeaderBottom"
+            android:layout_marginTop="@dimen/inner_img_l"/>
+
+    <TextView
+            android:id="@+id/tvLabelEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorMenuAddress"
+            android:textSize="@dimen/text_size_button_s"
+            android:layout_marginTop="@dimen/inner_img_xl_2"
+            android:visibility="gone"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/label_email_text"/>
+
+    <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xs"
+            android:layout_marginTop="@dimen/inner_img_s"
+            android:visibility="gone"
+            android:fontFamily="@font/montserrat_regular"
+            tools:text="@string/app_name"/>
+
+    <View
+            android:id="@+id/viewEmail"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:visibility="gone"
+            android:background="@color/colorMenuHeaderBottom"
+            android:layout_marginTop="@dimen/inner_img_l"/>
+
+    <TextView
+            android:id="@+id/tvLabelMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorMenuAddress"
+            android:textSize="@dimen/text_size_button_s"
+            android:layout_marginTop="@dimen/inner_img_xl_2"
+            android:visibility="gone"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/label_mobile_text"/>
+
+    <TextView
+            android:id="@+id/tvMobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xs"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/inner_img_s"
+            android:fontFamily="@font/montserrat_regular"
+            tools:text="@string/app_name"/>
+
+    <View
+            android:id="@+id/viewMobile"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:visibility="gone"
+            android:background="@color/colorMenuHeaderBottom"
+            android:layout_marginTop="@dimen/inner_img_l"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorMenuAddress"
+            android:textSize="@dimen/text_size_button_s"
+            android:layout_marginTop="@dimen/inner_img_xl_2"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/label_fisting_text"/>
+
+    <TextView
+            android:id="@+id/tvFistingId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xs"
+            android:layout_marginTop="@dimen/inner_img_s"
+            android:fontFamily="@font/montserrat_regular"
+            tools:text="@string/app_name"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorMenuHeaderBottom"
+            android:layout_marginTop="@dimen/inner_img_l"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorMenuAddress"
+            android:textSize="@dimen/text_size_button_s"
+            android:layout_marginTop="@dimen/inner_img_xl_2"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/label_glove_text"/>
+
+    <TextView
+            android:id="@+id/tvGlovePreference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xs"
+            android:layout_marginTop="@dimen/inner_img_s"
+            android:fontFamily="@font/montserrat_regular"
+            tools:text="@string/app_name"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorMenuHeaderBottom"
+            android:layout_marginTop="@dimen/inner_img_l"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorMenuAddress"
+            android:layout_marginTop="@dimen/inner_img_xl_2"
+            android:textSize="@dimen/text_size_button_s"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/label_intercourse_text"/>
+
+    <TextView
+            android:id="@+id/tvIntercourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xs"
+            android:layout_marginTop="@dimen/inner_img_s"
+            android:fontFamily="@font/montserrat_regular"
+            tools:text="@string/app_name"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorMenuHeaderBottom"
+            android:layout_marginTop="@dimen/inner_img_l"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorMenuAddress"
+            android:textSize="@dimen/text_size_button_s"
+            android:layout_marginTop="@dimen/inner_img_xl_2"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/label_condom_text"/>
+
+    <TextView
+            android:id="@+id/tvCondomPreference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xs"
+            android:layout_marginTop="@dimen/inner_img_s"
+            android:fontFamily="@font/montserrat_regular"
+            tools:text="@string/app_name"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorMenuHeaderBottom"
+            android:layout_marginTop="@dimen/inner_img_l"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorMenuAddress"
+            android:textSize="@dimen/text_size_button_s"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_marginTop="@dimen/inner_img_xl_2"
+            android:text="@string/label_sti_text"/>
+
+    <TextView
+            android:id="@+id/tvStiStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xs"
+            android:layout_marginTop="@dimen/inner_img_s"
+            android:fontFamily="@font/montserrat_regular"
+            tools:text="@string/app_name"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorMenuHeaderBottom"
+            android:layout_marginTop="@dimen/inner_img_l"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorMenuAddress"
+            android:textSize="@dimen/text_size_button_s"
+            android:layout_marginTop="@dimen/inner_img_xl_2"
+            android:visibility="gone"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/label_prep_text"/>
+
+    <TextView
+            android:id="@+id/tvPrep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xs"
+            android:layout_marginTop="@dimen/inner_img_s"
+            android:visibility="gone"
+            android:fontFamily="@font/montserrat_regular"
+            tools:text="@string/app_name"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorMenuHeaderBottom"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/inner_img_l"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorMenuAddress"
+            android:textSize="@dimen/text_size_button_s"
+            android:layout_marginTop="@dimen/inner_img_xl_2"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/label_race_text"/>
+
+    <TextView
+            android:id="@+id/tvRace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xs"
+            android:layout_marginTop="@dimen/inner_img_s"
+            android:fontFamily="@font/montserrat_regular"
+            tools:text="@string/app_name"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorMenuHeaderBottom"
+            android:layout_marginTop="@dimen/inner_img_l"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorMenuAddress"
+            android:layout_marginTop="@dimen/inner_img_xl_2"
+            android:textSize="@dimen/text_size_button_s"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/label_partner_status_text"/>
+
+    <TextView
+            android:id="@+id/tvPartnerStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xs"
+            android:layout_marginTop="@dimen/inner_img_s"
+            android:fontFamily="@font/montserrat_regular"
+            tools:text="@string/app_name"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorMenuHeaderBottom"
+            android:layout_marginTop="@dimen/inner_img_l"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorMenuAddress"
+            android:textSize="@dimen/text_size_button_s"
+            android:layout_marginTop="@dimen/inner_img_xl_2"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/label_about_me_text"/>
+
+    <TextView
+            android:id="@+id/tvAboutMe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xs"
+            android:layout_marginTop="@dimen/inner_img_s"
+            android:fontFamily="@font/montserrat_regular"
+            tools:text="@string/app_name"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/colorMenuHeaderBottom"
+            android:layout_marginTop="@dimen/inner_img_l"/>
+
+</LinearLayout>

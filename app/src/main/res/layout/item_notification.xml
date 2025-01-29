@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:drag_edge="right"
+        app:leftEdgeSwipeOffset="0dp"
+        app:rightEdgeSwipeOffset="0dp"
+        app:show_mode="pull_out">
+
+    <LinearLayout
+            android:layout_width="@android:dimen/notification_large_icon_height"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|end"
+            android:layout_marginLeft="@dimen/inner_img_xxl"
+            android:layout_marginRight="@dimen/inner_img_xxl"
+            android:background="@color/colorRed"
+            android:gravity="center">
+
+        <ImageView
+                android:id="@+id/ivDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_delete" />
+
+    </LinearLayout>
+
+    <include android:id="@+id/include_notification"
+        layout="@layout/item_notifications" />
+</com.daimajia.swipe.SwipeLayout>

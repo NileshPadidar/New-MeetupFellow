@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:padding="@dimen/inner_img_xl_2"
+    tools:ignore="spUsage"
+    android:visibility="gone"
+    android:id="@+id/main_ads"
+
+   >
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/pro_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:text="Ads"
+        android:textColor="@color/colorRed"
+        android:textSize="@dimen/text_size_button_l"
+        tools:ignore="SpUsage" />
+   <!-- <ImageView
+
+        android:id="@+id/ivAminads"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/inner_img_s"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/placeholder_icon"
+        android:tag="img1"
+        />-->
+
+
+   <!-- <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder_icon" />-->
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder" />
+
+
+    <ImageView
+        android:id="@+id/ivAminads"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop" />
+
+
+</RelativeLayout>

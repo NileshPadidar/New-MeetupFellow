@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/_6sdp"
+    android:layout_marginBottom="@dimen/_2sdp"
+    android:layout_marginHorizontal="@dimen/_4sdp"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    tools:ignore="spUsage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llMain"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:visibility="gone"
+            android:layout_margin="@dimen/_2sdp">
+
+            <ImageView
+                android:id="@+id/ivNotificationImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/meetupsfellow_transpatent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.15"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/inner_img_xl_2"
+            android:paddingEnd="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical">
+
+
+                <TextView
+                    android:id="@+id/tvNotificationName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_toStartOf="@id/notificationSwitch"
+                    android:ellipsize="end"
+                    android:layout_marginVertical="@dimen/_4sdp"
+                    android:padding="@dimen/_4sdp"
+                    android:maxLines="2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    tools:text="@string/app_name" />
+
+
+              <!--  <com.polyak.iconswitch.IconSwitch
+                    android:id="@+id/notificationSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:gravity="center"
+                    app:isw_icon_size="@dimen/_4sdp"
+                    app:isw_active_tint_icon_left="@color/gradientEnd"
+                    app:isw_active_tint_icon_right="@color/gradientStart"
+                    app:isw_inactive_tint_icon_left="@color/gradientEnd"
+                    app:isw_inactive_tint_icon_right="@color/gradientStart"
+                    app:isw_thumb_color_left = "@color/gradientEnd"
+                    app:isw_thumb_color_right = "@color/gradientStart"
+                    app:isw_background_color="@color/cardBgColor"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_gravity="center"/>-->
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/notificationSwitch"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:gravity="center"
+                    android:thumbTint="@color/thumb_tint"
+                    android:trackTint="@color/track_tint"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

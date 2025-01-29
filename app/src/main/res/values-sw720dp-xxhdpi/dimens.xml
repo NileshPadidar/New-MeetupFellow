@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="corner_radius_box_xs">8dp</dimen>
+    <dimen name="corner_radius_box_s">16dp</dimen>
+
+    <dimen name="text_size_button_xxxs">1dp</dimen>
+    <dimen name="text_size_button_xxs">29dp</dimen>
+    <dimen name="text_size_button_xs">33dp</dimen>
+    <dimen name="text_size_button_s">35dp</dimen>
+    <dimen name="text_size_button_m">41dp</dimen>
+    <dimen name="text_size_button_l">43dp</dimen>
+    <dimen name="text_size_button_xl">57dp</dimen>
+
+    <dimen name="inner_img_s">7dp</dimen>
+    <dimen name="inner_img_m">10dp</dimen>
+    <dimen name="inner_img_l">12dp</dimen>
+    <dimen name="inner_img_xl">18dp</dimen>
+    <dimen name="inner_img_xl_2">23dp</dimen>
+    <dimen name="inner_img_xxl_1">25dp</dimen>
+    <dimen name="inner_img_xxl">27dp</dimen>
+    <dimen name="inner_img_xxxl_1">39dp</dimen>
+    <dimen name="inner_img_xxxl">63dp</dimen>
+
+</resources>

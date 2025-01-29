@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/group_2"
+    tools:context=".mvp.view.activities.MultiUserViewLikeActivity">
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_toolbar" />
+
+    <!-- WHEN USER HAVE CONTAIN ANY MEMBERSHIP NOW OR OLD ONE -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/llViewList"
+        android:layout_below="@+id/header"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llTransection"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Users view profile"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tvUpgradePlan"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_22sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                android:gravity="center"
+                android:padding="@dimen/_4sdp"
+                android:text="Upgrade Plan"
+                android:background="@drawable/rounded_corners_filter_selected"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_9sdp" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvUserViewLike"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_notifications"
+            android:layout_marginVertical="@dimen/_4sdp"
+            android:overScrollMode="never" />
+
+    </LinearLayout>
+
+    <!--WHEN USER IS FREE OR FREES MEMBER-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/llFreeUser"
+        android:layout_below="@+id/header"
+        android:visibility="gone"
+        android:gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/iv_no_plan"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/block_user__1_"
+            />
+.
+        <TextView
+            android:id="@+id/tvNoPlan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/upgrade_plan"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:gravity="center"
+            android:layout_marginHorizontal="@dimen/_12sdp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPlanPurchaseNow"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_16sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/inner_img_xl"
+            android:background="@drawable/round_corner_btn_new"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Purchase Now"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+    </LinearLayout>
+
+    <include android:id="@+id/included_loading"
+        layout="@layout/layout_loading" />
+
+</RelativeLayout>

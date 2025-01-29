@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#C6A9A9A9"
+    android:layout_height="match_parent">
+
+    <com.connect.meetupsfellow.global.utils.TouchImageView
+        android:id="@+id/ivImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/_8sdp"
+        android:layout_centerInParent="true" />
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:elevation="@dimen/_8sdp"
+        />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        style="?android:progressBarStyleLarge"
+        android:indeterminateTint="@android:color/holo_blue_light"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivImageClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/inner_img_xxl_1"
+            android:elevation="@dimen/_8sdp"
+            app:civ_circle_background_color="#3E000000"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>

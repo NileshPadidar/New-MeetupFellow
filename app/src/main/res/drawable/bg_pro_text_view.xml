@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle"  >
+
+          <!--  <size
+                android:width="40dp"
+                android:height="40dp"/>
+
+            <solid
+                android:color="@color/white"/>-->
+
+           <gradient
+                android:startColor="#CCCAC9"
+                android:endColor="#FFBC00"
+                android:angle="90"/>-->
+            <corners android:radius="@dimen/inner_img_l" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlProfileImage1"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    tools:ignore="spUsage">
+
+    <ImageView
+        android:id="@+id/ivUserProfile1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:visibility="visible" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/userProfileBackBtn"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:gravity="center"
+        android:paddingStart="@dimen/_2sdp"
+        android:layout_margin="@dimen/_6sdp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:drawableLeft="@drawable/back_arrow"
+        android:background="@drawable/user_add_img_btn"
+        />
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/userImgPager"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="@dimen/_250sdp"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutIndecatore"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        app:tabIndicatorColor="@android:color/transparent"
+        app:tabIndicatorHeight="0dp"
+        app:tabGravity="center"
+        app:tabIndicatorFullWidth="false"
+        app:tabMode="fixed"
+        app:tabPaddingStart="8dp"
+        app:tabPaddingEnd="8dp"
+        app:tabPadding="8dp"
+        android:background="@color/transparent"/>
+
+
+    <!-- <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:id="@+id/userImgDots"
+         android:layout_marginBottom="@dimen/_8sdp"
+         android:layout_above="@+id/proTxt"
+         android:layout_centerHorizontal="true"
+         app:dotsColor="@color/white"
+         android:elevation="@dimen/_8sdp"
+         android:visibility="gone"
+         app:selectedDotColor="@color/colorBlue"
+         app:dotsSize="8dp"
+         app:dotsSpacing="5dp"
+         app:progressMode="true"
+         tools:ignore="MissingClass" />-->
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/trending_gradient_shape" />
+
+    <LinearLayout
+        android:id="@+id/addUserImage"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_2sdp"
+            android:padding="@dimen/_2sdp"
+            android:layout_gravity="center"
+            android:elevation="@dimen/_8sdp"
+            android:src="@drawable/upload_profile"
+            android:background="@drawable/user_add_img_btn"
+            android:fontFamily="@font/montserrat_regular"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/imagecount1"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@drawable/ic_baseline_add_24"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat_regular"
+            android:maxLines="1"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_s"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/prouser1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:orientation="vertical">
+
+        <TextView
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/inner_img_m"
+            android:layout_marginEnd="@dimen/inner_img_m"
+            android:background="@drawable/bg_pro_text_view"
+            android:id="@+id/tv_pro_user1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat_regular"
+            android:maxLines="1"
+            android:text="@string/label__pro_user"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_s"
+            android:paddingStart="@dimen/inner_img_l"
+            android:paddingTop="@dimen/inner_img_m"
+            android:paddingEnd="@dimen/inner_img_l"
+            android:paddingBottom="@dimen/inner_img_m"
+            />
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/proImg"
+        android:layout_width="@dimen/_22sdp"
+        android:layout_height="@dimen/_22sdp"
+        android:layout_alignBottom="@+id/ivUserProfile1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:src="@drawable/free_user_badge" />
+
+    <TextView
+        android:id="@+id/proTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivUserProfile1"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:layout_toEndOf="@+id/proImg"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Premium"
+        android:textColor="@color/white" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:visibility="gone"
+        android:id="@+id/pro_user_image1"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        android:layout_alignTop="@+id/rlShared1"
+        android:layout_alignBottom="@+id/rlShared1"
+        android:layout_toStartOf="@+id/rlShared1"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/pro_demo" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rlShared1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/inner_img_xl"
+        android:background="@drawable/rounded_corners_white_background"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+
+            android:id="@+id/ivShared1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:paddingStart="@dimen/inner_img_xxl"
+            android:paddingTop="@dimen/inner_img_xl"
+            android:paddingEnd="@dimen/inner_img_xxl"
+            android:paddingBottom="@dimen/inner_img_xl"
+            app:srcCompat="@drawable/drawable_shared_gray" />
+
+    </RelativeLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/tvUserEdit1"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignBottom="@+id/ivUserProfile1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:elevation="@dimen/_4sdp"
+        android:src="#196ABA"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/tvUserEditBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvUserEdit1"
+        android:layout_alignTop="@+id/tvUserEdit1"
+        android:layout_alignEnd="@+id/tvUserEdit1"
+        android:layout_alignBottom="@+id/tvUserEdit1"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/ic_baseline_edit_note_24"
+        android:elevation="@dimen/_4sdp" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivFavorite1"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:contentDescription="@string/app_name"
+            android:layout_alignBottom="@+id/ivUserMultipleLike1"
+            android:layout_toStartOf="@+id/ivFollow"
+            android:background="@drawable/selector_favorite"
+            android:visibility="visible" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivFollow"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/ivUserProfile1"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:layout_toStartOf="@+id/followerCount"
+        android:background="@drawable/selector_follower"
+        android:contentDescription="@string/app_name" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivUserMultipleLike1"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/ivUserProfile1"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:layout_toStartOf="@+id/likeCount"
+        android:background="@drawable/selector_like"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/likeCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_alignTop="@+id/ivUserMultipleLike1"
+        android:layout_alignBottom="@+id/ivUserProfile1"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11sdp" />
+
+    <TextView
+        android:id="@+id/followerCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ivUserMultipleLike1"
+        android:layout_alignBottom="@+id/ivUserMultipleLike1"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_toStartOf="@+id/ivUserMultipleLike1"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11sdp" />
+
+
+</RelativeLayout>

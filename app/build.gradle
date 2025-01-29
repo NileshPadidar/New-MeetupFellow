@@ -1,0 +1,276 @@
+//noinspection GradleCompatible
+/*apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+/// Update by nilu google Ads 30-oct-23
+///apply plugin: 'kotlin-android-extensions'*/
+
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'com.google.firebase.crashlytics'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    /*signingConfigs {
+        release {
+            storeFile file('reegur.keystore')
+            storePassword = 'android' // 'iss@123'
+            keyAlias = 'key0' // 'Meetupsfellow'
+            keyPassword =  'android' // 'iss@123'
+        }
+    }*/
+    namespace "com.connect.meetupsfellow"
+    compileSdkVersion 34
+    buildToolsVersion "34.0.0"
+    defaultConfig {
+        applicationId "com.connect.meetupsfellow"
+        minSdkVersion 23
+        targetSdkVersion 34
+        versionCode 6
+        versionName "1.0.0"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        resConfigs "en"
+
+        ndk {
+            // config you want to support device
+            abiFilters 'arm64-v8a', 'armeabi', 'armeabi-v7a', 'x86', 'x86_64'
+        }
+        //signingConfig signingConfigs.release
+    }
+
+    buildFeatures {
+        buildConfig = true
+        viewBinding = true
+    }
+
+    buildTypes {
+        debug {
+            if (file('primitives.properties').exists()) {
+                def props = new Properties()
+                props.load(new FileInputStream(file('primitives.properties')))
+                props.each { key, value ->
+                    /// buildConfigField "String", key.toUpperCase(), "\"${value}\""
+                    buildConfigField "String", key.toUpperCase(), "${value}"
+                }
+            }
+        }
+        release {
+            minifyEnabled false
+            crunchPngs false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (file('primitives.properties').exists()) {
+                def props = new Properties()
+                props.load(new FileInputStream(file('primitives.properties')))
+                props.each { key, value ->
+                    /// buildConfigField "String", key.toUpperCase(), "\"${value}\""
+                    buildConfigField "String", key.toUpperCase(), "${value}"
+                }
+            }
+        }
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+    }
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/rxjava.properties'
+    }
+    compileOptions {
+        /*  targetCompatibility = "1.8"
+          sourceCompatibility = "1.8"*/
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        // jvmTarget = "1.8"
+        jvmTarget = "17"
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+    }
+
+    // buildToolsVersion = '29.0.2'
+    buildToolsVersion = '34.0.0'
+    ndkVersion '20.0.5594570'
+    viewBinding {
+        enabled true
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    /* Latest update below dependency bu nilu - 18/Dec/24 */
+    implementation 'com.hbb20:ccp:2.7.3'
+    //  New Google Places Library
+    implementation 'com.google.android.libraries.places:places:4.1.0'
+    ///  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.22"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.22"
+    kapt "org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.6.0"
+    // Dagger Dependency
+    implementation "com.google.dagger:dagger:2.50"
+    kapt "com.google.dagger:dagger-compiler:2.50"
+    implementation 'javax.annotation:javax.annotation-api:1.3.2'
+
+
+    /* We can remove this below library using for get real file path but now manually i get */
+    implementation 'commons-io:commons-io:20030203.000550'
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.firebase:firebase-auth-ktx:21.0.3'
+    implementation 'com.google.firebase:firebase-dynamic-links:21.0.1'
+
+
+    // Multidex support
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.media2:media2-widget:1.2.1'
+
+    //Giphy SDK GIF
+    implementation 'com.giphy.sdk:ui:2.3.0'
+    //EXO PLAYER
+    implementation("com.google.android.exoplayer:exoplayer-core:2.18.1")
+    implementation("com.google.android.exoplayer:exoplayer-ui:2.18.1")
+
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    def lottieVersion = "5.2.0"
+    //Lottie animation
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    // Android Support Libraries
+    //noinspection GradleCompatible
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'androidx.browser:browser:1.2.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.core:core-ktx:1.9.0'
+    //implementation 'com.google.android.play:core:1.7.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
+
+    implementation 'org.jsoup:jsoup:1.12.1'
+
+    //shimmerLayout
+    implementation 'io.supercharge:shimmerlayout:2.1.0'
+    /*
+     *Required For Firebase Cloud Messaging
+     * implementation 'com.google.firebase:firebase-messaging:20.1.0'
+     **/
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+    implementation 'com.google.firebase:firebase-perf:19.0.5'
+    implementation 'com.google.firebase:firebase-core:20.1.2'
+    implementation 'com.google.firebase:firebase-database:19.2.1'
+    implementation 'com.google.firebase:firebase-storage:19.1.1'
+
+    //BioMetric
+    implementation "androidx.biometric:biometric:1.1.0"
+
+
+    // Google Map and Location Libraries
+    implementation 'com.google.android.gms:play-services-maps:18.2.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    // Google ads sence SDK
+    implementation 'com.google.android.gms:play-services-ads:22.2.0'
+
+
+    /*
+     * Required for Runtime Permissions in android Above Marshmallow
+     * */
+    implementation 'pub.devrel:easypermissions:3.0.0'
+
+    //OkHttp
+    implementation 'com.squareup.okhttp3:okhttp:4.2.2'
+    implementation 'com.squareup.okio:okio:2.4.3'
+
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.7.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.7.0'
+
+    //RxAndroid
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'io.reactivex:rxjava:1.3.8'
+
+    // Logging Interceptorkotlin-kapt'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.2'
+
+    // Crash Handler  Show custom activity
+    implementation 'cat.ereza:customactivityoncrash:2.2.0'
+
+    //Circle ImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    /*
+     *Required for Glide
+     **/
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+
+    //noinspection GradleDependency
+    // For Glide transformations
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+
+
+    //noinspection GradleDependency
+    implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.3.0'
+    implementation 'com.google.firebase:firebase-crashlytics:19.3.0'
+    implementation(platform("com.google.firebase:firebase-bom:33.7.0"))
+
+
+    implementation 'androidx.exifinterface:exifinterface:1.1.0'
+
+
+    implementation 'com.daimajia.swipelayout:library:1.2.0@aar'
+
+    /// Badge Count is already implemented
+    implementation "me.leolin:ShortcutBadger:1.1.22@aar"
+
+    implementation 'com.github.ivaniskandar:material-sheet-fab:1.0.0'
+
+    implementation 'com.github.clans:fab:1.6.4'
+
+    //animation
+    implementation 'com.github.Marvel999:Android-Loading-Animation:1.0.0'
+
+    /// Google Play Billing Library dependency for Payment
+    def billingVersion = "7.1.1"
+    implementation "com.android.billingclient:billing-ktx:$billingVersion"
+
+    /// google authentication - log in with gmail
+    implementation 'com.google.android.gms:play-services-auth:21.2.0'
+
+    implementation 'com.intuit.sdp:sdp-android:1.0.4'
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+}
+
+
+apply plugin: 'com.google.gms.google-services'
+googleServices.disableVersionCheck = true

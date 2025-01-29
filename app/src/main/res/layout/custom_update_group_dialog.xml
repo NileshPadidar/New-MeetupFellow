@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="15dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update Group Name"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="@dimen/_16sdp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MyTheme.TextInputLayout"
+                android:id="@+id/groupNameELay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:visibility="visible"
+                android:background="@color/transparent"
+                app:boxBackgroundColor="@color/transparent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/groupNameUEtxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_corners_default"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:hint="Enter Group Name"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="@dimen/_12sdp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MyTheme.TextInputLayout"
+                android:id="@+id/groupDesELay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                app:counterEnabled="true"
+                app:counterMaxLength="150"
+                android:visibility="gone"
+                android:isScrollContainer="true"
+                android:nestedScrollingEnabled="true"
+                android:scrollbars="vertical"
+                android:background="@color/transparent"
+                app:boxBackgroundColor="@color/transparent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/groupDestxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:background="@drawable/round_corners_default"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:hint="Group Description"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:textColor="@color/black"
+                    android:maxLines="4"
+                    android:gravity="top"
+                    android:enabled="true"
+                    android:minLines="2"
+                    android:scrollbars="vertical"
+                    android:isScrollContainer="true"
+                    android:nestedScrollingEnabled="true"
+                    android:focusable="true"
+                    android:inputType="textMultiLine"
+                    android:maxLength="200"
+                    android:textColorHint="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/noExitUBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cancel"
+                    android:textSize="@dimen/_14sdp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:background="@drawable/round_corner_btn_new"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/yesExitUBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Update"
+                    android:textSize="@dimen/_14sdp"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:background="@drawable/round_corner_btn_new"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

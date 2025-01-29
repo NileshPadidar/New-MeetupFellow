@@ -1,0 +1,805 @@
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">MeetUpsFellow</string>
+
+    <string name="APPLICATION_ID">ca-app-pub-9821745744044932~5968422250</string>
+    <string name="title_edit_profile">Edit Profile</string>
+    <string name="title_create_profile">Create Profile</string>
+    <string name="title_create_event">Create Event</string>
+    <string name="title_create_group">Create Group</string>
+    <string name="title_add_members">Add Members</string>
+    <string name="title_event_detail">Event Detail</string>
+    <string name="title_settings">Account Settings</string>
+    <string name="title_profile">Profile</string>
+    <!--<string name="title_nearby">Fellow\'s around you</string>-->
+    <string name="title_nearby">Around You</string>
+    <string name="title_chat">Messages</string>
+    <string name="title_favorites">Favourite Fellows</string>
+    <string name="title_interested_people">Interested People</string>
+    <string name="title_change_number">Change Number</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_meetups">Meetups</string>
+    <string name="title_notifications_setting">Notifications Settings</string>
+    <string name="title_private_album">Media Album</string>
+    <string name="title_private_album_access">Manage Access</string>
+    <string name="title_recent_album">Recent Pictures</string>
+    <string name="title_refresh">Refresh</string>
+    <string name="no_plan_yet">You haven\'t purchased a plan yet</string>
+    <string name="becomeProTxt">You are a Free member, <u>\"Become Premium\"</u></string>
+    <string name="renew_subscription">Your membership has expired. Please renew it to reactivate the services."</string>
+    <string name="txt_img_note">* All uploaded images are subjected to admin review. Please ensure that all the uploaded images are appropriate.</string>
+    <string name="text_upload_private">Click to Access/Upload to Private Album</string>
+    <string name="read_more"><b><font color="#ff0099cc" size="20"> Read more</font></b></string>
+
+    <!--  New implemnt string by nilu below-->
+
+    <string name="search_hint">Search..</string>
+    <string name="membership_free">Free</string>
+    <string name="membership_special">Special</string>
+    <string name="membership_standard">Standard</string>
+    <string name="membership_premium">Premium</string>
+    <string name="membership_featured">Featured</string>
+    <string name="make_public">Make your profile public</string>
+    <string name="make_privet">Make your profile private</string>
+    <string name="make_privet_hint">Free membership doesn\'t allow to make profit private or hidden.</string>
+    <string name="upgrade_plan_for_private">This membership doesn\'t allow to make you profit private or hidden.</string>
+    <string name="upgrade_plan_for_event">This membership doesn\'t allow to create event.</string>
+    <string name="free_user_event_note">Free membership doesn\'t allow to create Event.</string>
+    <string name="event_limit_note">You don\'t have limit add to add new event.</string>
+    <string name="hide_profile_checkbox_text">Are you sure you want to hide your profile? It will be invisible to everyone on the platform.</string>
+    <string name="unhide_profile_checkbox_text">Your profile will also be visible to everyone.</string>
+    <string name="want_to_privet_profile">Are you sure you want to make your profile private? Only your connections will be able to view your profile.</string>
+    <string name="want_to_privet_profile_premium">Are you sure you want to privet your profile?, will only be able to see your connection or no one can see.</string>
+    <string name="want_to_privet_profile_featured">Are you sure you want to privet your profile?, will only be able to see your connection only &amp; You can hide your profile if you want </string>
+    <string name="want_to_public_profile">"Are you sure you want to make your profile public? Anyone on the platform will be able to view your profile information.</string>
+    <string name="your_media_album_public">Your media album is publicly accessible. Anyone on the platform can view it. To limit access, adjust your privacy settings.</string>
+    <string name="your_media_album_privet">Your media album is set to private. Only you can view it. To change this setting, adjust your privacy preferences</string>
+    <string name="your_media_album_privet_connected">Your media is visible only to your connections. If you\'d like to share it with a broader audience or keep it more restricted, update your privacy settings.</string>
+    <string name="your_media_album_selected_connection">Your media is shared with specific members only. To modify who can view this content, update your selected members in the privacy settings.</string>
+    <string name="you_sent_connection_request">Your connection request is pending. The member has not yet responded. You’ll be notified once they take action. You can also retract the request from your sent connections list.</string>
+    <string name="you_receiver_connection_request">You have a pending connection request from this user. Please review and respond in your notifications or received connections list.</string>
+    <string name="you_not_connect">It seems you are no longer connected. To continue the chat, please connect with each other.</string>
+    <string name="deactivate_your_account">Are you sure you want to deactivate your account? You can reactivate it anytime by logging back in.</string>
+    <string name="delete_your_account">Are you sure you want to permanently delete your account? This action cannot be undone, and all your data will be lost.</string>
+    <string name="your_chat_list_is_empty">Your chat list is empty right now. Start a new conversation to connect with others and keep the chat going. \n Don’t miss out—reach out and make some new connections!</string>
+    <string name="limited_chat_history">You can only view chat history from the last 3 days with your current membership. Upgrade to access your full message history.</string>
+    <string name="restricted_video_uploading">Video uploads are restricted on your current plan. Upgrade to upload videos in your media album.</string>
+    <string name="you_cannot_restrict_your_media_album">You cannot restrict your media album visibility with your current membership. Upgrade to control who sees your media.</string>
+    <string name="text_no_connection_user">You don\'t have any users connected user at the moment.</string>
+    <string name="text_no_connection_request">You don\'t have any users connected request at the moment.</string>
+    <string name="text_no_connection_request_sent">You don\'t have any users connection request sent at the moment.</string>
+    <string name="text_no_block_user">You don\'t have any users blocked at this time.</string>
+    <string name="user_profile_privet">This user has set their profile to private, You must connect to view their profile.</string>
+    <string name="you_send_100_word_only">You are not connect from this user, you can send only one text SMS length of 150 words only.</string>
+    <string name="reach_your_media_uploading">You\u2019ve reached your space limit for uploading media content under your current membership plan. Upgrade to increase your storage capacity and continue uploading content.</string>
+    <string name="upgrade_plan">You haven\'t purchased a plan yet. \n please upgrade your plan than try again.</string>
+    <string name="clear_all_chat">Do you want to clear all chats?</string>
+    <string name="disable_pin_code">Disable PIN code?</string>
+    <string name="enable_pin_code">Enable PIN code?</string>
+
+    <string name="text_sent_message">
+        <xliff:g id="view">%1$s</xliff:g>
+        has sent you a message
+    </string>
+
+    <string name="text_shared_photo">
+        <xliff:g id="view">%1$s</xliff:g>
+        shared a photo with you.
+    </string>
+
+    <string name="text_shared_video">
+        <xliff:g id="view">%1$s</xliff:g>
+        shared a video with you.
+    </string>
+
+    <string name="text_shared_file">
+        <xliff:g id="view">%1$s</xliff:g>
+        shared a file with you.
+    </string>
+
+    <string name="text_shared_gif">
+        <xliff:g id="view">%1$s</xliff:g>
+        shared a gif with you.
+    </string>
+
+    <!-- <string name="google_server_key">AIzaSyB2VYKguRPDqNorl0bGgu6hlivLF5DnJVc</string> previous one-->
+    <string name="google_server_key">AIzaSyCjVwgXpH_OE3IkhwqF7K6_cGFnCBZUjrc</string>
+    <string name="InterstitialAd_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+
+
+    <!--  <string name="default_notification_channel_id">REEGÜRwekfhwekfjwbvjwrgh_5684658643784_!182-_!938293974835864</string>-->
+    <string name="default_notification_channel_id">meetups_notification</string>
+    <string name="chat_notification_channel_id">G2Xo8mV6H9748CCMugPMmAcgZUopSRpu6hlivLF5Dn</string>
+    <string name="profile_notification_channel_id">G2Xo8mV6H9748CCMugPMmAcgZUopSlivLF5DnJVc</string>
+    <string name="event_notification_channel_id">AIzaSyCjVwgXpH_OE3IkhwqF7K6</string>
+    <string name="default_notification_channel_name">MeetupsFellow</string>
+
+    <string name="only_to_admin">(Only visible to MeetUpsFellow Admin.)</string>
+
+    <string name="label_sign_in_text">Sign In with Phone Number</string>
+    <string name="label_enter_number_text">Enter your phone number to\n receive the Verification Code</string>
+    <string name="label_verify_number_text">Verify Your Number</string>
+    <string name="label_verification_text">Please enter the verification code sent to\n your given mobile number
+    </string>
+    <string name="label_stats_text">Stats</string>
+    <string name="label_bio_text">Bio</string>
+    <string name="label_username_text">Username:</string>
+    <string name="label_age_text">Age:</string>
+    <string name="label_hometown_text">Location:</string>
+    <string name="label_current_location_text">Current Location:</string>
+    <string name="label_twitter_text">Twitter:</string>
+    <string name="label_insta_text">Instagram:</string>
+    <string name="label_xtube_text">XTube:</string>
+    <string name="label_youtube_text">YouTube:</string>
+    <string name="label_sex_text">Gender:</string>
+    <string name="label_height_text">Height:</string>
+    <string name="label_weight_text">Weight:</string>
+    <string name="label_height_weight_text">Height &amp; Weight:</string>
+    <string name="label_email_text">Email:</string>
+    <string name="label_mobile_text">Mobile Number:</string>
+    <string name="label_glove_text">Glove Preference:</string>
+    <string name="label_fisting_text">Are You:</string>
+    <string name="label_handball_text">Handball Preferences:</string>
+    <string name="label_fisting_i_am_text">I am a:</string>
+    <string name="label_intercourse_text">General Intercourse:</string>
+    <string name="label_condom_text">Safer Sex Practices:</string>
+    <string name="label_sti_text">STI Status:</string>
+    <string name="label_prep_text">PrEP:</string>
+    <string name="label_race_text">Race/Ethnicity:</string>
+    <string name="label_partner_status_text">Partner Status:</string>
+    <string name="label_i_identify_text">I Identify As:</string>
+    <string name="please_select">Please select</string>
+    <string name="label_he_identify_text">He Identify As:</string>
+    <string name="label_into_members_text">Into Members Who Are:</string>
+    <string name="label_seeking_members_text">Seeking Members Who Are:</string>
+    <string name="label_about_me_text">A Little About Me:</string>
+    <string name="label_event_title_text">Event Title:</string>
+    <string name="label_start_date_text">Start Date:</string>
+    <string name="label_end_date_text">End Date:</string>
+    <string name="label_location_text">Location:</string>
+    <string name="label_description_text">Description:</string>
+    <string name="label_website_url_text">Website URL:</string>
+    <string name="label_buy_ticket_url_text">Buy Ticket URL:</string>
+    <string name="label_interested_people_text">Interested People</string>
+    <string name="label_profile_text">Profile</string>
+    <string name="text_twitter">Twitter</string>
+    <string name="label_profile">111 Profile</string>
+    <string name="label_twitter">111 Twitter</string>
+    <string name="label_block_text">Blocked Users</string>
+    <string name="label_favorite_fellows">Favourite Fellows</string>
+    <string name="label_transection_history">Payment History</string>
+    <string name="label_my_subscription">My Subscription</string>
+    <string name="connect_request">Connect Request</string>
+    <string name="follower_following">Your Connection</string>
+    <string name="my_connections">My Connections</string>
+    <string name="label_settings_text">Account Settings</string>
+    <string name="label_privacy_text">Privacy &amp; Policy</string>
+    <string name="label_pro_feature">Premium Plans</string>
+    <string name="label_pro_user">PRO</string>
+    <string name="label_buy_ticket">Buy Ticket</string>
+    <string name="label_website">Website</string>
+    <string name="label_conditions_text">Terms &amp; Conditions</string>
+    <string name="label_faqs_text">FAQ\'s</string>
+    <string name="label_support_text">Support Helpline</string>
+    <string name="label_how_to_use_text">How to use</string>
+    <string name="label_meetups_admin">Meetups Admin</string>
+    <string name="label_invite">Share App</string>
+    <string name="label_camera_text">Camera</string>
+    <string name="label_photo_video_text">Photo &amp; Video</string>
+    <string name="label_cancel_text">Cancel</string>
+    <string name="label_users_text">Fellows</string>
+    <string name="label_events_text">Events</string>
+    <string name="label__pro">PRO</string>
+    <string name="label__pro_user">PRO</string>
+
+    <string name="support_text">If you have any questions or comments for general support regarding the Reegur mobile
+        app, please email us at: info@reegur.com.
+    </string>
+    <string name="label_give_feedback_text">Report this Event</string>
+    <string name="label_give_feedback_user_text">Report User</string>
+    <string name="label_feedback_text">We use your feedback to help us learn when something isn\'t right.</string>
+    <string name="label_emergency_text">If someone is in immediate danger, call the local emergency services. Don\'t
+        wait.
+    </string>
+    <string name="label_old_number">Enter your old phone number with country code:</string>
+    <string name="label_new_number">Enter your new phone number with country code:</string>
+    <string name="label_price">Price:</string>
+
+    <string name="label_name">Name:</string>
+
+
+    <string name="label_owner_text">Owner Name:</string>
+
+
+    <string name="hint_old_number">Old phone number</string>
+    <string name="hint_new_number">new phone number</string>
+
+    <string name="text_image_warning">All photos are subject to REEGÜR admin approval. Please only upload profile photos
+        that DO NOT contain any nudity or sexual activity which includes sexually overt penis prints or perceived sexual
+        acts.
+    </string>
+
+
+    <string name="alert_no_hometown">Without hometown, nearby users may not be able to find you.</string>
+    <string name="textWarning">Warning!</string>
+
+    <string name="btn_text_verify">Verify</string>
+    <string name="btn_text_add">Add</string>
+    <string name="btn_text_ignore">Ignore</string>
+    <string name="btn_text_search">Search</string>
+    <string name="btn_text_next">Next</string>
+    <string name="btn_text_continue">Continue</string>
+    <string name="btn_text_save">Upload</string>
+    <string name="btn_text_submit">Submit</string>
+    <string name="btn_text_buy_ticket">Buy Ticket</string>
+    <string name="btn_text_get_ticket">Get Ticket/Register</string>
+    <string name="btn_text_send">Send</string>
+
+    <string name="text_search_user">User Search</string>
+    <string name="text_search_event">Event Search</string>
+    <string name="text_search">User Profile/Event Search</string>
+
+    <string name="hint_text_number">222 666 9999</string>
+    <string name="hint_text_code">+1</string>
+    <string name="hint_text_name">Jack</string>
+    <string name="hint_text_age">25</string>
+    <string name="hint_text_hometown">Washington, DC</string>
+    <string name="hint_text_username">username</string>
+    <string name="hint_text_url">https://</string>
+    <string name="hint_url">www.url.com</string>
+    <string name="hint_text_height">height</string>
+    <string name="hint_text_weight">weight</string>
+    <string name="hint_text_email">name@example.com</string>
+    <string name="hint_text_sti">text..</string>
+    <string name="hint_event_title">Title</string>
+    <string name="hint_date">mm-dd-yyyy</string>
+    <string name="hint_location">location</string>
+
+
+    <string name="text_fisting_id_1">Top</string>
+    <string name="text_fisting_id_2">Bottom</string>
+    <string name="text_fisting_id_3">Vers</string>
+
+    <string name="text_height"><xliff:g id="view">%1$s</xliff:g>\u0027 <xliff:g id="view">%2$s</xliff:g>\u0022
+    </string>
+    <string name="text_event_dates">
+        <xliff:g id="view">%1$s</xliff:g>
+        to
+        <xliff:g id="view">%2$s</xliff:g>
+    </string>
+    <string name="text_event_dates_2">
+        <xliff:g id="view">%1$s</xliff:g>
+        -
+        <xliff:g id="view">%2$s</xliff:g>
+    </string>
+    <string name="text_date">
+        <xliff:g id="view">%1$s</xliff:g>-<xliff:g id="view">%2$s</xliff:g>-
+        <xliff:g id="view">%2$s</xliff:g>
+    </string>
+
+    <string name="text_height_weight">
+        <xliff:g id="view">%1$s</xliff:g>,
+        <xliff:g id="view">%2$s</xliff:g>
+    </string>
+    <string name="text_number">
+        <xliff:g id="view">%1$s</xliff:g>
+        <xliff:g id="view">%2$s</xliff:g>
+    </string>
+    <string name="text_more_people">+
+        <xliff:g id="view">%1$s</xliff:g>
+    </string>
+    <string name="text_distance">
+        <xliff:g id="view">%1$s</xliff:g>
+        mi
+    </string>
+    <string name="text_distance_away">
+        <xliff:g id="view">%1$s</xliff:g>
+        mi away
+    </string>
+
+    <string name="text_distance_km">
+        <xliff:g id="view">%1$s</xliff:g>
+        km
+    </string>
+    <string name="text_distance_away_km">
+        <xliff:g id="view">%1$s</xliff:g>
+        km away
+    </string>
+
+    <string name="text_you_block">You have blocked
+        <xliff:g id="view">%1$s</xliff:g>.
+    </string>
+    <string name="text_deactivated">
+        <xliff:g id="view">%1$s</xliff:g>
+        has deactivated their account.
+    </string>
+    <string name="text_deleted">
+        <xliff:g id="view">%1$s</xliff:g>
+        has deleted their account.
+    </string>
+    <string name="text_blocked_you">
+        <xliff:g id="view">%1$s</xliff:g>
+        no longer wants to communicate with you.
+    </string>
+    <string name="text_partner_status_1">Single (Just Me for Now)</string>
+    <string name="text_partner_status_2">Single (Open to Dating)</string>
+    <string name="text_partner_status_3">Married</string>
+    <string name="text_partner_status_4">Partnered</string>
+
+    <string name="text_intercourse_1">Top</string>
+    <string name="text_intercourse_2">Bottom</string>
+    <string name="text_intercourse_3">Vers</string>
+
+    <string name="text_prep_1">On PrEP</string>
+    <string name="text_prep_2">Considering PrEP</string>
+
+    <string name="text_okay">Okay</string>
+    <string name="text_resend">Resend</string>
+    <string name="text_done">Done</string>
+    <string name="text_ok">OK</string>
+    <string name="text_update">Update</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_prep">PrEP</string>
+    <string name="text_condoms">Condoms</string>
+    <string name="text_prevention">Treatment As Prevention</string>
+    <string name="text_block">Block</string>
+    <string name="text_Unshare">Unshare</string>
+    <string name="text_blocked">Blocked</string>
+    <string name="text_flag">Flag</string>
+    <string name="text_clear_chat">Clear Chat</string>
+    <string name="text_clear">Clear</string>
+    <string name="text_no">No</string>
+    <string name="text_neutral">Neutral</string>
+    <string name="text_pending">Still to implement</string>
+    <string name="text_male">Male</string>
+    <string name="text_female">Female</string>
+    <string name="text_trans">Trans</string>
+    <string name="text_no_gender_con">Non-Gender Conforming</string>
+    <string name="text_no_feeds">No feeds found</string>
+    <string name="text_no_result">No results found</string>
+    <string name="text_no_notification">You have no new notifications at the moment. Check back later for updates.</string>
+    <string name="text_no_favorite">No favourite found</string>
+    <string name="text_no_user">No personal conversation found. \n Start a new conversation to see your Fellow\'s here</string>
+    <string name="text_no_group">No group conversation found. \n Create a new group or ask fellows to add you in their group.</string>
+    <string name="text_no_call">No call history found. \n Call a fellow to see your call history</string>
+    <string name="text_admin_support">Admin Support Chat</string>
+    <string name="text_no_message">No message found</string>
+    <string name="text_no_events">There are no upcoming events at the moment. Check back later for new events or create your own</string>
+    <string name="text_no_private_images">No images found</string>
+    <string name="text_no_nearby_user">No nearby user found</string>
+    <string name="text_twitter_profile">No Twitter profile found</string>
+
+    <string name="alert_exit">Are you sure, you want to exit from app?</string>
+    <string name="alert_delete">Are you sure, you want to delete this image?</string>
+
+    <string name="alert_delete_conversation">Are you sure, you want to delete this conversation?</string>
+
+    <string name="alert_nsfw">To disable safe browsing, you must be at least 18 years of age.</string>
+
+    <string name="alert_title_exit">Exit</string>
+
+    <string name="internet_not_connected">No internet connection found.</string>
+    <string name="error_title">Something went wrong!</string>
+    <string name="invalid_request">Invalid request.</string>
+
+    <string name="gradientStart">#F4447E</string>
+    <string name="gradientEnd">#8448F4</string>
+
+    <string name="label_change_number_text">Change Phone Number</string>
+    <string name="label_push_notification_text">Push Notification</string>
+    <string name="label_event_notification_text">Events Notifications</string>
+    <string name="label_event_update_text">Events Update</string>
+    <string name="label_nsfw_family_text">NSFW Family Filter</string>
+    <string name="label_private_pictures_access">Private Pictures Access</string>
+    <string name="label_deactivate_text">Deactivate Account</string>
+    <string name="label_delete_text">Delete Account</string>
+    <string name="label_unit_text">Unit System</string>
+
+    <string name="text_private_photos">Private Photos</string>
+    <string name="text_album_access">My Album Access</string>
+    <string name="text_received_album">Received Albums</string>
+
+
+    <string-array name="sex">
+        <item>@string/text_male</item>
+        <item>@string/text_female</item>
+        <item>@string/text_trans</item>
+        <item>@string/text_no_gender_con</item>
+    </string-array>
+
+    <string-array name="settings">
+        <item>@string/label_change_number_text</item>
+        <item>@string/label_push_notification_text</item>
+        <item>@string/label_event_notification_text</item>
+        <item>@string/label_event_update_text</item>
+        <item>@string/label_nsfw_family_text</item>
+        <item>@string/label_private_pictures_access</item>
+        <item>@string/label_deactivate_text</item>
+        <item>@string/label_delete_text</item>
+        <item>@string/label_unit_text</item>
+    </string-array>
+
+    <string name="text_nudity">Nudity</string>
+    <string name="text_violence">Violence</string>
+    <string name="text_harassment">Harassment</string>
+    <string name="text_false_news">False news</string>
+    <string name="text_spam">Spam</string>
+    <string name="text_gun_drug">Gun or drug sales</string>
+    <string name="text_speech">Hate Speech</string>
+
+    <string-array name="feedback">
+        <item>@string/text_nudity</item>
+        <item>@string/text_violence</item>
+        <item>@string/text_harassment</item>
+        <item>@string/text_false_news</item>
+        <item>@string/text_spam</item>
+        <item>@string/text_gun_drug</item>
+        <item>@string/text_speech</item>
+    </string-array>
+
+    <string name="text_terms_policy">I agree to Terms and Conditions.</string>
+    <string name="text_no_fb_post">We do not post anything on Facebook.</string>
+    <string name="text_terms">Terms and Conditions</string>
+    <string name="text_privacy">Privacy Policy</string>
+    <string name="text_advertisement">Advertisement</string>
+    <string name="text_login_facebook">Login with Facebook</string>
+    <string name="text_sign_up">ARE YOU SIGNING UP FOR</string>
+    <string name="text_dating_challenge">THE DL CHALLENGE?</string>
+    <string name="text_enter_code_below">ENTER CODE BELOW!</string>
+    <string name="text_hint_challenge_code">CHALLENGE CODE</string>
+    <string name="alert_logout_user">Are you sure, you want to logout from app?</string>
+    <string name="alert_delete_image">Are you sure, you want to delete this image?</string>
+    <string name="alert_delete_account">Are you sure, you want to delete your account?</string>
+    <string name="alert_no_message">Are you sure, you want to continue without adding a message?</string>
+    <string name="alert_block_user">Are you sure, you want to block this user?</string>
+    <string name="text_enter_code">Enter Code</string>
+    <string name="text_skip_step">Skip this Step</string>
+    <string name="text_i_am">I am a…</string>
+    <string name="text_seeking">Seeking</string>
+    <string name="text_dob">Date of Birth</string>
+    <string name="text_day">Day :</string>
+    <string name="text_month">Month :</string>
+    <string name="text_hint_month">01</string>
+    <string name="text_year">Year :</string>
+    <string name="text_hint_year">1991</string>
+    <string name="text_push_notifications">Push Notifications</string>
+    <string name="text_age">Age</string>
+    <string name="text_woman">Woman</string>
+    <string name="text_man">Man</string>
+    <string name="text_women">Women</string>
+    <string name="text_men">Men</string>
+    <string name="text_both">Both</string>
+
+    <style name="mont">montserrat_regular.ttf</style>
+
+    <string name="text_apply_filters">Apply Filters</string>
+    <string name="text_upgrade_premium">Upgrade To Premium Plan!</string>
+    <string name="text_upgrade">Upgrade</string>
+
+    <string name="error_occurred">An error occurred. We\'re deeply sorry.</string>
+    <string name="restart_app">Go to Home</string>
+    <string name="text_check_out">Go to check out</string>
+    <string name="text_buy_merchandise">Buy Merchandise</string>
+    <string name="text_dl_dating">DL Dating</string>
+    <string name="text_dl_dates">My Dl Dates</string>
+    <string name="text_edit_profile">Edit Profile</string>
+    <string name="text_fun_questions">Fun Questions</string>
+    <string name="text_fun_tidbits">Fill out at least three choices to provide \nfun tidbits for others to see!</string>
+    <string name="text_edit_later">You can edit this later in your profile.</string>
+    <string name="text_hint_fun_questions">Type Something (150 Characters Max)</string>
+    <string name="text_hint_bio">Type Something (350 Characters Max)</string>
+    <string name="text_continue">Continue</string>
+    <string name="text_create_profile">Create Profile</string>
+    <string name="text_save_photo">Save Photo</string>
+    <string name="text_saving_photo">Saving Photo</string>
+    <string name="text_save_updates">Save Updates</string>
+    <string name="text_view_profile">View Profile</string>
+    <string name="text_apply_cities">Apply Cities</string>
+    <string name="text_find_single">I am look to find singles\nin the following areas</string>
+
+    <string name="text_user_age">Age :
+        <xliff:g id="view">%1$s</xliff:g>
+    </string>
+    <string name="text_signup_challenge">
+        <xliff:g id="view">%1$s</xliff:g>
+        <xliff:g id="view">%2$s</xliff:g>
+    </string>
+    <string name="text_age_range">
+        <xliff:g id="view">%1$s</xliff:g>
+        -
+        <xliff:g id="view">%2$s</xliff:g>
+    </string>
+    <string name="text_images_count"><xliff:g id="view">%1$s</xliff:g>/
+        <xliff:g id="view">%2$s</xliff:g>
+    </string>
+    <string name="text_selected_dob"><xliff:g id="view">%1$s</xliff:g>-<xliff:g id="view">%2$s</xliff:g>-
+        <xliff:g id="view">%3$s</xliff:g>
+    </string>
+    <string name="text_questions"><xliff:g id="view">%1$s</xliff:g>:
+    </string>
+    <string name="text_percentage"><xliff:g id="view">%1$s</xliff:g>%%
+    </string>
+    <string name="text_edit_length">
+        <xliff:g id="view">%1$s</xliff:g>
+    </string>
+    <string name="text_on_off">off / on</string>
+    <string name="text_visible_to_those" tools:keep="@string/text_visible_to_those">VISIBLE TO THOSE WHO\nARE AROUND
+        YOU
+    </string>
+    <string name="text_visible_to_those_full">View People Near You</string>
+    <string name="text_within_x_miles">WITHIN X MILES</string>
+
+    <string name="text_alert_unmatch">Are you sure you want to\nunmatch with <xliff:g id="view">%1$s</xliff:g>?
+    </string>
+
+    <string name="text_setup_profile">Setup your profile</string>
+    <string name="text_add_photos">Add Photos</string>
+    <string name="text_tagline_bio">TAGLINE &amp; BIO</string>
+    <string name="text_tagline_bio_hint">You must fill out tagline for users\nto view, but biography is optional!
+    </string>
+    <string name="text_tagline_bio_edit_later">You can edit this later in your profile.</string>
+    <string name="text_want_to_travel">Want to travel and meet\npeople before you get there?</string>
+    <string name="text_you_can_choose">You can choose to match with people\nin up to three cities (does not have
+        to\ninclude your current location)!
+    </string>
+    <string name="text_go_to_swipe">Go to Swipe</string>
+    <string name="text_see_more" tools:keep="@string/text_see_more">See More People</string>
+    <string name="text_who_liked_you">See Who’s Liked You Already</string>
+    <string name="text_see_more_people">See more people</string>
+    <string name="text_swipe_on">Swipe On DL</string>
+    <string name="text_swipe_on_back">Back to DL Swipe</string>
+    <string name="text_block_user">Block User</string>
+    <string name="text_post_images_counter"><xliff:g id="view">%1$s</xliff:g>/
+        <xliff:g id="view">%2$s</xliff:g>
+    </string>
+    <string name="text_age_location">
+        <xliff:g id="view">%1$s</xliff:g>
+        /
+        <xliff:g id="view">%2$s</xliff:g>
+    </string>
+    <string name="notification_error_ssl_cert_invalid">Invalid SSL certificate.</string>
+    <string name="text_please_accept">Please accept terms and conditions.</string>
+    <string name="text_please_wait">Loading</string>
+    <string name="text_camera_roll">Camera Roll</string>
+    <string name="text_camera">Camera</string>
+    <string name="text_facebook">Facebook</string>
+    <string name="text_default">Make Default</string>
+    <string name="text_gallery" tools:keep="@string/text_gallery">Gallery</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="text_unblock">Unblock</string>
+    <string name="text_edit_text">Edit text</string>
+    <string name="text_no_camera">Your device doesn\'t support camera</string>
+    <string name="text_no_gallery">Your device doesn\'t support gallery</string>
+    <string name="text_version">version
+        <xliff:g id="view">%1$s</xliff:g>
+    </string>
+    <string name="text_rational_gallery">
+        <xliff:g id="view">%1$s</xliff:g>
+        needs access to your gallery so you can see your pictures.
+    </string>
+    <string name="text_rational_camera">
+        <xliff:g id="view">%1$s</xliff:g>
+        needs access to your camera so you can take pictures.
+    </string>
+    <string name="text_rational_video" tools:keep="@string/text_rational_video">
+        <xliff:g id="view">%1$s</xliff:g>
+        needs access to your camera so you can record video.
+    </string>
+    <string name="text_rational_location">
+        <xliff:g id="view">%1$s</xliff:g>
+        uses your location ONLY to update your location on the platform.
+    </string>
+    <string name="text_rational_audio">
+        <xliff:g id="view">%1$s</xliff:g>
+        needs to use this permission for initiate calls.
+    </string>
+    <string name="file_provider_authority" translatable="false">
+        com.connect.meetupsfellow.fileprovider
+    </string>
+
+    <!-- Temporary String -->
+    <string name="text_name">Name</string>
+    <string name="text_ad">Advertisement :</string>
+    <string name="text_location">Location</string>
+    <string name="text_about_me">About Me</string>
+    <string name="text_hint_age">25</string>
+
+    <string name="side_menu_item_1">Home</string>
+    <string name="side_menu_item_2">Profile</string>
+    <string name="side_menu_item_3">My Dates</string>
+    <string name="side_menu_item_4">My Cities</string>
+    <string name="side_menu_item_5">Settings</string>
+    <string name="side_menu_item_6">Shopping</string>
+    <string name="side_menu_item_7">Contact</string>
+    <string name="side_menu_item_8">Blocked Users</string>
+    <string name="text_send_us_a_message">Send us a message</string>
+    <string name="text_hint_full_name">Full Name</string>
+    <string name="text_hint_email">Email</string>
+    <string name="text_hint_message">Message</string>
+    <string name="text_unmatch">Unmatch</string>
+    <string name="text_send_message">Send message</string>
+    <string name="text_go_chat">Go Chat</string>
+    <string name="text_your_cities">Your Cities</string>
+    <string name="text_contact_amp_faq"><![CDATA[Contact & Faq]]></string>
+    <string name="text_logout">Logout</string>
+    <string name="text_deactivate">Deactivate</string>
+    <string name="text_clear_all">Clear All</string>
+    <string name="text_delete">Delete</string>
+    <string name="text_buy">Buy</string>
+    <string name="text_delete_account">Delete Account</string>
+    <string name="text_faq">Faq</string>
+    URL_PRIVACY
+    <string name="text_no_image">Please add at least 3 images.</string>
+    <string name="internet_connected" tools:keep="@string/internet_connected">Internet Connection Found</string>
+    <string name="text_server_not_found">Unable to connect to server.</string>
+    <string name="text_enter_email">Please enter your email!</string>
+    <string name="text_message">Message</string>
+    <string name="text_no_email">No email!</string>
+    <string name="text_report_user">Report User</string>
+    <string name="text_submit">Submit</string>
+    <string name="text_tagline">Tagline</string>
+    <string name="text_bio">Bio</string>
+    <string name="text_no_tagline">You must fill out tagline for users to view.</string>
+    <string name="text_no_images">Please select images first.</string>
+    <string name="text_limit_exceeded" tools:keep="@string/text_limit_exceeded">Limit exceeded.</string>
+
+    <string name="text_invalid_email">Invalid email</string>
+    <string name="text_no_gender">Please select your gender</string>
+    <string name="text_no_seeking">Please select seeking for</string>
+    <string name="text_no_dob">Please fill date of birth</string>
+    <string name="text_min_3_questions">Fill out at least 3 choices.</string>
+    <string name="text_min_miles">100</string>
+
+
+    <string name="text_url_terms">http://18.216.113.147/terms.html</string>
+    <string name="text_url_privacy">http://18.216.113.147/privacy.html</string>
+    <string name="text_url_shopping">http://dldating.com/shop/</string>
+    <string name="text_hint_city">CITY</string>
+    <string name="text_no_city">Please enter city first.</string>
+    <string name="text_no_miles">Please enter miles.</string>
+    <string name="text_value_text">Text</string>
+    <string name="alert_dialog_title_date">Select Date</string>
+    <string name="alert_dialog_title_month">Select Month</string>
+    <string name="alert_dialog_title_year">Select Year</string>
+    <string name="positive_button_text">Select</string>
+    <string name="negative_button_text">Cancel</string>
+    <string name="text_no_users">No users found</string>
+    <string name="text_no_update">Nothing to update</string>
+
+    <string name="location_updated">Location Updated: %1$s</string>
+
+    <string name="text_user_blocked">User blocked successfully.</string>
+    <string name="text_user_reported">Thanks for your report, we will check this user for spam.</string>
+    <string name="text_contact_us">Your message was successfully delivered.</string>
+    <string name="text_a">A:</string>
+    <string name="text_q">Q:</string>
+
+    <string name="text_empty_code">Challenge code cannot be empty.</string>
+    <string name="text_invalid_code">Invalid challenge code.</string>
+
+    <string name="text_accept">Accept</string>
+    <string name="text_reject">Reject</string>
+    <string name="text_end">End</string>
+    <string name="text_take_selfie">Take Selfie</string>
+    <string name="text_save_selfie">Save Selfie</string>
+    <string name="text_retake_selfie">Retake Selfie</string>
+    <string name="text_dl_selfie">Take Dl Selfie</string>
+    <string name="text_selfie">Before chatting you must send a selfie to confirm. This will be sent to your match at the
+        beginning of every chat. This photo can be retaken and changed at any time and needs to be updated monthly.
+    </string>
+
+    <string name="text_like_me">Liked Me</string>
+    <string name="text_my_dl_dates">My Matches</string>
+    <string name="text_messages">Messages</string>
+
+    <string-array name="side_menu_items" tools:keep="@array/side_menu_items">
+        <item>@string/side_menu_item_1</item>
+        <item>@string/side_menu_item_2</item>
+        <item>@string/side_menu_item_3</item>
+        <item>@string/side_menu_item_4</item>
+        <item>@string/side_menu_item_5</item>
+        <item>@string/side_menu_item_6</item>
+        <item>@string/side_menu_item_7</item>
+    </string-array>
+
+    <string name="text_keep_on_dl">But keep it on the DL</string>
+    <string name="text_you_matched">You Matched!</string>
+    <string name="text_sneak_peak">Sneak Peek (Remaining Sneak Peeks = <xliff:g id="view">%1$s</xliff:g>)
+    </string>
+    <string name="text_calls">Phone plan (Remaining Calls = <xliff:g id="view">%1$s</xliff:g>)
+    </string>
+    <string name="text_unlimited">Unlimited</string>
+    <string name="text_15_new_profile">15 more profiles</string>
+    <string name="text_unlimited_everything">Unlimited Everything(1 month)</string>
+    <string name="text_5_sneak_peak">5 sneak peeks</string>
+    <string name="text_3_calls">3 more calls</string>
+    <string name="text_unlimited_sneak_peak">Unlimited sneak peeks(1 month)</string>
+    <string name="text_unlimited_calls">Unlimited calls(1 month)</string>
+    <string name="text_price_.99" tools:ignore="ExtraTranslation">$0.99</string>
+    <string name="text_price_3.99" tools:ignore="ExtraTranslation">$3.99</string>
+    <string name="text_no_product">Please select product first.</string>
+    <string name="text_payment_not_initiated">Payment cannot be made right now. Please try again later</string>
+    <string name="text_buy_sneak_peek">Want to see who has liked you? Then buy a Sneak Peek plan!</string>
+    <string name="text_buy_phone_plan">Want to make a call? Then buy a Phone plan!</string>
+
+    <string name="text_no_image_captured">
+        No image captured
+    </string>
+    <string name="text_no_file_path">
+        Could not find the filepath of the selected image
+    </string>
+
+    <string name="text_appropriate_selfie">Keep Selfies Appropriate or Risk Being Suspended</string>
+    <string name="text_like_to_save">Would you like to save this selfie\nto replace the old one?</string>
+    <string name="text_once_accept">Once you accept their selfie they will\nappear in DL Dates!</string>
+    <string name="text_message_not_appropriate">Are you sure, you want to click not appropriate?</string>
+    <string name="text_save_send">Save &amp; Send</string>
+    <string name="text_accept_selfie">Accept Selfie</string>
+    <string name="text_accept_date">Accept Date</string>
+    <string name="text_not_appropriate">Not Appropriate</string>
+
+    <string name="recent">Recent</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="video">Video</string>
+    <string name="btn_buy_now">Buy Now</string>
+    <string name="subscription_1">1 month \n
+        <font size="24">
+            <b>$4.99</b>
+        </font>
+         \n*Auto-Renewed
+    </string>
+    <string name="subscription_2">3 months \n
+        <font size="24">
+            <b>$10.99</b>
+        </font>
+        \n*Auto-Renewed
+    </string>
+
+    <string name="trail_text">14 Day Free Trial</string>
+
+    <string name="click_to_load_more">Tap to load more profiles</string>
+    <string name="upgrade_to_pro">Profile loading is limited on your current plan. Upgrade your membership to view more profiles</string>
+    <string name="upgrade_to_pro_chat">Upgrade to PRO \n To See Your Chat History</string>
+
+    <string name="upgrade_to_pro_">Upgrade to Premium </string>
+    <string name="upgrade_to_pro_see_more">To See More Nearby Fellows</string>
+    <string name="upgrade_to_pro_see_chat">To See Your Chat History</string>
+
+
+    <string name="text_identity_1">Bear</string>
+    <string name="text_identity_2">Geek</string>
+    <string name="text_identity_3">Daddy</string>
+    <string name="text_identity_4">Muscle</string>
+    <string name="text_identity_5">Chub</string>
+    <string name="text_identity_6">Chaser</string>
+    <string name="text_identity_7">Guy Next Door</string>
+    <string name="text_identity_8">Otter</string>
+    <string name="text_identity_9">Leather</string>
+    <string name="text_identity_10">Poz</string>
+    <string name="text_identity_11">Discreet</string>
+    <string name="text_identity_12">Jock</string>
+    <string name="text_identity_13">Queer</string>
+    <string name="text_identity_14">Military</string>
+    <string name="text_identity_15">Bisexual</string>
+    <string name="text_identity_16">College</string>
+    <string name="text_identity_17">Transgender</string>
+    <string name="text_identity_18">Drag</string>
+    <string name="text_identity_19">Twink</string>
+
+    <string name="imperial">Imperial</string>
+    <string name="metric">Metric</string>
+
+    <string name="alert_pro_user">This feature is only available for PRO users. Do you want to upgrade to PRO to use this feature?</string>
+    <string name="label_subscribe_to_pro">Subscribe to PRO</string>
+    <string name="alluser">All Users</string>
+    <string name="recently_online">RECENTLY/ONLINE</string>
+    <string name="most_recent">New Fellow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="view_all"><u>View all</u></string>
+
+    <string name="label_resend_text">Didn\'t receive code?<b><font color="#AC216C"> Request again</font></b></string>
+    <string name="label_already_account">Already have an account ?<b><font color="#AC216C"> SIGN IN</font></b></string>
+    <string name="label_not_member">Not a Member ?<b><font color="#AC216C"> SIGN UP</font></b></string>
+    <string name="text_copy_right">©2025 MeetupsFellow</string>
+</resources>

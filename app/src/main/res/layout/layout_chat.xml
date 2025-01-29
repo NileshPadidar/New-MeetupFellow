@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlChat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="spUsage"
+    android:visibility="visible"
+    >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/chatTabLay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabTextColor="@color/black"
+                android:background="@color/transparent"
+                app:tabMode="fixed"
+                app:tabIndicatorGravity="stretch"
+                app:tabIndicatorColor="@color/cardBgColor"
+                app:tabIndicator="@drawable/custom_tab_indicator"
+                app:tabIndicatorFullWidth="true"
+                app:tabTextAppearance="@style/Style_TabText"
+                app:tabSelectedTextColor="@color/gradientEnd"
+                app:tabIndicatorAnimationMode="elastic"
+                app:tabPadding="@dimen/_4sdp"
+                app:tabGravity="fill"
+                android:layout_margin="@dimen/_8sdp"/>
+
+            <com.google.android.gms.ads.admanager.AdManagerAdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/mAdViewChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+            </com.google.android.gms.ads.admanager.AdManagerAdView>
+
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/chatViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <EditText
+                android:id="@+id/searchChat"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@color/white"
+                android:digits="qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM_1234567890 "
+                android:elevation="@dimen/_2sdp"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="Search your FFellow..."
+                android:imeActionLabel="Search"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:visibility="gone"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/inner_img_xl"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/text_size_button_s"
+                app:queryHint="Search your FFellow..." />
+
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+
+                android:id="@+id/swipeRefreshChat"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/personalChaTtxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Personal Chats"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textSize="@dimen/_14sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvConversation"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clipToPadding="false"
+                            tools:listitem="@layout/item_conversation"
+                            android:overScrollMode="never" />
+
+                        <TextView
+                            android:id="@+id/groupChattxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Group Chats"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textSize="@dimen/_14sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvGroupConversation"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:clipToPadding="false"
+                            tools:listitem="@layout/item_conversation"
+                            android:overScrollMode="never" />
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvUnReadCountG"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:background="@drawable/drawable_user_offline"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="center"
+        android:maxLines="1"
+        android:visibility="gone"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        tools:text="99" />
+
+    <TextView
+        android:id="@+id/middleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:layout_marginTop="16dp"
+        />
+
+    <TextView
+        android:id="@+id/tvUnReadCountP"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_alignEnd="@+id/middleText"
+        android:background="@drawable/drawable_user_offline"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="center"
+        android:visibility="gone"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        tools:text="99" />
+
+
+    <RelativeLayout
+            android:id="@+id/chat_prouser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+
+            <TextView
+                android:id="@+id/tvMostUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorBackground"
+                android:fontFamily="@font/montserrat_regular"
+                android:padding="@dimen/_7sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14ssp"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/tv_pro_chatt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tvMostUser"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/inner_img_l"
+                android:background="@drawable/bg_pro_text_view"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingStart="@dimen/inner_img_l"
+                android:paddingEnd="@dimen/inner_img_l"
+                android:text="@string/label__pro_user"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_button_s"
+                android:visibility="gone"
+
+                />
+        </RelativeLayout>
+
+       <!-- <EditText
+            android:id="@+id/searchChat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/white"
+            android:digits="qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM_1234567890 "
+            android:elevation="@dimen/_2sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="Search your FFellow..."
+            android:imeActionLabel="Search"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/inner_img_xl"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/text_size_button_s"
+            app:queryHint="Search your FFellow..." />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+
+            android:id="@+id/swipeRefreshChat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/searchChat"
+            android:layout_marginTop="8dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvConversation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                tools:listitem="@layout/item_user_chat_list"
+                android:overScrollMode="never" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGroupConversation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                tools:listitem="@layout/item_conversation"
+                android:overScrollMode="never" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabSupporyAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:background="@color/black"
+            android:contentDescription="@string/search_hint"
+            android:visibility="gone"
+            app:backgroundTint="@color/black"
+            app:fabSize="mini"
+            app:srcCompat="@drawable/ic_adminchat"
+
+
+            />
+
+
+        <TextView
+            android:id="@+id/add_alarm_action_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/fabSupporyAdmin"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/fabSupporyAdmin"
+            android:text="Start chat with admin"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/noChatImg"
+            android:layout_width="@dimen/_160sdp"
+            android:layout_height="@dimen/_160sdp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/no_chat"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvNoChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/noChatImg"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center"
+            android:text="@string/text_no_user"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/startNewConvo_tbn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/round_corner_btn_new"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Start a new Conversation"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:visibility="gone" />
+
+        <include layout="@layout/layout_loading" />
+
+</RelativeLayout>

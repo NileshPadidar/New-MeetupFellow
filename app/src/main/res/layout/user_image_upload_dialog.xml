@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_centerInParent="true"
+    android:gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/_16sdp"
+        app:cardCornerRadius="@dimen/_16sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update Images"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/colorBlue"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginVertical="@dimen/_14sdp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|top"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardBackgroundColor="#C6F6F8"
+                    app:cardCornerRadius="@dimen/_8sdp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/akar_icons_camera"
+                                android:backgroundTint="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Add Photo"
+                                android:textSize="12dp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/montserrat_medium"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/userImg1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/ivCross1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignEnd="@+id/userImg1"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:background="@drawable/ic_delete_cirecle"
+                            android:contentDescription="@string/app_name"
+                            android:visibility="visible" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#C6F6F8"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:cardCornerRadius="@dimen/_8sdp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/akar_icons_camera"
+                                android:backgroundTint="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Add Photo"
+                                android:textSize="10dp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/montserrat_medium"/>
+
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/userImg2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/ivCross2"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_alignEnd="@+id/userImg2"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:background="@drawable/ic_delete_cirecle"
+                            android:contentDescription="@string/app_name"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#C6F6F8"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    android:layout_margin="@dimen/_8sdp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/akar_icons_camera"
+                                android:backgroundTint="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Add Photo"
+                                android:textSize="10dp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/montserrat_medium"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/userImg3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/ivCross3"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_alignEnd="@+id/userImg3"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:background="@drawable/ic_delete_cirecle"
+                            android:contentDescription="@string/app_name"
+                            android:visibility="visible" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#C6F6F8"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    android:layout_margin="@dimen/_8sdp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/akar_icons_camera"
+                                android:backgroundTint="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Add Photo"
+                                android:textSize="10dp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/montserrat_medium"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/userImg4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/ivCross4"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_alignEnd="@+id/userImg4"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/ic_delete_cirecle"
+                            android:contentDescription="@string/app_name"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="#C6F6F8"
+                    app:cardCornerRadius="@dimen/_8sdp"
+                    android:layout_margin="@dimen/_8sdp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/akar_icons_camera"
+                                android:backgroundTint="@color/black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Add Photo"
+                                android:textSize="10dp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/montserrat_medium"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/userImg5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/ivCross5"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_alignEnd="@+id/userImg5"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/ic_delete_cirecle"
+                            android:contentDescription="@string/app_name"
+                            android:visibility="visible" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvImgNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_img_note"
+                android:textSize="@dimen/_8sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/red"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dialogUpdateImgBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_btn_new"
+                android:text="Update"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textAllCaps="false"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:fontFamily="@font/montserrat_medium"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/loading_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#81000000"
+        android:elevation="@dimen/_8sdp"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <com.example.loadinganimation.LoadingAnimation
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            app:barType="@drawable/heart_3x"
+            android:elevation="@dimen/_10sdp"
+            android:backgroundTint="@color/transparent"
+            android:background="@color/transparent"
+            app:boldText="false"
+            android:visibility="gone"
+            app:enlarge="10"
+            app:textColor="@color/colorBlue"
+            app:textSize="15sp"
+            />
+
+        <ImageView
+            android:id="@+id/loadingLogo"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/meetupsfellow_transpatent"
+            />
+
+        <ProgressBar
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            style="?android:progressBarStyleLarge"
+            android:progress="100"
+            android:indeterminate="true"
+            android:visibility="gone"
+            android:indeterminateTint="@android:color/holo_blue_light"
+            android:id="@+id/progressBar" />
+
+        <TextView
+            android:id="@+id/tv_text_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/inner_img_l"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="@string/text_please_wait"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_button_l" />
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_loading"/>
+
+</RelativeLayout>

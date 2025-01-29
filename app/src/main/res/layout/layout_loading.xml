@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_progress"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="#6A000000"
+    android:clickable="true"
+    android:focusable="true"
+    android:elevation="@dimen/_16sdp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone"
+    tools:ignore="Overdraw,spUsage">
+
+    <!--<com.oit.meetUpsFellow.global.view.AVLoadingIndicatorView
+        android:id="@+id/indicator"
+        style="@style/AVLoadingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        app:indicatorName="BallPulseIndicator" />-->
+
+    <ImageView
+        android:id="@+id/loading_logo"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:visibility="gone"
+        android:src="@drawable/meetupsfellow_transpatent"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/anim_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start"
+        android:visibility="gone"
+        android:layout_margin="@dimen/_18sdp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/anim_btn_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="stop"
+        android:visibility="gone"
+        android:layout_margin="@dimen/_18sdp"
+        />
+
+    <!--<com.airbnb.lottie.LottieAnimationView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        app:lottie_rawRes="@raw/editor_1s_47px"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        />-->
+
+    <!--<com.example.loadinganimation.LoadingAnimation
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        app:barType="@drawable/editor_1s_47px"
+        android:elevation="@dimen/_10sdp"
+        android:backgroundTint="@color/transparent"
+        android:background="@color/transparent"
+        app:boldText="false"
+        app:enlarge="10"
+        android:visibility="visible"
+        app:textColor="@color/colorBlue"
+        app:textSize="15sp"
+        />-->
+
+    <ImageView
+        android:id="@+id/animLogo"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:src="@drawable/meetupsfellow_transpatent"
+        />
+
+    <ProgressBar
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        style="?android:progressBarStyleLarge"
+        android:progress="100"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:indeterminateTint="@android:color/holo_blue_light"
+        android:id="@+id/progressBar" />
+
+    <TextView
+        android:id="@+id/tv_text_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/inner_img_l"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Please wait..."
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_button_l" />
+
+</LinearLayout>

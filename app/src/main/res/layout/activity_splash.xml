@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="@dimen/_25sdp"
+    tools:context=".mvp.view.activities.SplashActivity">
+
+    <ImageView
+        android:id="@+id/splashGif"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/_160sdp"
+        android:layout_height="@dimen/_160sdp"
+        android:src="@drawable/meetupsfellow_transpatent"
+        android:layout_centerInParent="true"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvCopyRight"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/darkParpul"
+        android:textSize="@dimen/_13sdp"
+        app:fontFamily="@font/montserrat_medium"
+        tools:text="@string/text_version" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvCopyRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_8sdp"
+        app:fontFamily="@font/montserrat_medium"
+        tools:text="@string/text_copy_right" />
+
+</RelativeLayout>

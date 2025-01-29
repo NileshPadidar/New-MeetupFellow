@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/group_2">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_toolbar" />
+
+    <TextView
+        android:id="@+id/tvNoUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/montserrat_medium"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:text="No private Access \n Ask Fellow's for private access"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_button_xl"
+        android:gravity="center"
+        android:visibility="gone"
+        tools:ignore="SpUsage" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPrivateAccess"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:padding="@dimen/_8sdp"
+        tools:listitem="@layout/item_private_picture_access" />
+
+    <include android:id="@+id/included_loading"
+        layout="@layout/layout_loading" />
+
+</RelativeLayout>

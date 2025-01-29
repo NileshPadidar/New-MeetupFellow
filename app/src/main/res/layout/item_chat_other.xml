@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/inner_img_xxl"
+    android:layout_marginTop="@dimen/inner_img_l"
+    android:layout_marginEnd="@dimen/inner_img_xxl"
+    android:elevation="@dimen/_8sdp"
+    tools:ignore="spUsage,UselessParent">
+
+    <RelativeLayout
+        android:id="@+id/rlChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginEnd="@dimen/inner_img_xxxl"
+        android:layout_marginRight="@dimen/inner_img_xxxl"
+        android:paddingEnd="@dimen/_8sdp"
+        android:background="@drawable/drawable_chat_other"
+        android:padding="@dimen/inner_img_l">
+
+        <TextView
+            android:id="@+id/userNameChat1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:padding="@dimen/_4sdp"
+            android:text=""
+            android:visibility="gone"
+            android:textColor="#F4447E"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/tvChatMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="@dimen/_200sdp"
+            android:minWidth="@dimen/_100sdp"
+            android:layout_below="@+id/userNameChat1"
+            android:gravity="end"
+            android:fontFamily="@font/montserrat_medium"
+            android:linksClickable="true"
+            android:padding="@dimen/_4sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xxs"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/tvChatTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvChatMessage"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xxxxs"
+            tools:text="@string/app_name" />
+
+        <FrameLayout
+            android:id="@+id/flImage"
+            android:layout_width="192dp"
+            android:layout_height="200dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/ivChatImage"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/userNameChatImg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:padding="@dimen/_4sdp"
+                    android:text=""
+                    android:textColor="#F4447E"
+                    android:textSize="@dimen/_10sdp" />
+
+                <ImageView
+                    android:id="@+id/ivChatImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    android:layout_below="@+id/userNameChatImg1"
+                    android:src="@drawable/placeholder" />
+
+            </RelativeLayout>
+
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/flPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="#60000000"
+            android:padding="@dimen/inner_img_l"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivChatVideoPlay"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/play" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlChat"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/inner_img_l">
+
+        <TextView
+            android:id="@+id/tvChatTime1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/colorMenuAddress"
+            android:textSize="@dimen/text_size_button_xxxxs"
+            tools:text="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/ivChatStatus"
+            android:layout_width="@dimen/_8sdp"
+            android:layout_height="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/inner_img_xl"
+            android:layout_marginRight="@dimen/inner_img_xl"
+            android:layout_toStartOf="@+id/tvChatTime"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/double_tick_seen"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

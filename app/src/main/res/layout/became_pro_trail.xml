@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlPro"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/inner_img_l">
+
+    <TextView
+        android:id="@+id/pro_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:text="@string/upgrade_to_pro"
+        android:textColor="@color/colorRed"
+        android:textSize="@dimen/text_size_button_l"
+        tools:ignore="SpUsage" />
+
+
+    <TextView
+        android:id="@+id/pro_text_trail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="center"
+        android:text="@string/upgrade_to_pro"
+        android:textColor="@color/colorRed"
+        android:textSize="@dimen/text_size_button_xxs"
+        tools:ignore="SpUsage" />
+
+</LinearLayout>

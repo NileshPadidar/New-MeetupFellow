@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/llTop"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_350sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/curv_background_main" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/llTerms"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:background="@drawable/iv_login_mobile" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Enter Mobile Number"
+            android:layout_marginVertical="@dimen/_14sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sdp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:text="Please enter your registered \n phone number to get an OTP"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp" />
+
+        <LinearLayout
+            android:id="@+id/llNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/llTerms"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_134sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/round_corners_default"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/inner_img_xl">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/countryCodePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inner_img_s"
+                android:layout_marginLeft="@dimen/inner_img_s"
+                app:ccpDialog_allowSearch="true"
+                app:ccpDialog_keyboardAutoPopup="true"
+                app:ccpDialog_showCloseIcon="true"
+                app:ccpDialog_showFastScroller="true"
+                app:ccpDialog_showPhoneCode="true"
+                app:ccpDialog_textColor="@color/colorPrimary"
+                app:ccp_autoDetectCountry="false"
+                android:fontFamily="@font/montserrat_regular"
+                app:ccp_autoFormatNumber="true"
+                app:ccp_clickable="true"
+                app:ccp_defaultNameCode="IN"
+                app:ccp_contentColor="@color/black"
+                app:ccp_flagBorderColor="@android:color/transparent"
+                app:ccp_showArrow="false"
+                app:ccp_showNameCode="false"
+                app:ccp_textSize="@dimen/_14sdp" />
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorAccent" />
+
+            <EditText
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:background="@null"
+                android:digits="0123456789"
+                android:fontFamily="@font/montserrat_regular"
+                android:hint="@string/hint_text_number"
+                android:inputType="phone"
+                android:maxLength="14"
+                android:maxLines="1"
+                android:padding="@dimen/inner_img_l"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/_14sdp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTerms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnVerify"
+        android:layout_centerVertical="true"
+        android:layout_gravity="start"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_18sdp"
+        app:layout_constraintBottom_toTopOf="@+id/btnVerify"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cb_terms_policy"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:button="@drawable/selector_terms"
+            android:scaleX="1"
+            android:scaleY="1" />
+
+        <TextView
+            android:id="@+id/tv_terms_policy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/inner_img_xl"
+            android:layout_marginRight="@dimen/inner_img_xl"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/text_terms_policy"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textColorLink="@color/colorRed"
+            android:textSize="@dimen/text_size_button_xxs"
+            tools:ignore="RelativeOverlap" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnVerify"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_46sdp"
+        android:background="@drawable/round_corner_btn_new"
+        android:fontFamily="@font/montserrat_medium"
+        android:onClick="onVerifyClick"
+        android:text="Request OTP"
+        android:textAllCaps="false"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

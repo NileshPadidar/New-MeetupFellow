@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/group_2"
+    tools:ignore="spUsage">
+
+    <include
+        android:id="@+id/header"
+        android:visibility="gone"
+        layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:id="@+id/scrollViewEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llButnTicket"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/inner_img_s"
+        android:clipToPadding="false"
+        android:overScrollMode="never">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_12sdp">
+
+          <!--  <Button
+                android:id="@+id/eventBackBtn"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:gravity="center"
+                android:paddingStart="@dimen/_4sdp"
+                android:layout_margin="@dimen/_4sdp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:backgroundTint="#99FFFFFF"
+                android:drawableLeft="@drawable/back_arrow"
+                android:background="@drawable/circle_back"
+                />-->
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_178sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_minus8sdp"
+                app:cardElevation="@dimen/_2sdp"
+                android:id="@+id/cvImgEvent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivEventImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ivEventImage"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/trending_gradient_shape" />
+
+                    <Button
+                        android:id="@+id/eventBackBtn"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginStart="@dimen/_6sdp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:drawableLeft="@drawable/back_arrow"
+                        android:background="@drawable/user_add_img_btn"
+                        />
+
+           <!-- <TextView
+                android:id="@+id/tvEventName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/ivEventImage"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_medium"
+                android:maxLines="1"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp" />
+-->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/interestedImg"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignBottom="@+id/ivEventImage"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:padding="@dimen/_3sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:src="@drawable/people"
+                android:background="@drawable/round_users_btn"
+                 />
+
+            <TextView
+                android:id="@+id/tvMorePeople1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/interestedImg"
+                android:layout_alignEnd="@+id/interestedImg"
+                android:layout_alignBottom="@+id/interestedImg"
+                android:layout_alignStart="@+id/interestedImg"
+                android:layout_alignTop="@+id/interestedImg"
+                android:layout_gravity="center"
+                android:layout_marginBottom="-8dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:text="20"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/ivFavorite"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:background="@drawable/selector_favorite"
+                android:backgroundTint="@color/white"
+                android:visibility="gone"
+                android:contentDescription="@string/app_name"
+                android:onClick="onFavoriteClick" />
+
+           <!-- <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivInterested"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:contentDescription="@string/app_name"
+                android:onClick="onInterestedClick"
+                android:background="@drawable/selector_tick"
+                app:civ_circle_background_color="@color/white" />-->
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/rlEventDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvImgEvent"
+                android:padding="@dimen/_4sdp"
+                android:background="@drawable/drawable_rounded_corners_otp"
+                android:layout_marginTop="@dimen/inner_img_xl_2">
+
+                <!--<TextView
+                    android:id="@+id/tvEventName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_toStartOf="@id/ivFavorite"
+                    android:layout_toLeftOf="@+id/ivFavorite"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:maxLines="1"
+                    android:text="@string/app_name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_19sdp" />-->
+
+                <!--<ImageView
+                    android:id="@+id/ivFavorite"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:contentDescription="@string/app_name"
+                    android:onClick="onFavoriteClick"
+                    android:src="@drawable/selector_favorite" />
+-->
+
+                <TextView
+                    android:id="@+id/tvEventName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginHorizontal="@dimen/_4sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:maxLines="2"
+                    android:text="Event Name"
+                    android:textColor="@color/light_dark_text"
+                    android:textSize="@dimen/_16sdp" />
+
+
+
+                <ImageView
+                    android:id="@+id/ivLocation"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_below="@+id/tvEventName"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:background="@drawable/carbon_location" />
+                <TextView
+                    android:id="@+id/tvEventLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/ivLocation"
+                    android:layout_below="@+id/tvEventName"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:drawablePadding="@dimen/inner_img_l"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:maxLength="25"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="@string/hint_text_hometown"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/tvEventDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvEventName"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/inner_img_xl"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/inner_img_xl"
+                    android:layout_toEndOf="@+id/tvEventLocation"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:maxLines="1"
+                    android:text="@string/text_distance"
+                    android:textColor="#3C3A3A"
+                    android:textSize="@dimen/_10sdp" />
+
+
+                <ImageView
+                    android:id="@+id/icCalendar"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_below="@+id/ivLocation"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:background="@drawable/calendar_gradiant" />
+                <TextView
+                    android:id="@+id/tvEventDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivLocation"
+                    android:layout_toEndOf="@+id/icCalendar"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/inner_img_xl"
+                    android:drawablePadding="@dimen/inner_img_l"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:maxLines="2"
+                    android:text="@string/hint_date"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <!--<ImageView
+                    android:id="@+id/ivInterested"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivFavorite"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/inner_img_xl_2"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:contentDescription="@string/app_name"
+                    android:onClick="onInterestedClick"
+                    android:src="@drawable/selector_tick" />
+-->
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:layout_below="@+id/rlEventDetails"
+                android:layout_marginTop="@dimen/inner_img_xl"
+                android:background="@color/colorMenuHeaderBottom" />
+
+            <ImageView
+                android:id="@+id/interestedPeopleBtn"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_below="@+id/view1"
+                android:layout_alignParentStart="true"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/group" />
+
+            <FrameLayout
+                android:id="@+id/frameMore1"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/view1">
+
+                <ImageView
+                    android:id="@+id/ivEventInterestedText1"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/group"
+                    android:visibility="gone" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:src="@drawable/group"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    app:civ_circle_background_color="#8ED5A0"
+                    />
+
+                <TextView
+                    android:id="@+id/tvMorePeople11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_button_m" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvInterestedPeople"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frameMore1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/inner_img_xl"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/label_interested_people_text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_button_m"
+                android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:id="@+id/rlAboutEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:layout_below="@+id/tvInterestedPeople"
+            android:background="@drawable/drawable_rounded_corners_otp"
+            android:layout_marginTop="@dimen/_8sdp">
+
+            <TextView
+                android:id="@+id/tvAboutEvent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_medium"
+                android:maxLines="1"
+                android:text="About Event"
+                android:textColor="@color/light_dark_text"
+                android:textSize="@dimen/_14sdp" />
+
+
+           <!-- <com.borjabravo.readmoretextview.ReadMoreTextView
+                android:id="@+id/tvEventDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_below="@+id/tvAboutEvent"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                app:colorClickableText="@color/gradientStart"
+                app:trimCollapsedText="Read More"
+                app:trimExpandedText=" Read Less"
+                app:trimLines="3"
+                tools:text="@string/label_description_text" />-->
+
+            <TextView
+                android:id="@+id/tvEventDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_below="@+id/tvAboutEvent"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:ellipsize="end"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                tools:text="@string/label_description_text" />
+
+            <TextView
+                android:id="@+id/tvEventWebsite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvEventDescription"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_medium"
+                android:maxLines="1"
+                android:text="@string/label_website"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp" />
+
+            <LinearLayout
+                android:id="@+id/llInterestedPeople"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_44sdp"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_4sdp"
+                android:layout_below="@+id/tvEventWebsite"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rlInterestedPeople0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/inner_img_l"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivEventInterestedUser0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/placeholder" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlInterestedPeople1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/inner_img_l"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivEventInterestedUser1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/placeholder" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlInterestedPeople2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/inner_img_l"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivEventInterestedUser2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/placeholder" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlInterestedPeople3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/inner_img_l"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivEventInterestedUser3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/placeholder" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlInterestedPeople4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/inner_img_l"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivEventInterestedUser4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/placeholder" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlInterestedPeople5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/inner_img_l"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivEventInterestedUser5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/placeholder"
+                        android:visibility="gone" />
+
+                    <FrameLayout
+                        android:id="@+id/frameMore"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/ivEventInterestedText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/ic_round"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/tvMorePeople"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_button_m" />
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/flagEvent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llInterestedPeople"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:clickable="true"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="Report as inappropriate"
+                android:textColor="@color/gradientStart"
+                android:textSize="@dimen/_14sdp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_4sdp"
+            android:paddingHorizontal="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            android:layout_below="@+id/rlAboutEvent"
+            android:background="@drawable/drawable_rounded_corners_otp"
+            android:layout_marginTop="@dimen/_8sdp">
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_medium"
+                android:maxLines="1"
+                android:text="Location"
+                android:textColor="@color/light_dark_text"
+                android:textSize="@dimen/_14sdp" />
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapView"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_below="@+id/tvLocation"
+                android:layout_width="match_parent"
+                android:layout_height="140dp" />
+
+        </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llButnTicket"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:weightSum="1"
+        android:paddingHorizontal="@dimen/_14sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/btnBuyTicket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/round_corner_btn_new"
+        android:fontFamily="@font/montserrat_medium"
+        android:onClick="onBuyTicketClick"
+        android:text="@string/btn_text_get_ticket"
+        android:textAllCaps="false"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sdp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivInterested"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/app_name"
+        android:onClick="onInterestedClick"
+        android:background="@drawable/selector_tick"
+        app:civ_circle_background_color="@color/white" />
+    </LinearLayout>
+
+    <include android:id="@+id/included_loading"
+        layout="@layout/layout_loading" />
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_nav_timeline"
+        android:title="Feed"
+        android:visible="false"
+        android:icon="@drawable/selecor_timeline"
+        />
+
+    <item
+        android:id="@+id/bottom_nav_nearBy"
+        android:icon="@drawable/selector_nearby"
+        android:title="Around You"/>
+
+    <item
+        android:id="@+id/bottom_nav_chat"
+        android:title="Messages"
+        android:icon="@drawable/selector_chat"
+        />
+
+    <item
+        android:id="@+id/bottom_nav_events"
+        android:icon="@drawable/selector_feed"
+        android:title="Meetups" />
+
+    <item
+        android:id="@+id/bottom_nav_favorite"
+        android:title="Notifications"
+        android:icon="@drawable/selector_bottom_noty"
+        />
+
+
+
+
+
+    <!--<item
+        android:id="@+id/invisible"
+        android:visible="false"
+        android:icon="@drawable/heart_gray"
+        android:title="invisible" />
+-->
+</menu>

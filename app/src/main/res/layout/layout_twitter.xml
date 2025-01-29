@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/twitter"
+                android:background="@color/colorBackground"
+                tools:ignore="spUsage">
+
+    <FrameLayout
+            android:id="@+id/fullscreen_custom_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    <LinearLayout
+            android:id="@+id/linearlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+        <WebView
+                android:id="@+id/activity_main_webview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:progressDrawable="@color/colorAccent"/>
+
+    <TextView
+            android:id="@+id/tvNoTwitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/text_size_button_xl"
+            android:visibility="gone"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/text_twitter_profile"/>
+
+</RelativeLayout>

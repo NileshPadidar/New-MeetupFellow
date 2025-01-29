@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_lock"
+        android:icon="@drawable/ic_locked_gray"
+        android:title="lock"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_more"
+        android:icon="@drawable/ic_more_white"
+        android:title="@string/text_edit_text"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_call"
+        android:icon="@drawable/update_number_3x"
+        android:title="call"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_block"
+        android:icon="@drawable/blockuser_3x"
+        android:title="Block"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_copy_chat"
+        android:icon="@drawable/ic_baseline_content_copy_24"
+        android:title="Copy"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+
+    <item
+        android:id="@+id/menu_delete_chat"
+        android:icon="@drawable/ic_baseline_delete_forever_24"
+        android:title="Delete"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_clear"
+        android:icon="@drawable/nochat60"
+        android:title="Clear"
+        android:visible="false"
+        app:showAsAction="always"/>
+
+</menu>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llConversation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:paddingTop="@dimen/_6sdp"
+    android:layout_marginStart="@dimen/_8sdp"
+    android:paddingStart="@dimen/_8sdp"
+    android:paddingEnd="@dimen/_6sdp"
+    android:layout_marginBottom="@dimen/_8sdp"
+    android:orientation="horizontal"
+    tools:ignore="spUsage">
+
+    <RelativeLayout
+        android:layout_width="@dimen/_48sdp"
+        android:layout_height="@dimen/_48sdp">
+
+        <ImageView
+            android:id="@+id/ivUserImageBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:contentDescription="@string/app_name"
+            android:padding="1dp"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_2sdp"
+            app:cardCornerRadius="@dimen/_6sdp">
+
+            <ImageView
+                android:id="@+id/ivUserImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- <ImageView
+                 android:id="@+id/ivUserStatus"
+                 android:layout_width="@dimen/inner_img_xl_2"
+                 android:layout_height="@dimen/inner_img_xl_2"
+                 android:layout_alignParentEnd="true"
+                 android:layout_alignParentRight="true"
+                 android:layout_marginStart="0dp"
+                 android:layout_marginLeft="0dp"
+                 android:layout_marginTop="@dimen/inner_img_m"
+                 android:layout_marginEnd="@dimen/inner_img_m"
+                 android:layout_marginRight="@dimen/inner_img_m"
+                 android:contentDescription="@string/app_name"
+                 android:src="@drawable/selector_user_status"
+                 android:visibility="gone" />-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/inner_img_xl_2"
+        android:paddingLeft="@dimen/inner_img_xl_2"
+
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+
+        >
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toStartOf="@id/tvTimeAgo"
+            android:layout_toLeftOf="@+id/tvTimeAgo"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat_regular"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/tvTimeAgo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/montserrat_regular"
+            android:maxLines="1"
+            android:textColor="@color/gradientStart"
+            android:textSize="12dp"
+            tools:text="@string/text_distance" />
+
+        <TextView
+            android:id="@+id/senderNameGChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/_12sdp"
+            android:visibility="gone"
+            android:fontFamily="@font/montserrat_regular"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/inner_img_s"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_below="@+id/tvUserName"
+            android:ellipsize="end"
+            />
+
+        <ImageView
+            android:id="@+id/lastMsgStatus"
+            android:layout_width="@dimen/_8sdp"
+            android:layout_height="@dimen/_8sdp"
+            android:layout_below="@+id/tvUserName"
+            android:layout_toEndOf="@+id/senderNameGChat"
+            android:layout_marginTop="6dp"
+            android:visibility="gone"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:background="@drawable/tick__1_"
+            />
+
+        <ImageView
+            android:id="@+id/mediaImg"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:background="@drawable/pdf"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_below="@+id/tvUserName"
+            android:layout_toEndOf="@+id/lastMsgStatus"/>
+
+        <TextView
+            android:id="@+id/tvLastMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvUserName"
+            android:layout_toEndOf="@+id/mediaImg"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat_medium"
+            android:maxLines="1"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/_10sdp"
+            tools:text="@string/hint_text_hometown" />
+
+        <TextView
+            android:id="@+id/tvUnReadCount"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_below="@+id/tvUserName"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/drawable_user_offline"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            tools:text="99" />
+
+    </RelativeLayout>
+
+</LinearLayout>

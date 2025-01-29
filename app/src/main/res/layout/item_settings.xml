@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:padding="@dimen/inner_img_xxl"
+        tools:ignore="spUsage">
+
+    <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/notification"
+            android:contentDescription="@string/app_name"
+            android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:id="@+id/tvSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/scSelection"
+        android:layout_toLeftOf="@+id/scSelection"
+        android:layout_toEndOf="@+id/ivIcon"
+        android:layout_toRightOf="@+id/ivIcon"
+        android:paddingLeft="@dimen/inner_img_xxl"
+        android:paddingRight="@dimen/inner_img_xxl"
+        android:text="@string/text_no_events"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_button_m" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/scSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:checked="true"
+        android:track="@drawable/selector_track"
+        app:theme="@style/SwitchCompatStyle" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="gone"
+        android:id="@+id/clUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" >
+
+        <TextView
+            android:id="@+id/tvImperial"
+            android:layout_width="@dimen/_66sdp"
+            android:layout_height="@dimen/_29sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvMetric"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_marginRight="@dimen/_4sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:background="@drawable/selector_unit_background"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="@color/black"
+            android:text="@string/imperial"
+            />
+
+        <TextView
+            android:id="@+id/tvMetric"
+            android:layout_width="@dimen/_66sdp"
+            android:layout_height="@dimen/_29sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_regular"
+            android:background="@drawable/selector_unit_background"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="@color/black"
+            android:text="@string/metric"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

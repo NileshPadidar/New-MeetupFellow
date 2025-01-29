@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/meetupsfellow_transpatent"
+            android:title="Home"
+            android:visible="false"
+            />
+
+        <item
+            android:id="@+id/pro_features"
+            android:icon="@drawable/premium_plan_3x"
+            android:title="@string/label_pro_feature"
+
+            />
+
+        <item
+            android:id="@+id/connectRequest"
+            android:icon="@drawable/heart_3x"
+            android:title="@string/connect_request"
+            android:visible="true"
+            />
+
+       <item
+            android:id="@+id/block"
+            android:icon="@drawable/blockuser_3x"
+            android:title="@string/label_block_text"
+            android:visible="true"
+
+            />
+
+
+        <item
+            android:id="@+id/favorite"
+            android:icon="@drawable/favorite_drawer"
+            android:title="@string/title_favorites"
+            android:visible="true"
+            />
+
+
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/setting_3x"
+            android:title="@string/label_settings_text"
+
+            />
+
+
+        <item
+                android:id="@+id/album"
+                android:icon="@drawable/notification_3x"
+                android:title="Notifications"
+                android:visible="true"
+            />
+
+
+        <item
+            android:id="@+id/invite"
+            android:icon="@drawable/share_3x"
+            android:title="@string/label_invite"
+
+            />
+
+        <item
+            android:id="@+id/reviewApp"
+            android:icon="@drawable/rattings_3x"
+            android:title="Review the App"
+            android:visible="true"
+
+            />
+
+        <item
+                android:id="@+id/policy"
+                android:icon="@drawable/policy_ic"
+                android:title="@string/label_privacy_text"
+              android:visible="true"
+
+            />
+
+
+        <item
+                android:id="@+id/terms"
+                android:icon="@drawable/term_ic"
+                android:title="@string/label_conditions_text"
+               android:visible="false"
+
+            />
+<!--        <item-->
+<!--                android:id="@+id/faqs"-->
+<!--                android:icon="@drawable/faq_ic"-->
+<!--                android:title="@string/label_faqs_text" />-->
+
+
+
+        <item
+            android:id="@+id/howToUse"
+            android:icon="@drawable/fq_60"
+            android:title="@string/label_how_to_use_text"
+            android:visible="true"
+
+            />
+
+        <item
+            android:id="@+id/FAQ"
+            android:icon="@drawable/link_3x"
+            android:title="FAQ"
+            android:visible="false"
+
+            />
+
+        <item
+            android:id="@+id/ImpLinks"
+            android:icon="@drawable/link_3x"
+            android:title="Important Links"
+            android:visible="false"
+
+            />
+
+
+        <item
+            android:id="@+id/support"
+            android:icon="@drawable/support_3x"
+            android:title="@string/label_support_text"
+            android:visible="false"
+
+            />
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/logout_3x"
+            android:title="Logout"
+            android:visible="true"
+
+            />
+
+    <item
+        android:id="@+id/support1"
+        android:visible="false"
+        android:checkable="false"
+        android:title="" />
+
+        <item
+            android:id="@+id/support2"
+            android:visible="true"
+            android:title="" />
+
+
+</menu>

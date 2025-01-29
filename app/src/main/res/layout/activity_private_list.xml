@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_toolbar"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="56dp" />
+
+    <ImageView
+        android:id="@+id/noFellowImg"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_140sdp"
+        android:gravity="center"
+        android:src="@drawable/intro1_new"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/noFellowTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:text="No Fellows have access to your media \nYou can give access to your fellow friends"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="@dimen/_14sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noFellowImg" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSetAccessTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_public"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:background="@drawable/round_corner_btn_new"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:text="Set permission"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_11ssp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noFellowTxt"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:visibility="gone"
+        android:layout_marginVertical="@dimen/_4sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintBottom_toTopOf="@+id/privateAccListRV"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/search"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corners_filter_selected"/>
+
+        <TextView
+            android:id="@+id/tv_check_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_26sdp"
+            android:text="Check all"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:padding="@dimen/_4sdp"
+            android:layout_margin="@dimen/_4sdp"
+            android:background="@drawable/rounded_corners_filter_selected"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/privateAccListRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_set_access"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_search"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/floating_btn_access"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/access"
+        android:backgroundTint="@color/white"
+        android:layout_margin="@dimen/_20sdp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_set_access"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_below="@+id/btn_public"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginVertical="@dimen/_6sdp"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/privateAccListRV"
+        android:background="@drawable/round_corner_btn_new"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="Set access"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        tools:ignore="MissingConstraints" />
+
+    <include android:id="@+id/included_loading"
+        layout="@layout/layout_loading"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

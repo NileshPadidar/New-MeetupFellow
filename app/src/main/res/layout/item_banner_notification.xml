@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/inner_img_xxl"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        app:cardCornerRadius="@dimen/inner_img_l"
+        android:id="@+id/cvParent"
+        >
+
+    <RelativeLayout
+            android:id="@+id/rlBannerParent"
+            android:padding="@dimen/inner_img_xxl"
+            android:background="@drawable/rounded_corners_new"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_1sdp"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/tvAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/app_name"
+                android:fontFamily="@font/roboto_medium"
+                android:textSize="@dimen/text_size_button_s"/>
+
+        <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/app_name"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_below="@+id/tvAppName"
+                android:layout_marginTop="@dimen/inner_img_s"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textSize="@dimen/text_size_button_xxs"/>
+
+        <ImageView
+                android:id="@+id/ivClose"
+                android:contentDescription="@string/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_cross"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">@color/colorBlack</color>
+    <color name="colorPrimaryDark">@color/colorBlack</color>
+    <color name="colorAccent">@color/grey</color>
+
+    <color name="colorBackground">#1A1A1A</color>
+    <color name="colorBackgroundMenu">#151515</color>
+    <color name="colorMenuHeaderBottom">#747474</color>
+    <color name="colorChatOther">#7A7A7A</color>
+    <color name="colorMenuAddress">#9F9F9F</color>
+    <color name="colorMenuText">#E6E6E6</color>
+    <color name="colorBottomBar">#2C2C2C</color>
+    <color name="colorTabBackground">#1A1A1A</color>
+    <color name="colorUserDetailFields">#D2D2D2</color>
+    <color name="colorPreferenceUnSelected">#95969A</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhiteTransparent">#DFFFFFFF</color>
+    <color name="colorBlackTransparent">#00000000</color>
+    <color name="colorGray">#E5E5E5</color>
+    <color name="colorRed">#ED2424</color>
+    <color name="colorBlue">#007AFF</color>
+    <color name="colorGreen">#1AFF22</color>
+    <color name="colorHintGray">#DDDDDD</color>
+    <color name="colorBgGray">#F0F0F0</color>
+    <color name="colorTermsGray">#95989A</color>
+    <color name="colorEditTextBorderGray">#DEDEDE</color>
+    <color name="colorSeekbarGray">#CCCCCC</color>
+    <color name="colorImageBgGray">#EBEBEB</color>
+    <color name="colorGalleryBgGray" tools:keep="@color/colorGalleryBgGray">#CBCBCB</color>
+    <color name="colorSideMenuBottomGray" tools:keep="@color/colorSideMenuBottomGray">#D8D8D8</color>
+    <color name="colorButtonBorder">#B9B9B9</color>
+    <color name="colorUpdateDetailsGray">#F7F7F7</color>
+    <color name="colorPaymentGray">#E9ECEF</color>
+    <color name="colorNotificationGray">#EFEFEF</color>
+    <color name="colorProUserStart">#feba00</color>
+    <color name="colorProUserEnd">#f17700</color>
+    <color name="cardBgColor">#C6F6F8</color>
+    <color name="filterGray">#3A3A3A</color>
+    <color name="light_black">#3E3E3E</color>
+
+    <color name="gradientStart">#F4447E</color>
+    <color name="gradientEnd">#8448F4</color>
+
+    <color name="colorLoading">#BE0A1E</color>
+    <color name="colorMintGreen">#69F2E3</color>
+    <color name="colorTwitter">#1AABFF</color>
+
+    <color name="black">#000000</color>
+    <color name="red">#d32f2f</color>
+    <color name="grey">#a9a9a9</color>
+    <color name="light_grey">#99FFFFFF</color>
+    <color name="white">#ffffff</color>
+    <color name="lock_grey">#3B5162</color>
+    <color name="dark_grey">#777676</color>
+    <color name="black_transparent">#16121614</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="colorError">#e21e00</color>
+    <color name="colorInfo">#41c4f4</color>
+    <color name="colorWarning">#f4a941</color>
+    <color name="colorSuccess">#03bc53</color>
+    <color name="offlineGray">#808080</color>
+    <color name="offlineOrange">#FFA500</color>
+    <color name="hyper_link">#3EB8E1</color>
+    <color name="hyper_link2">#ED2424</color>
+    <color name="bottom_alert">#aaaaaa</color>
+
+    <array name="array_dot_active">
+        <item>#FF0000</item>
+        <item>#FF0000</item>
+        <item>#FF0000</item>
+        <item>#FF0000</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+        <item>#000000</item>
+    </array>
+
+    <color name="backGround">#FCF6CF</color>
+    <color name="colorAccentDate">#FF4081</color>
+
+    // new color add by nilu below
+
+    <color name="darkParpul">#AC216C</color>
+    <color name="light_dark_text">#1E0A3C</color>
+    <color name="progress_bg_dim">#6A000000</color>
+    <color name="premium_badge_color">#FE9B00</color>
+
+</resources>

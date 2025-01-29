@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.connect.meetupsfellow"
+    android:targetSandboxVersion="1"
+    tools:ignore="UnusedAttribute">
+    <!-- Upadet by nilu 30-oct-24 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <uses-permission
+        android:name="android.permission.GET_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.BROADCAST_SMS"
+        tools:ignore="ProtectedPermissions" />
+   <!-- <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />-->
+    <!--  <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />-->
+    <!--<uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />-->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="com.android.vending.BILLING" /> <!-- Required OpenGL ES 2.0. for Maps V2 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" /> <!-- Required for working with camera -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <application
+        android:name="com.connect.meetupsfellow.application.ArchitectureApp"
+        android:allowBackup="true"
+        android:foregroundServiceType="location"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/meetupsfellow_transpatent"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/meetupsfellow_transpatent"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeSplash"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning,UnusedAttribute">
+
+        <activity
+            android:name=".mvp.view.activities.ImageVideoPreviewActivity"
+            android:exported="false" />
+
+        <!-- Sample Ad Manager app ID: ca-app-pub-3940256099942544~3347511713** Implement- 31-oct by nilu -->
+        <!-- Banner
+         ca-app-pub-9821745744044932/4439470744
+         Full Page Interstitial
+         ca-app-pub-9821745744044932/1994923190
+        -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/APPLICATION_ID" />
+
+        <activity
+            android:name=".mvp.view.activities.MultiUserViewLikeActivity"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppThemeCreate"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="MULTI_USER_VIEW_LIKE_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.ConnectRequestActivity"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppThemeCreate"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="MEETUP_APP_CONNECT_REQUEST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.ForgotPasswordActivity"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppThemeCreate"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="FORGOT_PASSWORD_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.ResetPasswordActivity"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppThemeCreate"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="RESET_PASSWORD_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.TransactionHistoryActivity"
+            android:exported="true"
+            android:theme="@style/AppThemeCreate"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".mvp.view.activities.LoginWithEmailActivity"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppThemeCreate"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="LOGIN_WITH_EMAIL_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.FollowFollowingActivity"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppThemeCreate"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="FOLLOW_FOLLOWING_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.AddNewGroupMembersActivity"
+            android:exported="true"
+            android:label=""
+            android:launchMode="singleTask"
+            android:theme="@style/AppThemeCreate"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="MEETUP_APP_ADD_NEW_GROUP_MEMBERS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.AddGroupMembersActivity"
+            android:exported="true"
+            android:label=""
+            android:launchMode="singleTask"
+            android:theme="@style/AppThemeCreate"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="MEETUP_APP_ADD_GROUP_MEMBERS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.GroupChatActivity"
+            android:exported="true"
+            android:label=""
+            android:launchMode="singleTask"
+            android:theme="@style/AppThemeCreate"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="MEETUP_APP_GROUP_CHAT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.GroupChatDetailsActivity"
+            android:exported="true"
+            android:theme="@style/AppThemeCreate"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="MEETUP_APP_GROUP_CHAT_DETAILS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.NewGroupActivity"
+            android:exported="true"
+            android:theme="@style/AppThemeCreate"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="MEETUP_APP_NEW_GROUP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.VerifyPinActivity"
+            android:exported="true"
+            android:theme="@style/AppThemeCreate"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="MEETUP_APP_VERIFY_PIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.NotificationSettingActivity"
+            android:exported="true"
+            android:theme="@style/AppThemeCreate"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="MEETUP_APP_NOTIFICATION_SETTING" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.GetStartActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="MEETUP_APP_GET_START" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.WelcomeActivityNew"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="MEETUP_APP_WELCOME" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- Deep link intent filter -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="meetupsfellow.com"
+                    android:scheme="http" />
+                <data
+                    android:host="meetupsfellow.com"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.CustomErrorActivity"
+            android:exported="true"
+            android:label="@string/error_title"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".mvp.view.activities.LoginActivity"
+            android:exported="true"
+            android:theme="@style/AppThemeCreate">
+            <intent-filter>
+                <action android:name="MEETUP_APP_LOGIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".mvp.view.activities.CreateProfileActivityNew"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppThemeCreate"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="MEETUP_APP_CREATE_PROFILE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.HomeActivity"
+            android:exported="true"
+            android:label=""
+            android:launchMode="singleTop"
+            android:theme="@style/AppThemeCreate"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="MEETUP_APP_HOME1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".mvp.view.activities.SettingsActivity"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppThemeCreate">
+            <intent-filter>
+                <action android:name="MEETUP_APP_SETTINGS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.FavoriteUserEvent"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppThemeCreate">
+            <intent-filter>
+                <action android:name="MEETUP_APP_FAVORITE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.SearchActivity"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppThemeSplash">
+            <intent-filter>
+                <action android:name="MEETUP_APP_SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.SearchByLocationActivity"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppThemeSplash">
+            <intent-filter>
+                <action android:name="MEETUP_APP_SEARCH_LOCATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.WebViewActivity"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppThemeSplash">
+            <intent-filter>
+                <action android:name="MEETUP_APP_WEB_VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.InterestedPeopleActivity"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppThemeSplash">
+            <intent-filter>
+                <action android:name="MEETUP_APP_INTERESTED_PEOPLE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.ProfileActivity"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppThemeCreate">
+            <intent-filter>
+                <action android:name="MEETUP_APP_PROFILE_SELF" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".mvp.view.activities.UserProfileActivity"
+            android:exported="true"
+            android:label=""
+            android:launchMode="singleTask"
+            android:theme="@style/AppThemeSplash">
+            <intent-filter>
+                <action android:name="MEETUP_APP_PROFILE_USER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.EventDetailsActivity"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppThemeSplash">
+            <intent-filter>
+                <action android:name="MEETUP_APP_EVENT_DETAILS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.CreateEventActivity"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppThemeCreate"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="MEETUP_APP_CREATE_EVENT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.ChangeNumberActivity"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppThemeSplash"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="MEETUP_APP_CHANGE_NUMBER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.NotificationActivity"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppThemeSplash"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="MEETUP_APP_NOTIFICATION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.ImagePagerActivity"
+            android:exported="true"
+            android:label=""
+            android:theme="@style/AppThemeSplashTran"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="MEETUP_APP_IMAGE_PAGER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".mvp.view.activities.ChatActivity"
+            android:exported="true"
+            android:label=""
+            android:launchMode="singleTask"
+            android:theme="@style/AppThemeCreate"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="MEETUP_APP_CHAT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.VideoPlayerActivity"
+            android:exported="true"
+            android:label=""
+            android:launchMode="singleTask"
+            android:theme="@style/transparentActivity"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="MEETUP_APP_CHAT_VIDEO_PLAYER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.BlockedUsersActivity"
+            android:exported="true"
+            android:label=""
+            android:launchMode="singleTask"
+            android:theme="@style/AppThemeCreate"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="MEETUP_APP_BLOCKED_USERS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.PrivateAccessActivity"
+            android:exported="true"
+            android:label=""
+            android:launchMode="singleTask"
+            android:theme="@style/AppThemeSplash"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="MEETUP_APP_PRIVATE_ACCESS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".mvp.view.activities.PrivateAccessListActivity"
+            android:exported="true"
+            android:label=""
+            android:launchMode="singleTask"
+            android:theme="@style/AppThemeSplash"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="MEETUP_APP_PRIVATE_LIST_ACCESS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".mvp.view.activities.PrivateAlbumActivity"
+            android:exported="true"
+            android:label=""
+            android:launchMode="singleTask"
+            android:theme="@style/AppThemeCreate"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="MEETUP_APP_VIEW_PRIVATE_ALBUM" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.connect.meetupsfellow.service.LocationUpdatesService"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedService" /> <!-- <service -->
+        <!-- android:name=".service.StickyService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true" -->
+        <!-- tools:ignore="ExportedService"/> -->
+        <!--
+ Service to asynchronously fetch a location address using a Geocoder. Setting the
+       android:exported attribute to "false" stops other apps from starting this
+       service, even when using an explicit intent.
+        -->
+        <receiver
+            android:name="com.connect.meetupsfellow.service.SmsReceiver"
+            android:exported="true"
+            android:permission="android.permission.BROADCAST_SMS"
+            tools:ignore="ExportedService">
+            <intent-filter android:priority="500">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.connect.meetupsfellow.service.FetchAddressIntentService"
+            android:enabled="true"
+            android:exported="false" />
+        <!--
+ <service
+            android:name="com.connect.meetupsfellow.firebase.NotificationService"
+            android:exported="true"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        -->
+        <service
+            android:name="com.connect.meetupsfellow.firebase.NotificationService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- <service -->
+        <!-- android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService" -->
+        <!-- android:enabled="true" /> -->
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.fc.debug" />
+            </intent-filter>
+        </receiver>
+        <!--
+ <meta-data
+                android:name="com.google.firebase.messaging.default_notification_icon"
+                android:resource="@drawable/ic_launcher" />
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_server_key" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@android:color/white" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="ea821874b430f171cc844a37a334edab93d11f2c" />
+        <meta-data
+            android:name="android.webkit.WebView.EnableSafeBrowsing"
+            android:value="true" />
+
+       <!-- <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.connect.meetupsfellow.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>-->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.connect.meetupsfellow.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+
+
+    </application>
+
+</manifest>

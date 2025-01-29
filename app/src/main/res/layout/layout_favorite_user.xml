@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="spUsage">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivNoFavFellow"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:src="@drawable/no_favorite_fellow"/>
+    <TextView
+        android:id="@+id/tvNoFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/montserrat_regular"
+        android:gravity="center"
+        android:layout_below="@+id/ivNoFavFellow"
+        android:text="No Favorite Fellows in your list"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16sdp"
+        android:visibility="gone" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshUsers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/inner_img_xxl"
+        android:paddingEnd="@dimen/inner_img_xxl">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFavoriteUsers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <include android:id="@+id/included_loading"
+        layout="@layout/layout_loading" />
+
+</RelativeLayout>

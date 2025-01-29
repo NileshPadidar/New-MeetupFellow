@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/inner_img_xl"
+    android:gravity="start"
+    android:orientation="horizontal"
+    tools:ignore="spUsage">
+
+    <LinearLayout
+        android:id="@+id/flagLay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="@drawable/rounded_corners_filter_default"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/flagCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:clickable="false"
+            android:button="@drawable/selector_terms"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tvFlagReason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:paddingTop="@dimen/inner_img_m"
+            android:paddingBottom="@dimen/inner_img_m"
+            android:text="@string/text_partner_status_1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xs" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

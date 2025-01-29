@@ -1,0 +1,1183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_11sdp"
+    tools:ignore="spUsage,Autofill,LabelFor">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:paddingTop="@dimen/inner_img_xl"
+                android:paddingBottom="@dimen/inner_img_xl"
+                android:text="Select Your Preferences"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_button_m"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/llPreferences_Top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_m"
+                tools:ignore="spUsage,Autofill,LabelFor">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingTop="@dimen/inner_img_xl"
+                    android:paddingBottom="@dimen/inner_img_xl"
+                    android:text="@string/label_handball_text"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvFisting1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_corners_filter_default"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:paddingStart="@dimen/inner_img_xxl"
+                        android:paddingTop="@dimen/inner_img_m"
+                        android:paddingEnd="@dimen/inner_img_xxl"
+                        android:paddingBottom="@dimen/inner_img_m"
+                        android:text="@string/text_fisting_id_1"
+                        android:textColor="@color/color_preference_selector"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvFisting2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/inner_img_xxl"
+                        android:layout_marginEnd="@dimen/inner_img_xxl"
+                        android:background="@drawable/rounded_corners_filter_default"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:paddingStart="@dimen/inner_img_xxl"
+                        android:paddingTop="@dimen/inner_img_m"
+                        android:paddingEnd="@dimen/inner_img_xxl"
+                        android:paddingBottom="@dimen/inner_img_m"
+                        android:text="@string/text_fisting_id_2"
+                        android:textColor="@color/color_preference_selector"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvFisting3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_corners_filter_default"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:paddingStart="@dimen/inner_img_xxl"
+                        android:paddingTop="@dimen/inner_img_m"
+                        android:paddingEnd="@dimen/inner_img_xxl"
+                        android:paddingBottom="@dimen/inner_img_m"
+                        android:text="@string/text_fisting_id_3"
+                        android:textColor="@color/color_preference_selector"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingTop="@dimen/inner_img_xl"
+                    android:paddingBottom="@dimen/inner_img_xl"
+                    android:text="@string/label_glove_text"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvGloveYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_preferences"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:paddingStart="@dimen/inner_img_xxxl_1"
+                        android:paddingTop="@dimen/inner_img_m"
+                        android:paddingEnd="@dimen/inner_img_xxxl_1"
+                        android:paddingBottom="@dimen/inner_img_m"
+                        android:text="@string/text_yes"
+                        android:textColor="@color/color_preference_selector"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvGloveNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/inner_img_xxl"
+                        android:layout_marginEnd="@dimen/inner_img_xxl"
+                        android:background="@drawable/selector_preferences"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:paddingStart="@dimen/inner_img_xxxl_1"
+                        android:paddingTop="@dimen/inner_img_m"
+                        android:paddingEnd="@dimen/inner_img_xxxl_1"
+                        android:paddingBottom="@dimen/inner_img_m"
+                        android:text="@string/text_no"
+                        android:textColor="@color/color_preference_selector"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvGloveNeutral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_preferences"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:paddingStart="@dimen/inner_img_xxxl_1"
+                        android:paddingTop="@dimen/inner_img_m"
+                        android:paddingEnd="@dimen/inner_img_xxxl_1"
+                        android:paddingBottom="@dimen/inner_img_m"
+                        android:text="@string/text_neutral"
+                        android:textColor="@color/color_preference_selector"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingTop="@dimen/inner_img_xl"
+                    android:paddingBottom="@dimen/inner_img_xl"
+                    android:text="@string/label_intercourse_text"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvIntercourse1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_corners_filter_default"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:paddingStart="@dimen/inner_img_xxxl_1"
+                        android:paddingTop="@dimen/inner_img_m"
+                        android:paddingEnd="@dimen/inner_img_xxxl_1"
+                        android:paddingBottom="@dimen/inner_img_m"
+                        android:text="@string/text_intercourse_1"
+                        android:textColor="@color/color_preference_selector"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvIntercourse2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/inner_img_xxl"
+                        android:layout_marginEnd="@dimen/inner_img_xxl"
+                        android:background="@drawable/rounded_corners_filter_default"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:paddingStart="@dimen/inner_img_xxxl_1"
+                        android:paddingTop="@dimen/inner_img_m"
+                        android:paddingEnd="@dimen/inner_img_xxxl_1"
+                        android:paddingBottom="@dimen/inner_img_m"
+                        android:text="@string/text_intercourse_2"
+                        android:textColor="@color/color_preference_selector"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvIntercourse3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_corners_filter_default"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:paddingStart="@dimen/inner_img_xxxl_1"
+                        android:paddingTop="@dimen/inner_img_m"
+                        android:paddingEnd="@dimen/inner_img_xxxl_1"
+                        android:paddingBottom="@dimen/inner_img_m"
+                        android:text="@string/text_intercourse_3"
+                        android:textColor="@color/color_preference_selector"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingTop="@dimen/inner_img_xl"
+                    android:paddingBottom="@dimen/inner_img_xl"
+                    android:text="@string/label_condom_text"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvCondomYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_corners_filter_default"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:paddingStart="@dimen/inner_img_xxxl_1"
+                        android:paddingTop="@dimen/inner_img_m"
+                        android:paddingEnd="@dimen/inner_img_xxxl_1"
+                        android:paddingBottom="@dimen/inner_img_m"
+                        android:text="@string/text_prep"
+                        android:textColor="@color/color_preference_selector"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvCondomNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/inner_img_xxl"
+                        android:layout_marginEnd="@dimen/inner_img_xxl"
+                        android:background="@drawable/rounded_corners_filter_default"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:paddingStart="@dimen/inner_img_xxxl_1"
+                        android:paddingTop="@dimen/inner_img_m"
+                        android:paddingEnd="@dimen/inner_img_xxxl_1"
+                        android:paddingBottom="@dimen/inner_img_m"
+                        android:text="@string/text_condoms"
+                        android:textColor="@color/color_preference_selector"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvCondomNeutral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_preferences"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:paddingStart="@dimen/inner_img_xxxl_1"
+                        android:paddingTop="@dimen/inner_img_m"
+                        android:paddingEnd="@dimen/inner_img_xxxl_1"
+                        android:paddingBottom="@dimen/inner_img_m"
+                        android:text="@string/text_neutral"
+                        android:textColor="@color/color_preference_selector"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvPrevention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/inner_img_xl"
+                    android:background="@drawable/rounded_corners_filter_default"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:paddingStart="@dimen/inner_img_xxl"
+                    android:paddingTop="@dimen/inner_img_m"
+                    android:paddingEnd="@dimen/inner_img_xxl"
+                    android:paddingBottom="@dimen/inner_img_m"
+                    android:text="@string/text_prevention"
+                    android:textColor="@color/color_preference_selector"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingTop="@dimen/inner_img_xl"
+                    android:paddingBottom="@dimen/inner_img_xl"
+                    android:text="@string/label_i_identify_text"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvIdentity1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_1"
+                            android:text="@string/text_identity_1"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvIdentity2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/inner_img_xxl"
+                            android:layout_marginEnd="@dimen/inner_img_xxl"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_2"
+                            android:text="@string/text_identity_2"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvIdentity3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_3"
+                            android:text="@string/text_identity_3"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/inner_img_xl">
+
+                        <TextView
+                            android:id="@+id/tvIdentity4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_4"
+                            android:text="@string/text_identity_4"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvIdentity5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/inner_img_xxl"
+                            android:layout_marginEnd="@dimen/inner_img_xxl"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_5"
+                            android:text="@string/text_identity_5"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvIdentity6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_6"
+                            android:text="@string/text_identity_6"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/inner_img_xl">
+
+                        <TextView
+                            android:id="@+id/tvIdentity7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_7"
+                            android:text="@string/text_identity_7"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvIdentity8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/inner_img_xxl"
+                            android:layout_marginEnd="@dimen/inner_img_xxl"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_8"
+                            android:text="@string/text_identity_8"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/inner_img_xl">
+
+                        <TextView
+                            android:id="@+id/tvIdentity9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_9"
+                            android:text="@string/text_identity_9"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvIdentity10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/inner_img_xxl"
+                            android:layout_marginEnd="@dimen/inner_img_xxl"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_10"
+                            android:text="@string/text_identity_10"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvIdentity11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_11"
+                            android:text="@string/text_identity_11"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/inner_img_xl">
+
+                        <TextView
+                            android:id="@+id/tvIdentity12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_12"
+                            android:text="@string/text_identity_12"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvIdentity13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/inner_img_xxl"
+                            android:layout_marginEnd="@dimen/inner_img_xxl"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_13"
+                            android:text="@string/text_identity_13"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvIdentity14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_14"
+                            android:text="@string/text_identity_14"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/inner_img_xl">
+
+                        <TextView
+                            android:id="@+id/tvIdentity15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_15"
+                            android:text="@string/text_identity_15"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvIdentity16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/inner_img_xl"
+                            android:layout_marginEnd="@dimen/inner_img_xl"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_16"
+                            android:text="@string/text_identity_16"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/inner_img_xl">
+
+                        <TextView
+                            android:id="@+id/tvIdentity17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_17"
+                            android:text="@string/text_identity_17"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvIdentity18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/inner_img_xxl"
+                            android:layout_marginEnd="@dimen/inner_img_xxl"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxl"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxl"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_18"
+                            android:text="@string/text_identity_18"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvIdentity19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_19"
+                            android:text="@string/text_identity_19"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingTop="@dimen/inner_img_xl"
+                    android:paddingBottom="@dimen/inner_img_xl"
+                    android:text="@string/label_into_members_text"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvMember1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_1"
+                            android:text="@string/text_identity_1"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvMember2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/inner_img_xxl"
+                            android:layout_marginEnd="@dimen/inner_img_xxl"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_2"
+                            android:text="@string/text_identity_2"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvMember3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_3"
+                            android:text="@string/text_identity_3"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/inner_img_xl">
+
+                        <TextView
+                            android:id="@+id/tvMember4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_4"
+                            android:text="@string/text_identity_4"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvMember5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/inner_img_xxl"
+                            android:layout_marginEnd="@dimen/inner_img_xxl"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_5"
+                            android:text="@string/text_identity_5"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvMember6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_6"
+                            android:text="@string/text_identity_6"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/inner_img_xl">
+
+                        <TextView
+                            android:id="@+id/tvMember7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_7"
+                            android:text="@string/text_identity_7"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvMember8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/inner_img_xxl"
+                            android:layout_marginEnd="@dimen/inner_img_xxl"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_8"
+                            android:text="@string/text_identity_8"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/inner_img_xl">
+
+                        <TextView
+                            android:id="@+id/tvMember9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_9"
+                            android:text="@string/text_identity_9"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvMember10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/inner_img_xxl"
+                            android:layout_marginEnd="@dimen/inner_img_xxl"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_10"
+                            android:text="@string/text_identity_10"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvMember11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_11"
+                            android:text="@string/text_identity_11"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/inner_img_xl">
+
+                        <TextView
+                            android:id="@+id/tvMember12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_12"
+                            android:text="@string/text_identity_12"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvMember13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/inner_img_xxl"
+                            android:layout_marginEnd="@dimen/inner_img_xxl"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_13"
+                            android:text="@string/text_identity_13"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvMember14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_14"
+                            android:text="@string/text_identity_14"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/inner_img_xl">
+
+                        <TextView
+                            android:id="@+id/tvMember15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_15"
+                            android:text="@string/text_identity_15"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvMember16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/inner_img_xl"
+                            android:layout_marginEnd="@dimen/inner_img_xl"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_16"
+                            android:text="@string/text_identity_16"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/inner_img_xl">
+
+                        <TextView
+                            android:id="@+id/tvMember17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_17"
+                            android:text="@string/text_identity_17"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvMember18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/inner_img_xxl"
+                            android:layout_marginEnd="@dimen/inner_img_xxl"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxl"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxl"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_18"
+                            android:text="@string/text_identity_18"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvMember19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/rounded_corners_filter_default"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:paddingStart="@dimen/inner_img_xxxl_1"
+                            android:paddingTop="@dimen/inner_img_m"
+                            android:paddingEnd="@dimen/inner_img_xxxl_1"
+                            android:paddingBottom="@dimen/inner_img_m"
+                            android:tag="@string/text_identity_19"
+                            android:text="@string/text_identity_19"
+                            android:textColor="@color/colorPreferenceUnSelected"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_sti_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:paddingTop="@dimen/inner_img_xl"
+                        android:paddingBottom="@dimen/inner_img_xl"
+                        android:text="@string/label_sti_text"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/etSti"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/drawable_rounded_corners_edit_text"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center_vertical"
+                        android:hint="@string/hint_text_sti"
+                        android:imeActionLabel="Next"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/inner_img_xxl"
+                        android:paddingTop="@dimen/inner_img_xl"
+                        android:paddingEnd="@dimen/inner_img_xxl"
+                        android:paddingBottom="@dimen/inner_img_xl"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:paddingTop="@dimen/inner_img_xl"
+                        android:paddingBottom="@dimen/inner_img_xl"
+                        android:text="@string/label_sex_text"
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tvGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/drawable_rounded_corners_edit_text"
+                        android:drawableEnd="@drawable/down_arrow"
+                        android:drawableRight="@drawable/down_arrow"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/inner_img_xxl"
+                        android:paddingTop="@dimen/inner_img_xl"
+                        android:paddingEnd="@dimen/inner_img_xxl"
+                        android:paddingBottom="@dimen/inner_img_xl"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/grey"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:paddingTop="@dimen/inner_img_xl"
+                    android:paddingBottom="@dimen/inner_img_xl"
+                    android:text="@string/label_prep_text"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvPrEP1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_corners_filter_default"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:paddingStart="@dimen/inner_img_xxxl_1"
+                        android:paddingTop="@dimen/inner_img_m"
+                        android:paddingEnd="@dimen/inner_img_xxxl_1"
+                        android:paddingBottom="@dimen/inner_img_m"
+                        android:text="@string/text_prep_1"
+                        android:textColor="@color/colorPreferenceUnSelected"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvPrEP2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/inner_img_xxl"
+                        android:layout_marginEnd="@dimen/inner_img_xxl"
+                        android:background="@drawable/rounded_corners_filter_default"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:paddingStart="@dimen/inner_img_xxxl_1"
+                        android:paddingTop="@dimen/inner_img_m"
+                        android:paddingEnd="@dimen/inner_img_xxxl_1"
+                        android:paddingBottom="@dimen/inner_img_m"
+                        android:text="@string/text_prep_2"
+                        android:textColor="@color/colorPreferenceUnSelected"
+                        android:textSize="@dimen/text_size_button_m" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSavePref"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:background="@drawable/round_corner_btn_new"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Save Preference"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/inner_img_xxxl"
+        android:paddingRight="@dimen/inner_img_xl_2"
+        tools:ignore="spUsage"
+        android:paddingLeft="0dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="@dimen/inner_img_xl_2">
+
+    <TextView
+        android:id="@+id/tvSave"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/round_corner_btn_new"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:paddingStart="@dimen/inner_img_xl_2"
+        android:paddingEnd="@dimen/inner_img_xl_2"
+        android:text="@string/btn_text_save"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_button_xs" />
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRepLay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:drag_edge="left"
+    app:show_mode="pull_out"
+    app:rightEdgeSwipeOffset="0dp"
+    app:leftEdgeSwipeOffset="0dp"
+    android:layout_marginStart="@dimen/_8sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/reply__1_"
+            />
+
+    </LinearLayout>
+
+    <include layout="@layout/item_group_chat"/>
+
+</com.daimajia.swipe.SwipeLayout>

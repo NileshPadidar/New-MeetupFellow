@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rlBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/group_2"
+        android:clickable="false">
+
+        <RelativeLayout
+            android:id="@+id/rlTitle"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:paddingStart="@dimen/inner_img_xxl"
+            android:paddingEnd="@dimen/inner_img_xxl">
+
+            <ImageView
+                android:id="@+id/ivCrossFlag"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/back_arrow"
+                android:backgroundTint="@color/black"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/tvHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_toEndOf="@+id/ivCrossFlag"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Report User"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rlTitle"
+            android:visibility="gone"
+            android:background="@drawable/divider_gray" />
+
+        <RelativeLayout
+            android:id="@+id/rlFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_below="@+id/view2"
+            android:paddingStart="@dimen/inner_img_xxl"
+            android:paddingEnd="@dimen/inner_img_xxl">
+
+            <ImageView
+                android:id="@+id/iv_flag"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/newspaper"
+                android:backgroundTint="@color/red"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/inner_img_xxl"
+                android:layout_marginLeft="@dimen/inner_img_xxl"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_toEndOf="@+id/iv_flag"
+                android:layout_toRightOf="@+id/iv_flag"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Please select activities you found inappropriate."
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_button_s" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnSend"
+            android:layout_below="@+id/rlFeedback"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:paddingStart="@dimen/inner_img_xxl"
+            android:paddingEnd="@dimen/inner_img_xxl"
+            android:paddingBottom="@dimen/inner_img_xl">
+
+            <ImageView
+                android:id="@+id/iv_flagDummy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/image_overlay_flag_user"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvReasons"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/iv_flagDummy"
+                android:layout_toRightOf="@+id/iv_flagDummy"
+                android:overScrollMode="never"
+                tools:listitem="@layout/item_reason" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlDanger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnSend"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/inner_img_xl"
+            android:background="@drawable/drawable_rounded_corners_otp"
+            android:paddingStart="@dimen/inner_img_xl"
+            android:paddingTop="@dimen/inner_img_xl"
+            android:paddingEnd="@dimen/inner_img_xl"
+            android:paddingBottom="@dimen/inner_img_xl">
+
+            <ImageView
+                android:id="@+id/iv_flag3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_info"
+                android:backgroundTint="@color/black"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/inner_img_xxl"
+                android:layout_marginLeft="@dimen/inner_img_xxl"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_toEndOf="@+id/iv_flag3"
+                android:layout_toRightOf="@+id/iv_flag3"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/label_emergency_text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_button_s" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSend"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/round_corner_btn_new"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Report"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

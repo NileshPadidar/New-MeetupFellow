@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RangeBar">
+        <attr name="tickStart" format="float"/>
+        <attr name="tickEnd" format="float"/>
+        <attr name="tickInterval" format="float"/>
+        <attr name="tickHeight" format="dimension"/>
+        <attr name="tickColor" format="color"/>
+        <attr name="barWeight" format="dimension"/>
+        <attr name="rangeBarColor" format="reference|color"/>
+        <attr name="textColor" format="reference|color"/>
+        <attr name="pinColor" format="reference|color"/>
+        <attr name="selectorSize" format="dimension"/>
+        <attr name="selectorBoundaryColor" format="reference|color"/>
+        <attr name="selectorBoundarySize" format="dimension"/>
+        <attr name="pinPadding" format="dimension"/>
+        <attr name="pinMinFont" format="dimension"/>
+        <attr name="pinMaxFont" format="dimension"/>
+        <attr name="rangeBarPaddingBottom" format="dimension"/>
+        <attr name="selectorColor" format="reference|color"/>
+        <attr name="rangeBar" format="boolean"/>
+        <attr name="temporaryPins" format="boolean"/>
+        <attr name="connectingLineWeight" format="dimension"/>
+        <attr name="connectingLineColor" format="reference|color"/>
+        <attr name="pinRadius" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="AVLoadingIndicatorView">
+        <attr name="minWidth" format="dimension"/>
+        <attr name="maxWidth" format="dimension"/>
+        <attr name="minHeight" format="dimension"/>
+        <attr name="maxHeight" format="dimension"/>
+        <attr name="indicatorName" format="string"/>
+        <attr name="indicatorColor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="OtpTextView">
+        <attr name="android:textColor"/>
+        <attr name="otp" format="string"/>
+        <attr name="hide_otp" format="boolean"/>
+        <attr name="hide_otp_drawable" format="reference"/>
+        <attr name="length" format="integer"/>
+        <attr name="width" format="dimension"/>
+        <attr name="height" format="dimension"/>
+        <attr name="box_margin" format="dimension"/>
+        <attr name="box_margin_left" format="dimension"/>
+        <attr name="box_margin_right" format="dimension"/>
+        <attr name="box_margin_top" format="dimension"/>
+        <attr name="box_margin_bottom" format="dimension"/>
+        <attr name="bar_height" format="dimension"/>
+        <attr name="bar_enabled" format="boolean"/>
+        <attr name="otp_box_background" format="reference"/>
+        <attr name="otp_box_background_active" format="reference"/>
+        <attr name="otp_box_background_inactive" format="reference"/>
+        <attr name="otp_box_background_success" format="reference"/>
+        <attr name="otp_box_background_error" format="reference"/>
+        <attr name="bar_margin" format="dimension"/>
+        <attr name="bar_margin_bottom" format="dimension"/>
+        <attr name="bar_margin_right" format="dimension"/>
+        <attr name="bar_margin_left" format="dimension"/>
+        <attr name="bar_margin_top" format="dimension"/>
+        <attr name="otp_text_size" format="dimension"/>
+        <attr name="bar_active_color" format="color"/>
+        <attr name="bar_inactive_color" format="color"/>
+        <attr name="bar_error_color" format="color"/>
+        <attr name="bar_success_color" format="color"/>
+        <attr name="text_typeface" format="string"/>
+    </declare-styleable>
+
+</resources>

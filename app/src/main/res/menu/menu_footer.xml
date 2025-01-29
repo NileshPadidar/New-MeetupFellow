@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:id="@+id/footer_feed"
+            android:title="@string/btn_text_save"
+            app:showAsAction="always"
+            android:icon="@drawable/feed_icon"/>
+
+    <item
+            android:id="@+id/footer_nearby"
+            android:title="@string/btn_text_save"
+            app:showAsAction="ifRoom"
+            android:icon="@drawable/ic_location"/>
+
+    <item
+            android:id="@+id/footer_add"
+            android:title="@string/btn_text_save"
+            app:showAsAction="ifRoom"
+            android:icon="@drawable/add_btn"/>
+
+    <item
+            android:id="@+id/footer_chat"
+            android:title="@string/btn_text_save"
+            app:showAsAction="ifRoom"
+            android:icon="@drawable/chat_4x"/>
+
+    <item
+            android:id="@+id/footer_favorite"
+            android:title="@string/btn_text_save"
+            app:showAsAction="ifRoom"
+            android:icon="@drawable/heart_3x"/>
+</menu>

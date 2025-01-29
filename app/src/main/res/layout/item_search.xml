@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    tools:ignore="spUsage"
+    android:padding="@dimen/inner_img_s"
+    android:baselineAligned="false">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        app:cardCornerRadius="@dimen/_8sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivSearchItemImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                android:background="@drawable/trending_gradient_shape" />
+
+            <TextView
+                android:id="@+id/tvSearchItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="left"
+                android:maxLines="1"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="2dp"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_7sdp" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/ivUserStatus"
+                android:layout_width="@dimen/inner_img_xl_2"
+                android:layout_height="@dimen/inner_img_xl_2"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/app_name"
+                android:layout_marginTop="@dimen/inner_img_m"
+                android:layout_marginEnd="@dimen/inner_img_m"
+                android:layout_marginStart="0dp"
+                android:src="@drawable/selector_user_status"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="@dimen/inner_img_m"
+                android:layout_marginLeft="0dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!--<RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="0.85"
+            android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivSearchItemImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/placeholder" />
+
+        <ImageView
+            android:visibility="gone"
+                android:id="@+id/ivUserStatus"
+                android:layout_width="@dimen/inner_img_xl_2"
+                android:layout_height="@dimen/inner_img_xl_2"
+                android:layout_alignParentRight="true"
+                android:contentDescription="@string/app_name"
+                android:layout_marginTop="@dimen/inner_img_m"
+                android:layout_marginEnd="@dimen/inner_img_m"
+                android:layout_marginStart="0dp"
+                android:src="@drawable/selector_user_status"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="@dimen/inner_img_m"
+                android:layout_marginLeft="0dp"/>
+
+    </RelativeLayout>-->
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/inner_img_m"
+            android:paddingStart="@dimen/inner_img_xl_2"
+            android:paddingRight="0dp"
+        android:visibility="gone"
+            android:paddingEnd="0dp"
+            android:paddingLeft="@dimen/inner_img_xl_2">
+
+        <TextView
+            android:id="@+id/tvSearchItemName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_toStartOf="@id/tvSearchItemDistance"
+            android:layout_toLeftOf="@+id/tvSearchItemDistance"
+            android:ellipsize="end"
+            android:fontFamily="@font/montserrat_regular"
+            android:maxLines="1"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_s" />
+
+        <TextView
+                android:id="@+id/tvSearchItemDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="@dimen/text_size_button_xs"
+                android:textColor="@color/colorMenuAddress"
+                tools:text="@string/text_distance"
+                android:maxLines="1"
+                android:layout_alignParentEnd="true"/>
+
+        <TextView
+                android:id="@+id/tvSearchItemLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hint_text_hometown"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="@dimen/text_size_button_xs"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/inner_img_s"
+                android:maxLines="1"
+                android:layout_below="@+id/tvSearchItemName1"
+                android:ellipsize="end"
+                android:textColor="@color/colorMenuAddress"
+                android:drawableLeft="@drawable/ic_location"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="@dimen/inner_img_l"/>
+
+        <TextView
+                android:id="@+id/tvSearchItemDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/inner_img_s"
+                android:visibility="visible"
+                android:padding="@dimen/inner_img_s"
+                android:text="@string/hint_date"
+                android:textColor="@color/colorMenuAddress"
+                android:textSize="@dimen/text_size_button_xs"
+                android:layout_below="@+id/tvSearchItemLocation"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

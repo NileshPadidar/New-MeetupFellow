@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:id="@+id/menu_location"
+            app:actionLayout="@layout/custom_locattion_icon"
+            android:title="@string/text_location"
+            app:showAsAction="always" />
+
+    <item
+            android:id="@+id/menu_search"
+            android:icon="@drawable/ic_baseline_search_24"
+            android:title="@string/btn_text_search"
+            app:showAsAction="always" />
+
+    <item
+            android:id="@+id/menu_add"
+            android:icon="@drawable/addevent60"
+            android:title="@string/btn_text_add"
+            android:visible="true"
+            app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_refresh"
+        android:icon="@drawable/notification_clear_all"
+        android:title="@string/title_refresh"
+        app:showAsAction="always"
+        />
+
+    <item
+            android:id="@+id/menu_notification"
+            android:icon="@drawable/notification"
+            android:title="@string/title_notifications"
+            app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_addChat"
+        android:icon="@drawable/ic_baseline_add_24"
+        android:title="@string/btn_text_add"
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_drawerBtn"
+        android:icon="@drawable/ic_baseline_menu_24"
+        android:title="@string/text_edit_text"
+        app:showAsAction="always" />
+</menu>

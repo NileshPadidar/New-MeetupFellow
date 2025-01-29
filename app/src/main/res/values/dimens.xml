@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin" tools:keep="@dimen/activity_horizontal_margin">16dp</dimen>
+
+    <dimen name="text_size_s" tools:keep="@dimen/text_size_s">16sp</dimen>
+    <dimen name="button_height" tools:keep="@dimen/button_height">48dp</dimen>
+    <dimen name="ads_size" >85dp</dimen>
+
+    <dimen name="image_width">80dp</dimen>
+    <dimen name="image_height">90dp</dimen>
+    <dimen name="spacing_normal" tools:keep="@dimen/spacing_normal">16dp</dimen>
+
+    <dimen name="corner_radius_box_xs" tools:keep="@dimen/corner_radius_box_xs">5dp</dimen>
+    <dimen name="corner_radius_box_s" tools:keep="@dimen/corner_radius_box_s">8dp</dimen>
+
+    <dimen name="design_navigation_separator_vertical_padding" tools:override="true">1dp</dimen>
+
+    <dimen name="design_fab_image_size" tools:override="true">40dp</dimen>
+
+    <dimen name="text_size_button_xxxxs">9.5dp</dimen>
+    <dimen name="text_size_button_xxxs">9dp</dimen>
+    <dimen name="text_size_button_xxs">11dp</dimen>
+    <dimen name="text_size_button_xs">13dp</dimen>
+    <dimen name="text_size_button_s">14dp</dimen>
+    <dimen name="text_size_button_m">15dp</dimen>
+    <dimen name="text_size_button_l">17dp</dimen>
+    <dimen name="text_size_button_xl">23dp</dimen>
+
+    <dimen name="inner_img_s">2dp</dimen>
+    <dimen name="inner_img_m">4dp</dimen>
+    <dimen name="inner_img_l">16dp</dimen>
+    <dimen name="inner_img_xl">7dp</dimen>
+    <dimen name="inner_img_xl_2">11dp</dimen>
+    <dimen name="inner_img_xxl_1">13dp</dimen>
+    <dimen name="inner_img_xxl">15dp</dimen>
+    <dimen name="inner_img_xxxl_1">20dp</dimen>
+    <dimen name="inner_img_xxxl">27dp</dimen>
+
+</resources>

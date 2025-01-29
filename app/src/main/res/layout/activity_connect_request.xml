@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.view.activities.ConnectRequestActivity"
+    android:background="@drawable/group_2"
+    tools:ignore="spUsage">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/layout_toolbar" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/connection_tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@color/white"
+        app:tabGravity="fill"
+        app:tabIndicatorAnimationMode="elastic"
+        app:tabIndicatorColor="@color/red"
+        app:tabIndicatorFullWidth="true"
+        app:tabIndicatorGravity="bottom"
+        app:tabIndicatorHeight="2dp"
+        app:tabMode="fixed"
+        app:tabPadding="@dimen/_2sdp"
+        app:tabSelectedTextColor="@color/gradientEnd"
+        app:tabTextAppearance="@style/Style_TabText"
+        app:tabTextColor="@color/black" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/connection_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/connection_tabLayout"
+        />
+
+
+    <com.google.android.gms.ads.admanager.AdManagerAdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adManagerAdView_connect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:layout_below="@+id/header"
+        ads:adSize="BANNER"
+        android:visibility="gone"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.admanager.AdManagerAdView>
+
+
+    <ImageView
+        android:id="@+id/no_connect_img"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/block_user__1_"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/tvNoUser_Request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/no_connect_img"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Connect Request Not Found"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvConnectRequest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/adManagerAdView_connect"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:clipToPadding="false"
+        android:visibility="gone"
+        android:overScrollMode="never" />
+
+    <include android:id="@+id/included_loading"
+        layout="@layout/layout_loading" />
+
+
+</RelativeLayout>

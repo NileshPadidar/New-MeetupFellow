@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appBarLayoutLoc"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    tools:ignore="NestedWeights,SpUsage,Autofill,LabelFor,TextFields">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:minHeight="?actionBarSize"
+        android:theme="@style/AppTheme.ActionBar2"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/inner_img_xl"
+            android:layout_marginBottom="@dimen/inner_img_xl"
+            android:layout_marginRight="@dimen/inner_img_xl_2"
+            android:layout_marginLeft="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="@dimen/inner_img_xl_2">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/back_arrow" />
+
+            <ImageView
+                android:id="@+id/locChangeIcon"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:background="@drawable/ic_baseline_my_location_24" />
+
+            <TextView
+                android:id="@+id/changeLoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/locChangeIcon"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:text="Change"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8sdp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4sp"
+                android:layout_marginLeft="@dimen/inner_img_xl_2"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_toStartOf="@+id/changeLoc"
+                android:layout_toEndOf="@+id/ivBack"
+                android:layout_toRightOf="@+id/ivBack"
+                android:background="@drawable/drawable_rounded_corners_search"
+                android:backgroundTint="@color/backGround">
+
+                <!--<fragment
+                    android:id="@+id/autocomplete_fragment"
+                    android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/ivCross"
+                    android:layout_toLeftOf="@+id/ivCross" />
+-->
+                <TextView
+                    android:id="@+id/locName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toStartOf="@+id/ivCross"
+                    android:layout_toLeftOf="@+id/ivCross"
+                    android:background="@null"
+                    android:digits="qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM_1234567890 "
+                    android:fontFamily="@font/montserrat_regular"
+                    android:hint="@string/search_hint"
+                    android:imeActionLabel="Search"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/inner_img_xl"
+                    android:paddingEnd="@dimen/inner_img_xl"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/text_size_button_s"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/ivCross"
+                    android:layout_width="@dimen/inner_img_xxxl_1"
+                    android:layout_height="@dimen/inner_img_xxxl_1"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/inner_img_l"
+                    android:layout_marginRight="@dimen/inner_img_l"
+                    android:background="@null"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/cross_icon"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+</com.google.android.material.appbar.AppBarLayout>

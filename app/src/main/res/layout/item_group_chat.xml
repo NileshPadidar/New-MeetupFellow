@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chatMsgLay"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:elevation="@dimen/_10sdp">
+
+    <RelativeLayout
+        android:id="@+id/rlGroupNotice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/_8sdp"
+            app:cardBackgroundColor="@color/cardBgColor"
+            app:cardCornerRadius="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/groupNotice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:maxWidth="@dimen/_180sdp"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingTop="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_4sdp"
+                android:text="group notices"
+                android:textAlignment="center"
+                android:textColor="@color/gradientEnd"
+                android:textSize="@dimen/_8sdp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlChatO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/inner_img_xxxl"
+        android:layout_marginRight="@dimen/inner_img_xxxl"
+        android:background="@drawable/drawable_chat_other"
+        android:elevation="@dimen/_4sdp"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/userNameChat1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:paddingStart="@dimen/_2sdp"
+            android:paddingEnd="@dimen/_2sdp"
+            android:text=""
+            android:textColor="#F4447E"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="gone" />
+
+      <!--  <io.github.ponnamkarthik.richlinkpreview.RichLinkView
+            android:id="@+id/richLinkViewO"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userNameChat1"
+            android:visibility="gone" />-->
+        <TextView
+            android:id="@+id/richLinkViewO"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_below="@+id/userNameChat1"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/replyChatLayO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/richLinkViewO"
+            android:layout_alignStart="@+id/tvChatMessageO"
+            android:layout_alignEnd="@id/flImageO"
+            android:layout_marginEnd="@dimen/_minus2sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="@dimen/_8sdp">
+
+            <LinearLayout
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:background="@color/gradientEnd"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/userReplyNameO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:paddingStart="@dimen/_2sdp"
+                        android:paddingEnd="@dimen/_2sdp"
+                        android:text="meetupffellwo"
+                        android:textColor="#F4447E"
+                        android:textSize="@dimen/_8sdp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/replyChatMessageO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/userNameChat1"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="start"
+                        android:linksClickable="true"
+                        android:maxWidth="@dimen/_200sdp"
+                        android:maxLines="2"
+                        android:minWidth="@dimen/_100sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:textColor="#FAF5F5"
+                        android:textSize="12dp"
+                        tools:text="meetupfelloe" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/otherReplayImgLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_weight="2"
+                    android:gravity="end|center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/otherReplyImg"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginEnd="@dimen/_4sdp"
+                        android:scaleType="fitXY" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvChatMessageO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/replyChatLayO"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:autoLink="all"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="start"
+            android:linksClickable="true"
+            android:maxWidth="@dimen/_200sdp"
+            android:minWidth="@dimen/_100sdp"
+            android:padding="@dimen/_4sdp"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:textColorLink="@color/gradientEnd"
+            android:textSize="@dimen/text_size_button_xxs"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/chatIdO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="adsa"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvChatTimeO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvChatMessageO"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:padding="4dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xxxxs"
+            tools:text="@string/app_name" />
+
+        <RelativeLayout
+            android:id="@+id/gifViewLayO"
+            android:layout_width="192dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/replyChatLayO"
+            android:background="@drawable/drawable_chat_other"
+            android:padding="@dimen/inner_img_l"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/userNameChatGifO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:paddingStart="@dimen/_2sdp"
+                android:paddingEnd="@dimen/_2sdp"
+                android:text=""
+                android:textColor="#F4447E"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone" />
+
+            <com.giphy.sdk.ui.views.GPHMediaView
+                android:id="@+id/gifViewO"
+                android:layout_width="188dp"
+                android:layout_height="200dp"
+                android:layout_above="@+id/tvTimeGifO"
+                android:layout_below="@+id/userNameChatGifO"
+                android:elevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tvTimeGifO"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/gifViewO"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/montserrat_regular"
+                android:maxWidth="@dimen/_200sdp"
+                android:minWidth="@dimen/_100sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_button_xxxxs"
+                android:visibility="visible"
+                tools:text="@string/app_name" />
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/flImageO"
+            android:layout_width="192dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/replyChatLayO"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/userNameChatImg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:padding="@dimen/_4sdp"
+                    android:text=""
+                    android:textColor="#F4447E"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/downloadProgressO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/chatImgDateO"
+                    android:layout_alignTop="@+id/ivChatImageO"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:elevation="@dimen/_8sdp"
+                    android:progressBackgroundTint="@color/gradientEnd"
+                    android:visibility="gone" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivChatImageO"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/chatImgDateO"
+                    android:layout_below="@id/userNameChatImg1"
+                    android:background="@drawable/meetupsfellow_transpatent"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivChatImageBlurO"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/chatImgDateO"
+                    android:layout_below="@id/userNameChatImg1"
+                    android:background="#D2A9A9A9"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/downloadImgBtnO"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_above="@+id/chatImgDateO"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="@dimen/_8sdp"
+                    android:src="@drawable/upload__60"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/chatImgDateO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:padding="@dimen/_4sdp"
+                    android:text="meetupsFellow"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_button_xxxxs" />
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/flPlayO"
+            android:layout_width="192dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/replyChatLayO"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/inner_img_l"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/userNameChatVideo1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:padding="@dimen/_4sdp"
+                    android:text=""
+                    android:visibility="gone"
+                    android:textColor="#F4447E"
+                    android:textSize="@dimen/_10sdp" />
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivChatVideoPlayO"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/chatVideoDateO"
+                    android:layout_below="@+id/userNameChatVideo1"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/ivChatVideoBtnO"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerInParent="true"
+                    android:backgroundTint="@color/black"
+                    android:src="@drawable/play" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/videoBlurImgO"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/chatVideoDateO"
+                    android:layout_below="@+id/userNameChatVideo1"
+                    android:background="#D2A9A9A9"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/videoDownloadBtnO"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/upload__60"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/chatVideoDateO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="meetupsFellow"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_button_xxxxs" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/flFileO"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/replyChatLayO"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/pdfPreviewImgO"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/fileBgIvO"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="#65858484"
+                    app:layout_constraintBottom_toTopOf="@+id/chatFileDateO"
+                    app:layout_constraintTop_toBottomOf="@+id/pdfPreviewImgO" />
+
+                <ImageView
+                    android:id="@+id/fileIconIvO"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:background="@drawable/ic_baseline_text_snippet_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pdfPreviewImgO" />
+
+                <TextView
+                    android:id="@+id/fileNameTvO"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:inputType="textMultiLine"
+                    android:text="File Name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/fileIconIvO"
+                    app:layout_constraintTop_toTopOf="@+id/fileIconIvO" />
+
+                <TextView
+                    android:id="@+id/fileSizeTvO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="doc size"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/fileBgIvO"
+                    app:layout_constraintStart_toStartOf="@+id/fileNameTvO" />
+
+                <ImageView
+                    android:id="@+id/fileDownloadO"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:background="@drawable/download_circular_button"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/fileSizeTvO"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/fileProgressO"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/fileSizeTvO"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/chatFileDateO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:maxWidth="@dimen/_200sdp"
+                    android:padding="@dimen/_4sdp"
+                    android:text="meetupsFellow"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_button_xxxxs"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fileIconIvO" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="@dimen/inner_img_xxxl"
+        android:layout_marginLeft="@dimen/inner_img_xxxl"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:background="@drawable/drawable_chat_me"
+        android:elevation="@dimen/_4sdp"
+        android:visibility="visible">
+
+        <!-- <TextView
+            android:id="@+id/userNameChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:padding="@dimen/_2sdp"
+            android:text=""
+            android:textColor="@color/colorBlue"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="gone" />-->
+
+       <!-- <io.github.ponnamkarthik.richlinkpreview.RichLinkView
+            android:id="@+id/richLinkView"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />-->
+
+        <TextView
+            android:id="@+id/richLinkView"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/replyChatLayU"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/richLinkView"
+            android:layout_alignStart="@+id/tvChatMessage"
+            android:layout_alignEnd="@id/flImage"
+            android:layout_marginEnd="@dimen/_minus3sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="@dimen/_8sdp">
+
+            <LinearLayout
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:background="@color/gradientEnd"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/userReplyNameU"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:paddingStart="@dimen/_2sdp"
+                        android:paddingEnd="@dimen/_2sdp"
+                        android:text="meetupffellwo"
+                        android:textColor="#F4447E"
+                        android:textSize="@dimen/_8sdp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/replyChatMessageU"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/userNameChat1"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:gravity="start"
+                        android:linksClickable="true"
+                        android:maxWidth="@dimen/_200sdp"
+                        android:maxLines="2"
+                        android:minWidth="@dimen/_100sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:textColor="#FAF5F5"
+                        android:textSize="12dp"
+                        tools:text="meetupfelloe" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/selfReplayImgLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:layout_weight="2"
+                    android:gravity="end|center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/selfReplyImg"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginEnd="@dimen/_6sdp"
+                        android:scaleType="fitXY" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvChatMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/replyChatLayU"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:autoLink="all"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="start"
+            android:linksClickable="true"
+            android:maxWidth="@dimen/_200sdp"
+            android:minWidth="@dimen/_100sdp"
+            android:padding="@dimen/_4sdp"
+            android:textColor="@color/black"
+            android:textColorLink="@color/gradientEnd"
+            android:textSize="@dimen/text_size_button_xxs"
+            android:visibility="visible"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/chatId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="adsa"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvChatTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvChatMessage"
+            android:layout_alignEnd="@+id/tvChatMessage"
+            android:fontFamily="@font/montserrat_regular"
+            android:padding="4dp"
+            android:gravity="end"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_button_xxxxs"
+            android:visibility="visible"
+            tools:text="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/ivChatStatus"
+            android:layout_width="@dimen/_8sdp"
+            android:layout_height="@dimen/_8sdp"
+            android:layout_below="@+id/tvChatMessage"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_toStartOf="@+id/tvChatTime"
+            android:background="@drawable/double_tick_seen"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_4sdp"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/gifViewLay"
+            android:layout_width="192dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/replyChatLayU"
+            android:background="@drawable/drawable_chat_me"
+            android:visibility="gone">
+
+            <com.giphy.sdk.ui.views.GPHMediaView
+                android:id="@+id/gifView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/tvTimeGif"
+                android:elevation="4dp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tvTimeGif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/gifView"
+                android:layout_alignParentBottom="true"
+                android:fontFamily="@font/montserrat_regular"
+                android:maxWidth="@dimen/_200sdp"
+                android:textAlignment="textEnd"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_button_xxxxs"
+                android:visibility="visible"
+                tools:text="@string/app_name" />
+
+            <ImageView
+                android:id="@+id/ivStatusGif"
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:layout_below="@+id/gifView"
+                android:layout_marginEnd="@dimen/inner_img_xl"
+                android:layout_marginRight="@dimen/inner_img_xl"
+                android:layout_toStartOf="@+id/tvTimeGif"
+                android:background="@drawable/double_tick_seen"
+                android:contentDescription="@string/app_name"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/flImage"
+            android:layout_width="192dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/replyChatLayU"
+            android:background="@drawable/drawable_chat_me"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/drawable_chat_me">
+
+                <TextView
+                    android:id="@+id/userNameChatImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:padding="@dimen/_4sdp"
+                    android:text=""
+                    android:textColor="#F4447E"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/downloadImgBtn"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_below="@id/userNameChatImg"
+                    android:layout_centerInParent="true"
+                    android:elevation="@dimen/_8sdp"
+                    android:src="@drawable/upload__60"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/downloadProgress"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_alignTop="@+id/ivChatImage"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:elevation="@dimen/_8sdp"
+                    android:progressBackgroundTint="@color/gradientEnd"
+                    android:visibility="gone" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivChatImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/chatImgDate"
+                    android:layout_below="@id/userNameChatImg"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/meetupsfellow_transpatent"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivChatImageBlur"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/chatImgDate"
+                    android:layout_below="@id/userNameChatImg"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    android:src="#D2A9A9A9"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/ivChatStatusImg"
+                    android:layout_width="@dimen/_8sdp"
+                    android:layout_height="@dimen/_8sdp"
+                    android:layout_below="@+id/ivChatImage"
+                    android:layout_marginTop="8dp"
+                    android:layout_toStartOf="@+id/chatImgDate"
+                    android:background="@drawable/double_tick_seen"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/chatImgDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="end"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:padding="@dimen/_4sdp"
+                    android:text="meetupsFellow"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_button_xxxxs" />
+
+            </RelativeLayout>
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/flPlay"
+            android:layout_width="192dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/replyChatLayU"
+            android:layout_centerInParent="true"
+            android:background="@drawable/drawable_chat_me"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/userNameChatVideo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:padding="@dimen/_4sdp"
+                    android:text=""
+                    android:textColor="#F4447E"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivChatVideoPlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/chatVideoDate"
+                    android:layout_below="@+id/userNameChatVideo"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/ivChatVideoBtn"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_above="@+id/chatVideoDate"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/black"
+                    android:src="@drawable/play" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/videoBlurImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/chatVideoDate"
+                    android:layout_below="@+id/userNameChatVideo"
+                    android:background="#D2A9A9A9"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/videoDownloadBtn"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_above="@+id/chatVideoDate"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/upload__60"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/ivChatStatusVideo"
+                    android:layout_width="@dimen/_8sdp"
+                    android:layout_height="@dimen/_8sdp"
+                    android:layout_below="@+id/ivChatVideoPlay"
+                    android:layout_marginTop="8dp"
+                    android:layout_toStartOf="@+id/chatVideoDate"
+                    android:background="@drawable/double_tick_seen"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/chatVideoDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:maxWidth="@dimen/_200sdp"
+                    android:padding="@dimen/_4sdp"
+                    android:text="meetupsFellow"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_button_xxxxs" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/flFile"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/replyChatLayU"
+            android:layout_centerInParent="true"
+            android:background="@drawable/drawable_chat_me"
+            android:visibility="gone">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/pdfPreviewImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/fileBgIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="#65858484"
+                    app:layout_constraintBottom_toTopOf="@+id/chatFileDate"
+                    app:layout_constraintTop_toBottomOf="@+id/pdfPreviewImg" />
+
+                <ImageView
+                    android:id="@+id/fileIconIv"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:background="@drawable/ic_baseline_text_snippet_24"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pdfPreviewImg" />
+
+                <TextView
+                    android:id="@+id/fileNameTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:inputType="textMultiLine"
+                    android:text="File Name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/fileIconIv"
+                    app:layout_constraintTop_toTopOf="@+id/fileIconIv" />
+
+                <TextView
+                    android:id="@+id/fileSizeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="doc size"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/fileBgIv"
+                    app:layout_constraintStart_toStartOf="@+id/fileNameTv" />
+
+                <ImageView
+                    android:id="@+id/fileDownload"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:background="@drawable/download_circular_button"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/fileSizeTv"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivChatStatusFile"
+                    android:layout_width="@dimen/_8sdp"
+                    android:layout_height="@dimen/_8sdp"
+                    android:background="@drawable/double_tick_seen"
+                    android:contentDescription="@string/app_name"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/chatFileDate"
+                    app:layout_constraintEnd_toStartOf="@+id/chatFileDate"
+                    app:layout_constraintTop_toTopOf="@+id/chatFileDate" />
+
+                <TextView
+                    android:id="@+id/chatFileDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:maxWidth="@dimen/_200sdp"
+                    android:padding="@dimen/_4sdp"
+                    android:text="meetupsFellow"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_button_xxxxs"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fileIconIv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

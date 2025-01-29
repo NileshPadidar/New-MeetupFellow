@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/group_2"
+    android:id="@+id/rlChangeNumberTop"
+    android:paddingTop="@dimen/inner_img_xxl"
+    tools:ignore="spUsage">
+
+    <TextView
+        android:id="@+id/tvTitleNumberOld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingTop="@dimen/inner_img_xl"
+        android:paddingBottom="@dimen/inner_img_xl"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:text="@string/label_old_number"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_button_s" />
+
+    <LinearLayout
+        android:id="@+id/llNumberOld"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_below="@+id/tvTitleNumberOld"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:background="@drawable/round_corners_default"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/inner_img_xl">
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/countryCodePickerOld"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/inner_img_s"
+            android:layout_marginLeft="@dimen/inner_img_s"
+            app:ccpDialog_allowSearch="true"
+            app:ccpDialog_keyboardAutoPopup="true"
+            app:ccpDialog_showCloseIcon="true"
+            app:ccpDialog_showFastScroller="true"
+            app:ccpDialog_showPhoneCode="true"
+            app:ccpDialog_textColor="@color/colorPrimary"
+            app:ccp_autoDetectCountry="false"
+            app:ccp_autoFormatNumber="true"
+            app:ccp_clickable="true"
+            app:ccp_contentColor="@color/black"
+            app:ccp_flagBorderColor="@android:color/transparent"
+            app:ccp_showArrow="false"
+            app:ccp_showNameCode="false"
+            app:ccp_textSize="@dimen/text_size_button_l" />
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccent" />
+
+        <EditText
+            android:id="@+id/etPhoneNumberOld"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:background="@null"
+            android:clickable="true"
+            android:digits="0123456789"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="@string/hint_text_number"
+            android:inputType="phone"
+            android:maxLength="14"
+            android:maxLines="1"
+            android:padding="@dimen/inner_img_l"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/text_size_button_l"
+            android:textStyle="bold"
+            tools:ignore="Autofill" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llNumberOld1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitleNumberOld"
+        android:visibility="gone"
+        android:background="@drawable/drawable_rounded_corners_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/inner_img_xl">
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/countryCodePickerOld1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/inner_img_s"
+            android:layout_marginLeft="@dimen/inner_img_s"
+            app:ccpDialog_keyboardAutoPopup="false"
+            app:ccpDialog_showCloseIcon="true"
+            app:ccpDialog_showFastScroller="true"
+            app:ccpDialog_showPhoneCode="true"
+            app:ccpDialog_textColor="@color/colorPrimary"
+            app:ccp_autoDetectCountry="false"
+            app:ccp_autoFormatNumber="true"
+            app:ccp_clickable="true"
+            app:ccp_contentColor="@color/black"
+            app:ccp_flagBorderColor="@android:color/transparent"
+            app:ccp_showArrow="false"
+            app:ccp_showNameCode="false"
+            app:ccp_textSize="@dimen/text_size_button_m" />
+
+        <View
+            android:layout_width="0.8dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/inner_img_xl"
+            android:layout_marginBottom="@dimen/inner_img_xl"
+            android:background="@color/black" />
+
+        <EditText
+            android:id="@+id/etPhoneNumberOld1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:digits="0123456789"
+            android:hint="@string/hint_old_number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:fontFamily="@font/montserrat_regular"
+            android:maxLines="1"
+            android:padding="@dimen/inner_img_l"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/text_size_button_m"
+            tools:ignore="Autofill" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTitleNumberNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llNumberOld"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingTop="@dimen/inner_img_xl"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:paddingBottom="@dimen/inner_img_xl"
+        android:text="@string/label_new_number"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_button_s" />
+
+    <LinearLayout
+        android:id="@+id/llNumberNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitleNumberNew"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:background="@drawable/round_corners_default"
+        android:clickable="true"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/inner_img_xl">
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/countryCodePickerNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/inner_img_s"
+            android:layout_marginLeft="@dimen/inner_img_s"
+            app:ccpDialog_allowSearch="true"
+            app:ccpDialog_keyboardAutoPopup="true"
+            app:ccpDialog_showCloseIcon="true"
+            app:ccpDialog_showFastScroller="true"
+            app:ccpDialog_showPhoneCode="true"
+            app:ccpDialog_textColor="@color/colorPrimary"
+            app:ccp_autoDetectCountry="false"
+            app:ccp_autoFormatNumber="true"
+            app:ccp_clickable="true"
+            app:ccp_contentColor="@color/black"
+            app:ccp_flagBorderColor="@android:color/transparent"
+            app:ccp_showArrow="false"
+            app:ccp_showNameCode="false"
+            app:ccp_textSize="@dimen/text_size_button_l" />
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccent" />
+
+        <EditText
+            android:id="@+id/etPhoneNumberNew"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:background="@null"
+            android:clickable="true"
+            android:digits="0123456789"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="@string/hint_text_number"
+            android:inputType="phone"
+            android:maxLength="14"
+            android:maxLines="1"
+            android:padding="@dimen/inner_img_l"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:textSize="@dimen/text_size_button_l"
+            android:textStyle="bold"
+            tools:ignore="Autofill" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llNumberNew1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitleNumberNew"
+        android:layout_marginBottom="@dimen/inner_img_xxxl"
+        android:background="@drawable/drawable_rounded_corners_white"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:padding="@dimen/inner_img_xl">
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/countryCodePickerNew1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/inner_img_s"
+            android:layout_marginLeft="@dimen/inner_img_s"
+            app:ccpDialog_keyboardAutoPopup="false"
+            app:ccpDialog_showCloseIcon="true"
+            app:ccpDialog_showFastScroller="true"
+            app:ccpDialog_showPhoneCode="true"
+            app:ccpDialog_textColor="@color/colorPrimary"
+            app:ccp_autoDetectCountry="false"
+            app:ccp_autoFormatNumber="true"
+            app:ccp_clickable="true"
+            app:ccp_contentColor="@color/black"
+            app:ccp_flagBorderColor="@android:color/transparent"
+            app:ccp_showArrow="false"
+            app:ccp_showNameCode="false"
+            app:ccp_textSize="@dimen/text_size_button_m" />
+
+        <View
+            android:layout_width="0.8dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/inner_img_xl"
+            android:layout_marginBottom="@dimen/inner_img_xl"
+            android:background="@color/black" />
+
+        <EditText
+            android:id="@+id/etPhoneNumberNew1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:digits="0123456789"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="@string/hint_new_number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:padding="@dimen/inner_img_l"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/text_size_button_m"
+            tools:ignore="Autofill" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/round_corner_btn_new"
+        android:fontFamily="@font/montserrat_medium"
+        android:onClick="onNextClick"
+        android:layout_marginVertical="@dimen/_6sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:text="@string/btn_text_next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_button_l" />
+
+
+</RelativeLayout>

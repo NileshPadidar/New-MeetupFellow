@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/group_2"
+    android:id="@+id/notification_lay"
+    tools:ignore="spUsage">
+
+    <include
+        android:id="@+id/header"
+        android:visibility="gone"
+        layout="@layout/layout_toolbar" />
+    <com.google.android.gms.ads.admanager.AdManagerAdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mAdViewNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="@dimen/_6sdp"
+        android:layout_below="@+id/header"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.admanager.AdManagerAdView>
+
+    <ImageView
+        android:id="@+id/noNoti_img"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_140sdp"
+        android:src="@drawable/no_notification"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+
+    <TextView
+        android:id="@+id/tvNoNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/noNoti_img"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/text_no_notification"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitXY" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshNotification"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mAdViewNotification">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNotifications"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingTop="@dimen/inner_img_s"
+            android:visibility="visible"
+            tools:listitem="@layout/item_notifications" />
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <include android:id="@+id/included_Loding"
+        layout="@layout/layout_loading" />
+
+</RelativeLayout>

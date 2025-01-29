@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appBarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    tools:ignore="NestedWeights,SpUsage">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:minHeight="?actionBarSize"
+        android:theme="@style/AppTheme.ActionBar2"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+         <!--   <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">-->
+
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/back_arrow" />
+
+            <ImageView
+                android:id="@+id/ivUserImageBackground"
+                android:layout_width="?actionBarSize"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/inner_img_l"
+                android:layout_marginLeft="@dimen/inner_img_l"
+                android:layout_toEndOf="@+id/ivBack"
+                android:visibility="gone"
+                android:layout_toRightOf="@+id/ivBack"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/meetupsfellow_transpatent" />
+
+                <ImageView
+                    android:id="@+id/ivUserImage"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginLeft="@dimen/inner_img_l"
+                    android:layout_toEndOf="@+id/ivBack"
+                    android:layout_toRightOf="@+id/ivBack"
+                    android:contentDescription="@string/app_name" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/ivUserImage"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_toStartOf="@+id/addGroupMembers"
+                android:layout_toRightOf="@+id/ivUserImage"
+                android:orientation="vertical">
+
+
+
+                <TextView
+                    android:id="@+id/tvUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeMinTextSize="@dimen/_10sdp"
+                    android:autoSizeStepGranularity="@dimen/_1sdp"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:gravity="bottom"
+                    android:layout_marginBottom="@dimen/_1sdp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvUserStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="top"
+                    android:visibility="visible"
+                    android:text=""
+                    android:textColor="#686868"
+                    android:textSize="@dimen/text_size_button_xxxs" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/tv_pro_chat"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_pro_rect"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/inner_img_m"
+                android:layout_gravity="end"
+                android:gravity="center"
+
+                />
+
+            <ImageView
+                android:id="@+id/chatDetails"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:src="@drawable/info"
+                android:layout_marginEnd="@dimen/_8sdp"
+                />
+
+            <ImageView
+                android:id="@+id/addGroupMembers"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/addmem__1_"
+                android:layout_alignParentEnd="true"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_12sdp"
+                />
+
+         <ImageView
+                android:id="@+id/ivClearChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nochat60"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_12sdp"
+                />
+
+            <ImageView
+                android:id="@+id/deleteChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_delete_forever_24"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/ivClearChat"
+                android:layout_marginEnd="@dimen/_12sdp"
+                />
+
+            <ImageView
+                android:id="@+id/copyChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_content_copy_24"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:layout_toStartOf="@+id/deleteChat"
+                android:layout_marginEnd="@dimen/_10sdp"
+                />
+
+            <TextView
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_pro_text_view"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingStart="@dimen/inner_img_l"
+                android:paddingEnd="@dimen/inner_img_l"
+                android:text="@string/label__pro_user"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_button_s" />
+
+          <!--  </LinearLayout>-->
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+</com.google.android.material.appbar.AppBarLayout>

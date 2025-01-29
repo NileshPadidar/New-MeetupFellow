@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/inner_img_m"
+    android:paddingEnd="@dimen/inner_img_m"
+    tools:ignore="spUsage,Autofill,LabelFor">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingTop="@dimen/inner_img_xl"
+        android:paddingBottom="@dimen/inner_img_xl"
+        android:text="@string/label_sex_text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_button_m"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvSex1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_preferences"
+            android:fontFamily="@font/montserrat_regular"
+            android:paddingStart="@dimen/inner_img_xxl"
+            android:paddingTop="@dimen/inner_img_m"
+            android:paddingEnd="@dimen/inner_img_xxl"
+            android:paddingBottom="@dimen/inner_img_m"
+            android:tag="@string/text_male"
+            android:text="@string/text_male"
+            android:textColor="@color/color_preference_selector"
+            android:textSize="@dimen/text_size_button_m" />
+
+        <TextView
+            android:id="@+id/tvSex2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/inner_img_xxl"
+            android:layout_marginEnd="@dimen/inner_img_xxl"
+            android:background="@drawable/selector_preferences"
+            android:fontFamily="@font/montserrat_regular"
+            android:paddingStart="@dimen/inner_img_xxl"
+            android:paddingTop="@dimen/inner_img_m"
+            android:paddingEnd="@dimen/inner_img_xxl"
+            android:paddingBottom="@dimen/inner_img_m"
+            android:tag="@string/text_female"
+            android:text="@string/text_female"
+            android:textColor="@color/color_preference_selector"
+            android:textSize="@dimen/text_size_button_m" />
+
+        <TextView
+            android:id="@+id/tvSex3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_preferences"
+            android:fontFamily="@font/montserrat_regular"
+            android:paddingStart="@dimen/inner_img_xxl"
+            android:paddingTop="@dimen/inner_img_m"
+            android:paddingEnd="@dimen/inner_img_xxl"
+            android:paddingBottom="@dimen/inner_img_m"
+            android:tag="@string/text_trans"
+            android:text="@string/text_trans"
+            android:textColor="@color/color_preference_selector"
+            android:textSize="@dimen/text_size_button_m" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSex4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/inner_img_xl"
+        android:background="@drawable/selector_preferences"
+        android:fontFamily="@font/montserrat_regular"
+        android:paddingStart="@dimen/inner_img_xxl"
+        android:paddingTop="@dimen/inner_img_m"
+        android:paddingEnd="@dimen/inner_img_xxl"
+        android:paddingBottom="@dimen/inner_img_m"
+        android:tag="@string/text_no_gender_con"
+        android:text="@string/text_no_gender_con"
+        android:textColor="@color/color_preference_selector"
+        android:textSize="@dimen/text_size_button_m" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingTop="@dimen/inner_img_xl"
+        android:paddingBottom="@dimen/inner_img_xl"
+        android:text="@string/label_partner_status_text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_button_m" />
+
+    <TextView
+        android:id="@+id/tvPartnerStatus1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_preferences"
+        android:fontFamily="@font/montserrat_regular"
+        android:paddingStart="@dimen/inner_img_xxl"
+        android:paddingTop="@dimen/inner_img_m"
+        android:paddingEnd="@dimen/inner_img_xxl"
+        android:paddingBottom="@dimen/inner_img_m"
+        android:tag="@string/text_partner_status_1"
+        android:text="@string/text_partner_status_1"
+        android:textColor="@color/color_preference_selector"
+        android:textSize="@dimen/text_size_button_m" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/inner_img_xxl_1"
+        android:paddingBottom="@dimen/inner_img_xxl_1">
+
+        <TextView
+            android:id="@+id/tvPartnerStatus2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginEnd="@dimen/inner_img_xl"
+            android:layout_marginRight="@dimen/inner_img_xl"
+            android:background="@drawable/selector_preferences"
+            android:fontFamily="@font/montserrat_regular"
+            android:paddingStart="@dimen/inner_img_xxl"
+            android:paddingTop="@dimen/inner_img_m"
+            android:paddingEnd="@dimen/inner_img_xxl"
+            android:paddingBottom="@dimen/inner_img_m"
+            android:tag="@string/text_partner_status_2"
+            android:text="@string/text_partner_status_2"
+            android:textColor="@color/color_preference_selector"
+            android:textSize="@dimen/text_size_button_m" />
+
+        <TextView
+            android:id="@+id/tvPartnerStatus3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/inner_img_xl"
+            android:layout_marginLeft="@dimen/inner_img_xl"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/selector_preferences"
+            android:fontFamily="@font/montserrat_regular"
+            android:paddingStart="@dimen/inner_img_xxl"
+            android:paddingTop="@dimen/inner_img_m"
+            android:paddingEnd="@dimen/inner_img_xxl"
+            android:paddingBottom="@dimen/inner_img_m"
+            android:tag="@string/text_partner_status_3"
+            android:text="@string/text_partner_status_3"
+            android:textColor="@color/color_preference_selector"
+            android:textSize="@dimen/text_size_button_m" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPartnerStatus4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_preferences"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingStart="@dimen/inner_img_xxl"
+        android:paddingTop="@dimen/inner_img_m"
+        android:paddingEnd="@dimen/inner_img_xxl"
+        android:paddingBottom="@dimen/inner_img_m"
+        android:tag="@string/text_partner_status_4"
+        android:text="@string/text_partner_status_4"
+        android:textColor="@color/color_preference_selector"
+        android:textSize="@dimen/text_size_button_m" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingTop="@dimen/inner_img_xl"
+        android:paddingBottom="@dimen/inner_img_xl"
+        android:text="@string/label_intercourse_text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_button_m" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvIntercourse1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_preferences"
+            android:fontFamily="@font/montserrat_regular"
+            android:paddingStart="@dimen/inner_img_xxxl_1"
+            android:paddingTop="@dimen/inner_img_m"
+            android:paddingEnd="@dimen/inner_img_xxxl_1"
+            android:paddingBottom="@dimen/inner_img_m"
+            android:tag="@string/text_intercourse_1"
+            android:text="@string/text_intercourse_1"
+            android:textColor="@color/color_preference_selector"
+            android:textSize="@dimen/text_size_button_m" />
+
+        <TextView
+            android:id="@+id/tvIntercourse2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/inner_img_xxl"
+            android:layout_marginEnd="@dimen/inner_img_xxl"
+            android:background="@drawable/selector_preferences"
+            android:fontFamily="@font/montserrat_regular"
+            android:paddingStart="@dimen/inner_img_xxxl_1"
+            android:paddingTop="@dimen/inner_img_m"
+            android:paddingEnd="@dimen/inner_img_xxxl_1"
+            android:paddingBottom="@dimen/inner_img_m"
+            android:tag="@string/text_intercourse_2"
+            android:text="@string/text_intercourse_2"
+            android:textColor="@color/color_preference_selector"
+            android:textSize="@dimen/text_size_button_m" />
+
+        <TextView
+            android:id="@+id/tvIntercourse3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_preferences"
+            android:fontFamily="@font/montserrat_regular"
+            android:paddingStart="@dimen/inner_img_xxxl_1"
+            android:paddingTop="@dimen/inner_img_m"
+            android:paddingEnd="@dimen/inner_img_xxxl_1"
+            android:paddingBottom="@dimen/inner_img_m"
+            android:tag="@string/text_intercourse_3"
+            android:text="@string/text_intercourse_3"
+            android:textColor="@color/color_preference_selector"
+            android:textSize="@dimen/text_size_button_m" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingTop="@dimen/inner_img_xl"
+        android:paddingBottom="@dimen/inner_img_xl"
+        android:text="@string/label_handball_text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_button_m"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvFisting1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_preferences"
+            android:fontFamily="@font/montserrat_regular"
+            android:paddingStart="@dimen/inner_img_xxxl_1"
+            android:paddingTop="@dimen/inner_img_m"
+            android:paddingEnd="@dimen/inner_img_xxxl_1"
+            android:paddingBottom="@dimen/inner_img_m"
+            android:tag="@string/text_fisting_id_1"
+            android:text="@string/text_fisting_id_1"
+            android:textColor="@color/color_preference_selector"
+            android:textSize="@dimen/text_size_button_m" />
+
+        <TextView
+            android:id="@+id/tvFisting2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/inner_img_xxl"
+            android:layout_marginEnd="@dimen/inner_img_xxl"
+            android:background="@drawable/selector_preferences"
+            android:fontFamily="@font/montserrat_regular"
+            android:paddingStart="@dimen/inner_img_xxxl_1"
+            android:paddingTop="@dimen/inner_img_m"
+            android:paddingEnd="@dimen/inner_img_xxxl_1"
+            android:paddingBottom="@dimen/inner_img_m"
+            android:tag="@string/text_fisting_id_2"
+            android:text="@string/text_fisting_id_2"
+            android:textColor="@color/color_preference_selector"
+            android:textSize="@dimen/text_size_button_m" />
+
+        <TextView
+            android:id="@+id/tvFisting3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_preferences"
+            android:fontFamily="@font/montserrat_regular"
+            android:paddingStart="@dimen/inner_img_xxxl_1"
+            android:paddingTop="@dimen/inner_img_m"
+            android:paddingEnd="@dimen/inner_img_xxxl_1"
+            android:paddingBottom="@dimen/inner_img_m"
+            android:tag="@string/text_fisting_id_3"
+            android:text="@string/text_fisting_id_3"
+            android:textColor="@color/color_preference_selector"
+            android:textSize="@dimen/text_size_button_m" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_regular"
+        android:paddingTop="@dimen/inner_img_xl"
+        android:paddingBottom="@dimen/inner_img_xl"
+        android:text="@string/label_he_identify_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_button_m"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvIdentity1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_1"
+                android:text="@string/text_identity_1"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvIdentity2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inner_img_xxl"
+                android:layout_marginEnd="@dimen/inner_img_xxl"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_2"
+                android:text="@string/text_identity_2"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvIdentity3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_3"
+                android:text="@string/text_identity_3"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/inner_img_xl">
+
+            <TextView
+                android:id="@+id/tvIdentity4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_4"
+                android:text="@string/text_identity_4"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvIdentity5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inner_img_xxl"
+                android:layout_marginEnd="@dimen/inner_img_xxl"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_5"
+                android:text="@string/text_identity_5"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvIdentity6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_6"
+                android:text="@string/text_identity_6"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/inner_img_xl">
+
+            <TextView
+                android:id="@+id/tvIdentity7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_7"
+                android:text="@string/text_identity_7"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvIdentity8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inner_img_xxl"
+                android:layout_marginEnd="@dimen/inner_img_xxl"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_8"
+                android:text="@string/text_identity_8"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/inner_img_xl">
+
+            <TextView
+                android:id="@+id/tvIdentity9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_9"
+                android:text="@string/text_identity_9"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvIdentity10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inner_img_xxl"
+                android:layout_marginEnd="@dimen/inner_img_xxl"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_10"
+                android:text="@string/text_identity_10"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvIdentity11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_11"
+                android:text="@string/text_identity_11"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/inner_img_xl">
+
+            <TextView
+                android:id="@+id/tvIdentity12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_12"
+                android:text="@string/text_identity_12"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvIdentity13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inner_img_xxl"
+                android:layout_marginEnd="@dimen/inner_img_xxl"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_13"
+                android:text="@string/text_identity_13"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvIdentity14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_14"
+                android:text="@string/text_identity_14"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/inner_img_xl">
+
+            <TextView
+                android:id="@+id/tvIdentity15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_15"
+                android:text="@string/text_identity_15"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvIdentity16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inner_img_xl"
+                android:layout_marginEnd="@dimen/inner_img_xl"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_16"
+                android:text="@string/text_identity_16"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/inner_img_xl">
+
+            <TextView
+                android:id="@+id/tvIdentity17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_17"
+                android:text="@string/text_identity_17"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvIdentity18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inner_img_xxl"
+                android:layout_marginEnd="@dimen/inner_img_xxl"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxl"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxl"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_18"
+                android:text="@string/text_identity_18"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvIdentity19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_19"
+                android:text="@string/text_identity_19"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:paddingTop="@dimen/inner_img_xl"
+        android:paddingBottom="@dimen/inner_img_xl"
+        android:text="@string/label_seeking_members_text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_button_m" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvMember1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_1"
+                android:text="@string/text_identity_1"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvMember2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inner_img_xxl"
+                android:layout_marginEnd="@dimen/inner_img_xxl"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_2"
+                android:text="@string/text_identity_2"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvMember3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_3"
+                android:text="@string/text_identity_3"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/inner_img_xl">
+
+            <TextView
+                android:id="@+id/tvMember4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_4"
+                android:text="@string/text_identity_4"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvMember5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inner_img_xxl"
+                android:layout_marginEnd="@dimen/inner_img_xxl"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_5"
+                android:text="@string/text_identity_5"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvMember6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_6"
+                android:text="@string/text_identity_6"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/inner_img_xl">
+
+            <TextView
+                android:id="@+id/tvMember7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_7"
+                android:text="@string/text_identity_7"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvMember8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inner_img_xxl"
+                android:layout_marginEnd="@dimen/inner_img_xxl"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_8"
+                android:text="@string/text_identity_8"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/inner_img_xl">
+
+            <TextView
+                android:id="@+id/tvMember9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_9"
+                android:text="@string/text_identity_9"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvMember10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inner_img_xxl"
+                android:layout_marginEnd="@dimen/inner_img_xxl"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_10"
+                android:text="@string/text_identity_10"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvMember11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_11"
+                android:text="@string/text_identity_11"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/inner_img_xl">
+
+            <TextView
+                android:id="@+id/tvMember12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_12"
+                android:text="@string/text_identity_12"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvMember13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inner_img_xxl"
+                android:layout_marginEnd="@dimen/inner_img_xxl"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_13"
+                android:text="@string/text_identity_13"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvMember14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_14"
+                android:text="@string/text_identity_14"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/inner_img_xl">
+
+            <TextView
+                android:id="@+id/tvMember15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_15"
+                android:text="@string/text_identity_15"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvMember16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inner_img_xl"
+                android:layout_marginEnd="@dimen/inner_img_xl"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_16"
+                android:text="@string/text_identity_16"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/inner_img_xl">
+
+            <TextView
+                android:id="@+id/tvMember17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_17"
+                android:text="@string/text_identity_17"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvMember18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inner_img_xxl"
+                android:layout_marginEnd="@dimen/inner_img_xxl"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxl"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxl"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_18"
+                android:text="@string/text_identity_18"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+            <TextView
+                android:id="@+id/tvMember19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_preferences"
+                android:fontFamily="@font/montserrat_regular"
+                android:paddingStart="@dimen/inner_img_xxxl_1"
+                android:paddingTop="@dimen/inner_img_m"
+                android:paddingEnd="@dimen/inner_img_xxxl_1"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:tag="@string/text_identity_19"
+                android:text="@string/text_identity_19"
+                android:textColor="@color/color_preference_selector"
+                android:textSize="@dimen/text_size_button_m" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

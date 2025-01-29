@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+            android:id="@+id/menu_private"
+            android:icon="@drawable/ic_unlocked"
+            android:title="@string/text_edit_text"
+            app:showAsAction="always"
+            tools:ignore="AlwaysShowAction" />
+
+    <item
+            android:id="@+id/menu_save"
+            android:title="@string/btn_text_save"
+            app:actionLayout="@layout/action_btn_save"
+            app:showAsAction="always" />
+
+</menu>

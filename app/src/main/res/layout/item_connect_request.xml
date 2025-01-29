@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_6sdp"
+    android:layout_marginBottom="@dimen/_2sdp"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    tools:ignore="spUsage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llMain"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="@dimen/_48sdp"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_margin="@dimen/_2sdp">
+
+            <ImageView
+                android:id="@+id/ivUserImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/meetupsfellow_transpatent" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.15"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/inner_img_xl_2"
+            android:paddingLeft="@dimen/inner_img_xl_2"
+            android:paddingEnd="0dp"
+            android:paddingRight="0dp">
+
+             <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_toStartOf="@id/btn_cancel_request"
+            android:gravity="center_vertical">
+
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/ivReject"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrat_regular"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                tools:text="@string/app_name" />
+            <TextView
+                android:id="@+id/tvUserBio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvUserName"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_toStartOf="@id/ivReject"
+                android:fontFamily="@font/montserrat_medium"
+                android:maxLines="2"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_10sdp"
+                tools:text="hfuhsdlk  derrwrwerrer sdsfdsdf dffg ert\n jdfnjokay good " />
+
+
+            <ImageView
+                android:id="@+id/ivAccept"
+                android:layout_width="@dimen/_34sdp"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_4sdp"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                android:src="@drawable/ic_check_green" />
+
+            <ImageView
+                android:id="@+id/ivReject"
+                android:layout_width="@dimen/_34sdp"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_4sdp"
+                android:layout_marginHorizontal="@dimen/_2sdp"
+                android:layout_toStartOf="@+id/ivAccept"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:visibility="gone"
+                android:src="@drawable/cross_icon" />
+
+        </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_cancel_request"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/inner_img_xxxl"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="@dimen/_2sdp"
+                android:background="@drawable/round_corner_btn_new"
+                android:fontFamily="@font/montserrat_medium"
+                android:maxLines="1"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8sdp"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

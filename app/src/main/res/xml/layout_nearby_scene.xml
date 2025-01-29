@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Transition
+        app:constraintSetStart="@id/start"
+        app:constraintSetEnd="@id/end"
+        app:duration="1000"
+        app:motionInterpolator="linear">
+        <OnSwipe
+            app:touchAnchorId="@+id/swipeRefreshNearby"
+            app:touchAnchorSide="top"
+            app:dragDirection="dragUp" />
+    </Transition>
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint android:id="@+id/imgCard1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivClear">
+
+        </Constraint>
+
+        <Constraint android:id="@+id/imgCard"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:elevation="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="@+id/imgCard1"
+            app:layout_constraintTop_toTopOf="@+id/imgCard1"
+            app:layout_constraintBottom_toBottomOf="@+id/imgCard1"
+            app:layout_constraintTop_toBottomOf="@+id/ivClear">
+
+        </Constraint>
+
+        <!--<Constraint android:id="@+id/userImg"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp">
+            <CustomAttribute
+                app:attributeName="scaleType"
+                app:customStringValue="centerCrop" />
+        </Constraint>-->
+
+        <Constraint
+            android:id="@id/userName_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:elevation="@dimen/_8sdp"
+            app:layout_constraintStart_toEndOf="@+id/imgCard"
+            app:layout_constraintTop_toTopOf="@+id/imgCard">
+
+            <!--<CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="21" />-->
+        </Constraint>
+
+        <Constraint android:id="@+id/imageView4"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/ic_baseline_home_24"
+            android:elevation="@dimen/_8sdp"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/imgCard"
+            app:layout_constraintTop_toBottomOf="@+id/userName_txt">
+
+        </Constraint>
+
+        <Constraint
+            android:id="@id/userHomeTown_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:elevation="@dimen/_8sdp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4">
+
+            <!--<CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="13" />-->
+        </Constraint>
+        
+        <Constraint android:id="@+id/userSelf_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:elevation="@dimen/_8sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView5"
+            app:transitionEasing="cubic(0.21,0.21,0.8,0.8)">
+           <!-- <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="11" />-->
+        </Constraint>
+
+
+        <Constraint android:id="@+id/imageView5"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:background="@drawable/ic_baseline_local_phone_24"
+            android:elevation="@dimen/_8sdp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+        </Constraint>
+        <Constraint android:id="@+id/becomePro_text_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:elevation="@dimen/_8sdp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+        </Constraint>
+
+        <Constraint android:id="@+id/imageView6"
+            android:layout_width="@dimen/_14sdp"
+            android:layout_height="@dimen/_14sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:background="@drawable/ic_baseline_email_24"
+            android:elevation="@dimen/_8sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/userSelf_phone"
+            app:layout_constraintStart_toEndOf="@+id/userSelf_phone"
+            app:layout_constraintTop_toTopOf="@+id/userSelf_phone">
+
+        </Constraint>
+
+        <Constraint android:id="@+id/userSelfEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:elevation="@dimen/_8sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="@+id/imageView6">
+           <!-- <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="11" />-->
+        </Constraint>
+
+        <Constraint
+            android:id="@id/userpro_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:elevation="@dimen/_8sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/userPro_ic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/userPro_ic">
+
+           <!-- <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="12" />-->
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/userPro_ic"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginEnd="8dp"
+            android:visibility="visible"
+            android:background="@drawable/ic_baseline_workspace_premium_24"
+            android:elevation="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/becomePro_text_top"
+            app:layout_constraintEnd_toStartOf="@+id/userpro_status"
+            app:layout_constraintTop_toTopOf="@+id/becomePro_text_top">
+
+        </Constraint>
+
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/end">
+
+      <!--  below item is not using above are use-->
+
+       <!-- <Constraint android:id="@id/userDetail_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp">
+        </Constraint>
+-->
+        <Constraint android:id="@+id/imgCard"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            app:layout_constraintTop_toBottomOf="@+id/ivClear"
+            app:layout_constraintStart_toStartOf="@+id/imgCard1"
+            app:layout_constraintTop_toTopOf="@+id/imgCard1"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="@+id/imgCard1"
+            android:elevation="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_8sdp">
+
+
+        </Constraint>
+
+        <Constraint android:id="@+id/imgCard1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:alpha="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivClear"
+            >
+
+        </Constraint>
+
+        <!--<Constraint android:id="@+id/userImg"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp">
+            <CustomAttribute
+                app:attributeName="scaleType"
+                app:customStringValue="centerCrop" />
+        </Constraint>-->
+
+        <Constraint
+            android:id="@id/userName_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:elevation="@dimen/_8sdp"
+            android:alpha="0"
+            app:layout_constraintStart_toEndOf="@+id/imgCard"
+            app:layout_constraintTop_toTopOf="@+id/imgCard"
+            app:layout_constraintBottom_toBottomOf="@+id/imgCard">
+
+           <!-- <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="16" />-->
+        </Constraint>
+
+        <Constraint
+            android:id="@id/userHomeTown_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:elevation="@dimen/_8sdp"
+            android:visibility="gone"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4">
+
+            <!--<CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="12" />-->
+
+        </Constraint>
+
+        <Constraint android:id="@+id/userSelf_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:elevation="@dimen/_8sdp"
+            android:visibility="gone"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView5">
+            <!--<CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="10" />-->
+        </Constraint>
+
+        <Constraint android:id="@+id/imageView5"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:background="@drawable/ic_baseline_local_phone_24"
+            android:elevation="@dimen/_8sdp"
+            android:visibility="gone"
+            android:alpha="0"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+        </Constraint>
+
+        <Constraint android:id="@+id/imageView4"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:background="@drawable/ic_baseline_home_24"
+            android:elevation="@dimen/_8sdp"
+            android:visibility="gone"
+            android:alpha="0"
+            app:layout_constraintStart_toEndOf="@+id/imgCard"
+            app:layout_constraintTop_toBottomOf="@+id/userName_txt">
+
+        </Constraint>
+
+        <Constraint android:id="@+id/imageView6"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="@drawable/ic_baseline_email_24"
+            android:elevation="@dimen/_8sdp"
+            android:visibility="gone"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="@+id/userSelf_phone"
+            app:layout_constraintStart_toEndOf="@+id/userSelf_phone"
+            app:layout_constraintTop_toTopOf="@+id/userSelf_phone">
+
+        </Constraint>
+
+        <Constraint android:id="@+id/userSelfEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:elevation="@dimen/_8sdp"
+            android:visibility="gone"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="@+id/imageView6">
+            <!--<CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="10" />-->
+        </Constraint>
+
+        <Constraint
+            android:id="@id/userpro_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:elevation="@dimen/_8sdp"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="@+id/userPro_ic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/userPro_ic">
+
+            <!--<CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="11" />-->
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/userPro_ic"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/ic_baseline_workspace_premium_24"
+            android:elevation="@dimen/_8sdp"
+            android:alpha="0"
+            app:layout_constraintBottom_toBottomOf="@+id/userName_txt"
+            app:layout_constraintEnd_toStartOf="@+id/userpro_status"
+            app:layout_constraintTop_toTopOf="@+id/userName_txt">
+
+        </Constraint>
+
+    </ConstraintSet>
+</MotionScene>

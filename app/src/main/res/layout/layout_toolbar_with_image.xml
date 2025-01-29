@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appBarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:theme="@style/AppTheme.AppBarOverlay"
+    android:elevation="0dp"
+    tools:ignore="NestedWeights,SpUsage"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:minHeight="?actionBarSize"
+        android:elevation="0dp"
+        android:theme="@style/AppTheme.ActionBar2"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        >
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                >
+
+                <ImageView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/inner_img_m"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/profile_logo"
+                    android:visibility="gone"
+                    android:layout_alignParentLeft="true"
+                    />
+
+
+
+
+                <ImageView
+
+                    android:id="@+id/ivTimeLineLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:paddingEnd="@dimen/inner_img_m"
+                    android:paddingStart="0dp"
+                    android:paddingBottom="@dimen/inner_img_m"
+                    android:paddingTop="@dimen/inner_img_m"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="0dp"
+                    android:src="@drawable/reegur_img_time"
+                    android:layout_alignParentLeft="true"
+                    android:visibility="gone"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/avenir_black"
+                    android:maxLines="1"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/title_favorites"
+                    android:layout_gravity="center"
+
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               android:layout_weight="2.7"
+                >
+
+
+
+
+
+                <ImageView
+
+                    android:id="@+id/tv_pro_visibility"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_pro_circle1"
+                    android:layout_alignParentRight="true"
+                    android:padding="@dimen/inner_img_m"
+                    android:layout_gravity="end"
+                    android:gravity="center"
+                   android:visibility="gone"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>-->
+
+
+       <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start|center">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_32sdp"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/inner_img_m"
+                android:layout_margin="8dp"
+                android:src="@drawable/logo_1_1"
+                android:visibility="gone"
+                android:layout_alignParentLeft="true"
+                />
+
+           <TextView
+               android:id="@+id/tv_title"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentStart="true"
+               android:ellipsize="end"
+               android:fontFamily="@font/montserrat_bold"
+               android:maxLines="1"
+               android:text="@string/title_favorites"
+               android:textSize="@dimen/_14sdp"
+               android:textColor="@color/colorBlue"
+               android:visibility="visible"
+               />
+           <ImageView
+               android:id="@+id/toolbar_location_ic"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/tv_title"
+               android:layout_marginStart="@dimen/_minus2sdp"
+               android:layout_marginTop="@dimen/_minus2sdp"
+               android:src="@drawable/ic_baseline_my_location_24"
+               />
+           <TextView
+               android:id="@+id/toolbar_currant_location"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:text="India"
+               android:gravity="center_vertical"
+               android:layout_below="@+id/tv_title"
+               android:textColor="@color/black"
+               android:layout_toRightOf="@+id/toolbar_location_ic"
+               android:layout_marginTop="@dimen/_minus2sdp"
+               android:textSize="12sp"
+               android:fontFamily="@font/montserrat_medium"
+               android:layout_centerVertical="true"
+               />
+
+           <ImageView
+               android:id="@+id/toolbar_userImg"
+               android:layout_width="@dimen/_30sdp"
+               android:layout_height="@dimen/_30sdp"
+               android:layout_centerVertical="true"
+               android:visibility="gone"
+               />
+
+           <TextView
+               android:id="@+id/toolbar_userName"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="UserName"
+               android:textColor="@color/black"
+               android:visibility="gone"
+               android:fontFamily="@font/montserrat_regular"
+               android:layout_toEndOf="@+id/toolbar_userImg"
+               android:layout_centerVertical="true"
+               android:layout_marginStart="@dimen/_8sdp"
+               />
+
+
+            <ImageView
+                android:id="@+id/ivTimeLineLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_32sdp"
+                android:contentDescription="@string/app_name"
+                android:paddingStart="0dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="@dimen/inner_img_m"
+                android:paddingTop="@dimen/inner_img_m"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="@dimen/_31sdp"
+                android:src="@drawable/logo_1_1"
+                android:layout_alignParentLeft="true"
+                android:visibility="gone"
+                />
+
+
+
+          <!--  <ImageView
+
+                android:id="@+id/tv_pro_visibility"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_pro_circle1"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/inner_img_m"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/_32sdp"
+                android:gravity="center"
+                android:visibility="gone"
+
+                />-->
+
+           <ImageView
+               android:id="@+id/btn_clear_notification"
+               android:layout_width="@dimen/_30sdp"
+               android:layout_height="@dimen/_30sdp"
+               android:layout_alignParentRight="true"
+               android:padding="@dimen/inner_img_m"
+               android:background="@drawable/nochat60"
+               android:layout_gravity="end"
+               android:gravity="center"
+               android:visibility="gone"
+               />
+
+
+
+           <!-- <TextView
+                 android:visibility="gone"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:layout_gravity="end"
+                 android:background="@drawable/bg_pro_text_view"
+                 android:ellipsize="end"
+                 android:fontFamily="@font/montserrat_regular"
+                 android:gravity="center"
+                 android:maxLines="1"
+                 android:text="@string/label__pro_user"
+                 android:textColor="@color/white"
+                 android:textSize="@dimen/text_size_button_s" />
+ &nd-->
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+</com.google.android.material.appbar.AppBarLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C6A9A9A9"
+    tools:context=".mvp.view.activities.ImageVideoPreviewActivity">
+
+
+    <com.connect.meetupsfellow.global.utils.TouchImageView
+        android:id="@+id/ivImageViewPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/_8sdp"
+        android:layout_centerInParent="true" />
+
+    <VideoView
+        android:id="@+id/videoView_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:elevation="@dimen/_8sdp"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_file_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_text_snippet_24"
+            />
+
+        <TextView
+            android:id="@+id/preview_fileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="file Name"
+            android:layout_below="@+id/preview_fileImg"
+            android:layout_margin="@dimen/_10sdp"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:fontFamily="@font/montserrat_medium"
+            />
+    </LinearLayout>
+
+ <ImageView
+        android:id="@+id/preview_fileImg"
+        android:layout_width="@dimen/_210sdp"
+        android:layout_height="@dimen/_230sdp"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:src="@drawable/ic_baseline_text_snippet_24"
+        />
+
+    <TextView
+        android:id="@+id/preview_fileNamePdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="file Name"
+        android:visibility="gone"
+        android:layout_below="@+id/preview_fileImg"
+        android:layout_margin="@dimen/_8sdp"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:fontFamily="@font/montserrat_medium"
+        />
+
+    <ProgressBar
+        android:id="@+id/preview_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        style="?android:progressBarStyleLarge"
+        android:indeterminateTint="@android:color/holo_blue_light"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivImageSend"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:elevation="@dimen/_8sdp"
+        android:padding="@dimen/_7sdp"
+        android:src="@drawable/ic_check_green" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivImageClosePreview"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:contentDescription="@string/app_name"
+        android:elevation="@dimen/_8sdp"
+        android:padding="@dimen/_7sdp"
+        android:src="@drawable/cross_icon" />
+
+
+</RelativeLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/group_2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/flagBlockBtn"
+        android:orientation="horizontal">
+
+    <ScrollView
+        android:id="@+id/scProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="true"
+        android:overScrollMode="never"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <include android:id="@+id/included_userImg"
+                layout="@layout/layout_image_user_new" />
+
+            <com.google.android.material.tabs.TabLayout
+               android:visibility="gone"
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabBackground="@color/colorBottomBar"
+                app:tabIndicatorColor="@color/colorRed"
+                app:tabIndicatorHeight="2dp"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                app:tabTextColor="@color/white" />
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/stats"
+                    layout="@layout/lyout_stats_view_new" />
+
+
+            </RelativeLayout>
+
+            <!--<include layout="@layout/layout_profile_details"/>-->
+        </LinearLayout>
+
+    </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/flagBlockBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/iv_flagUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:background="@drawable/round_corner_btn_new"
+            android:text="Flag"
+            android:textSize="@dimen/_11ssp"
+            android:visibility="gone"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textAllCaps="false" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/iv_blockUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:background="@drawable/round_corner_btn_new"
+            android:text="Action"
+            android:visibility="gone"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llBtn_receive"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_req_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:background="@drawable/round_corner_btn_new"
+            android:text="Request cancel"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textAllCaps="false" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_req_connect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:textSize="@dimen/_10ssp"
+            android:background="@drawable/round_corner_btn_new"
+            android:text="Request connect"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <include android:id="@+id/included_loading"
+        layout="@layout/layout_loading" />
+</androidx.constraintlayout.widget.ConstraintLayout>
