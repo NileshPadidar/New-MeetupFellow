@@ -2564,6 +2564,7 @@ class HomeActivity : CustomAppActivityCompatViewImpl(), OnNotificationReceived {
                             val otherUserName = list.child("otherUserName").value.toString()
 
                             if (chatRoomId != "null" && lastMsg != "null" && lastMsgTime != "null" && otherUserName != "null") {
+
                                 unreadCount = list.child("unReadCount").value.toString().toInt()
                                 Log.e("ChatUnreadCount", "Home: " + unreadCount.toString())
 
@@ -2595,6 +2596,7 @@ class HomeActivity : CustomAppActivityCompatViewImpl(), OnNotificationReceived {
                     }
 
                 }
+
                 override fun onCancelled(p0: DatabaseError) {
 
                 }
@@ -3849,7 +3851,7 @@ class HomeActivity : CustomAppActivityCompatViewImpl(), OnNotificationReceived {
                     switchActivity(Constants.Intent.Webview, false, Bundle().apply {
                         putString(
                             Constants.IntentDataKeys.TITLE,
-                            getString(R.string.label_support_text)
+                            getString(R.string.label_review_text)
                         )
                         putString(
                             Constants.IntentDataKeys.LINK,
