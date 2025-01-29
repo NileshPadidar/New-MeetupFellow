@@ -3872,7 +3872,6 @@ class HomeActivity : CustomAppActivityCompatViewImpl(), OnNotificationReceived {
                     isItemClicked = false
                     binding!!.drawerLayout.closeDrawer(GravityCompat.END)
                     showAlertLogout(getString(R.string.alert_logout_user))
-
                     return@setNavigationItemSelectedListener true
                 }
 
