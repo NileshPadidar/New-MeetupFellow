@@ -148,7 +148,7 @@ class NotificationsViewHolder(private val binding: ItemNotificationBinding) :
                 Constants.Notification.eventInterest -> {
                     Log.e("MultiUserActivity", "IS-MUlti_Following^@% : ${responseNotifications.is_multiple_event_interest}")
                     if (responseNotifications.is_multiple_event_interest == 1) {
-                        itemView.context.startActivity(
+                       /* itemView.context.startActivity(
                             Intent(Constants.Intent.MultiUserViewLike).putExtras(Bundle().apply {
                                 putInt(
                                     Constants.IntentDataKeys.NotificationId,
@@ -157,6 +157,14 @@ class NotificationsViewHolder(private val binding: ItemNotificationBinding) :
                                 putString(
                                     Constants.IntentDataKeys.Type,
                                     Constants.Notification.eventInterest
+                                )
+                            })
+                        )*/
+                        itemView.context.startActivity(
+                            Intent(Constants.Intent.EventDetails).putExtras(Bundle().apply {
+                                putInt(
+                                    Constants.IntentDataKeys.EventId,
+                                    responseNotifications.eventId
                                 )
                             })
                         )
@@ -278,7 +286,6 @@ class NotificationsViewHolder(private val binding: ItemNotificationBinding) :
                     adapterPosition, ItemClickStatus.Unread
                 )
             }
-
         }
 
         binding.ivDelete.setOnClickListener {
@@ -356,7 +363,6 @@ class NotificationsViewHolder(private val binding: ItemNotificationBinding) :
                     }
                 }
 
-
                 Constants.Notification.ProfileLike -> {
                     if (responseNotifications.is_multiple_profile_like == 1) {
                         itemView.context.startActivity(
@@ -412,7 +418,7 @@ class NotificationsViewHolder(private val binding: ItemNotificationBinding) :
                 Constants.Notification.eventInterest -> {
                     Log.e("MultiUserActivity", "IS-MUlti_Following^@% : ${responseNotifications.is_multiple_event_interest}")
                     if (responseNotifications.is_multiple_event_interest == 1) {
-                        itemView.context.startActivity(
+                       /* itemView.context.startActivity(
                             Intent(Constants.Intent.MultiUserViewLike).putExtras(Bundle().apply {
                                 putInt(
                                     Constants.IntentDataKeys.NotificationId,
@@ -421,6 +427,14 @@ class NotificationsViewHolder(private val binding: ItemNotificationBinding) :
                                 putString(
                                     Constants.IntentDataKeys.Type,
                                     Constants.Notification.eventInterest
+                                )
+                            })
+                        )*/
+                        itemView.context.startActivity(
+                            Intent(Constants.Intent.EventDetails).putExtras(Bundle().apply {
+                                putInt(
+                                    Constants.IntentDataKeys.EventId,
+                                    responseNotifications.eventId
                                 )
                             })
                         )

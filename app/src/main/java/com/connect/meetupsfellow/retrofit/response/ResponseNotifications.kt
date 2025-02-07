@@ -16,6 +16,10 @@ class ResponseNotifications : Serializable {
     @Expose
     internal val pushMgsId = -1
 
+     @SerializedName("eventId")
+    @Expose
+    internal val eventId = -1
+
     @SerializedName("type")
     @Expose
     internal val type = ""

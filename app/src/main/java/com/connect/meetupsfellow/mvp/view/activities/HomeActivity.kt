@@ -1925,7 +1925,7 @@ class HomeActivity : CustomAppActivityCompatViewImpl(), OnNotificationReceived {
     }
 
     override fun onBackPressed() {
-
+        super.onBackPressed()
         /* if (materialSheetFab.isSheetVisible()) {
              materialSheetFab.hideSheet();
          }
@@ -2850,7 +2850,6 @@ class HomeActivity : CustomAppActivityCompatViewImpl(), OnNotificationReceived {
           alertDialog.show()*/
     }
 
-
     private fun delete(id: String) {
         if (null == mPresenterN) mPresenterN = NotificationPresenter(presenterN)
 
@@ -2862,7 +2861,7 @@ class HomeActivity : CustomAppActivityCompatViewImpl(), OnNotificationReceived {
         }
     }
 
-    // claer all notification
+    // clear all notification
     private fun clear() {
         if (null == mPresenterN) mPresenterN = NotificationPresenter(presenterN)
 
@@ -3567,8 +3566,6 @@ class HomeActivity : CustomAppActivityCompatViewImpl(), OnNotificationReceived {
 
     }
 
-
-
     private fun setNavigationUserProfile() {
         if (null != navigationUserName && null != navigationUserImage && null != navigationUserAddress) {
             val profile = sharedPreferencesUtil.fetchUserProfile()
@@ -3847,24 +3844,24 @@ class HomeActivity : CustomAppActivityCompatViewImpl(), OnNotificationReceived {
 
                 R.id.reviewApp -> {
                     isItemClicked = false
-                    val reviewUrl = Constants.Firebase.App_Review_URL + sharedPreferencesUtil.fetchUserProfile().userId
-                    switchActivity(Constants.Intent.Webview, false, Bundle().apply {
-                        putString(
-                            Constants.IntentDataKeys.TITLE,
-                            getString(R.string.label_review_text)
-                        )
-                        putString(
-                            Constants.IntentDataKeys.LINK,
-                            reviewUrl
-                        )
-                    })
-                    Log.e("reviewApp","reviewApp_Code : $reviewUrl")
-                   /// reviewApp()
-//                    showSupport(getString(R.string.support_text), getString(R.string.label_support_text))
+                    openPlayStore()
+                    Log.e("reviewApp","showInAppReview")
+                    /*   val reviewUrl = Constants.Firebase.App_Review_URL + sharedPreferencesUtil.fetchUserProfile().userId
+                       switchActivity(Constants.Intent.Webview, false, Bundle().apply {
+                           putString(
+                               Constants.IntentDataKeys.TITLE,
+                               getString(R.string.label_review_text)
+                           )
+                           putString(
+                               Constants.IntentDataKeys.LINK,
+                               reviewUrl
+                           )
+                       })
+                       Log.e("reviewApp","reviewApp_Code : $reviewUrl")*/
+
                     Handler().postDelayed({
                         binding!!.drawerLayout.closeDrawer(GravityCompat.END)
                     }, 100)
-
                     return@setNavigationItemSelectedListener true
                 }
 
@@ -3909,6 +3906,16 @@ class HomeActivity : CustomAppActivityCompatViewImpl(), OnNotificationReceived {
             }
         }
 
+    }
+
+    private fun openPlayStore() {
+        val packageName = packageName
+        val intent = android.content.Intent(
+            android.content.Intent.ACTION_VIEW,
+            android.net.Uri.parse("market://details?id=$packageName")
+        )
+        intent.addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK)
+        startActivity(intent)
     }
 
     private fun closeMenuFilter() {

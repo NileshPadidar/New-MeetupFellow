@@ -22,7 +22,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Enable Fingerprint Security"
+                android:text="Fingerprint Security"
                 android:layout_gravity="center|top"
                 android:layout_marginTop="@dimen/_14sdp"
                 android:textColor="@color/colorBlue"
@@ -77,6 +77,20 @@
                     android:layout_marginTop="@dimen/_4sdp"
                     android:layout_gravity="center"/>-->
 
+                <TextView
+                    android:id="@+id/tvEnableDecebleFP"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:text="Enable Fingerprint?"
+                    />
+
+
                 <Switch
                     android:id="@+id/fingerSwitch"
                     android:layout_width="wrap_content"
@@ -85,7 +99,7 @@
                     android:layout_gravity="center"
                     android:thumbTint="@color/thumb_tint"
                     android:trackTint="@color/track_tint"
-                    android:layout_marginBottom="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
                     tools:ignore="UseSwitchCompatOrMaterialXml" />
 
             </LinearLayout>

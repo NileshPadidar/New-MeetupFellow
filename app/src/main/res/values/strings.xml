@@ -13,7 +13,7 @@
     <!--<string name="title_nearby">Fellow\'s around you</string>-->
     <string name="title_nearby">Around You</string>
     <string name="title_chat">Messages</string>
-    <string name="title_favorites">Favourite Fellows</string>
+    <string name="title_favorites">Favorite Fellows</string>
     <string name="title_interested_people">Interested People</string>
     <string name="title_change_number">Change Number</string>
     <string name="title_notifications">Notifications</string>
@@ -40,8 +40,8 @@
     <string name="membership_featured">Featured</string>
     <string name="make_public">Make your profile public</string>
     <string name="make_privet">Make your profile private</string>
-    <string name="make_privet_hint">Free membership doesn\'t allow to make profit private or hidden.</string>
-    <string name="upgrade_plan_for_private">This membership doesn\'t allow to make you profit private or hidden.</string>
+    <string name="make_privet_hint">Free membership doesn\'t allow to make profile private or hidden.</string>
+    <string name="upgrade_plan_for_private">This membership doesn\'t allow to make you profile private or hidden.</string>
     <string name="upgrade_plan_for_event">This membership doesn\'t allow to create event.</string>
     <string name="free_user_event_note">Free membership doesn\'t allow to create Event.</string>
     <string name="event_limit_note">You don\'t have limit add to add new event.</string>
@@ -75,6 +75,8 @@
     <string name="clear_all_chat">Do you want to clear all chats?</string>
     <string name="disable_pin_code">Disable PIN code?</string>
     <string name="enable_pin_code">Enable PIN code?</string>
+    <string name="disable_fingerprint">Disable fingerprint?</string>
+    <string name="enable_fingerprint">Enable fingerprint?</string>
 
     <string name="text_sent_message">
         <xliff:g id="view">%1$s</xliff:g>
@@ -165,7 +167,7 @@
     <string name="label_profile">111 Profile</string>
     <string name="label_twitter">111 Twitter</string>
     <string name="label_block_text">Blocked Users</string>
-    <string name="label_favorite_fellows">Favourite Fellows</string>
+    <string name="label_favorite_fellows">Favorite Fellows</string>
     <string name="label_transection_history">Payment History</string>
     <string name="label_my_subscription">My Subscription</string>
     <string name="connect_request">Connect Request</string>
@@ -357,8 +359,8 @@
     <string name="text_no_gender_con">Non-Gender Conforming</string>
     <string name="text_no_feeds">No feeds found</string>
     <string name="text_no_result">No results found</string>
-    <string name="text_no_notification">You have no new notifications at the moment. Check back later for updates.</string>
-    <string name="text_no_favorite">No favourite found</string>
+    <string name="text_no_notification">You don\'t have new notifications at the moment. Check back later for updates.</string>
+    <string name="text_no_favorite">No favorite found</string>
     <string name="text_no_user">No personal conversation found. \n Start a new conversation to see your Fellow\'s here</string>
     <string name="text_no_group">No group conversation found. \n Create a new group or ask fellows to add you in their group.</string>
     <string name="text_no_call">No call history found. \n Call a fellow to see your call history</string>

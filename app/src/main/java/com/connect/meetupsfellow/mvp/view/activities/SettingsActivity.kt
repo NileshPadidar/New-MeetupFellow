@@ -718,6 +718,7 @@ class SettingsActivity : CustomAppActivityCompatViewImpl() {
 
         val fingerSwitch = view.findViewById<Switch>(R.id.fingerSwitch)
         val closeDialog = view.findViewById<Button>(R.id.closeDialog)
+        val tvEnableDecebleFP = view.findViewById<TextView>(R.id.tvEnableDecebleFP)
 
         Log.d(
             "finger",
@@ -730,10 +731,12 @@ class SettingsActivity : CustomAppActivityCompatViewImpl() {
         if (isFingerEnabled) {
 
             //  fingerSwitch.isChecked = IconSwitch.Checked.RIGHT
+            tvEnableDecebleFP.text = getString(R.string.disable_fingerprint)
             fingerSwitch.isChecked = true
         } else {
 
             // fingerSwitch.checked = IconSwitch.Checked.LEFT
+            tvEnableDecebleFP.text = getString(R.string.enable_fingerprint)
             fingerSwitch.isChecked = false
         }
 
@@ -749,11 +752,13 @@ class SettingsActivity : CustomAppActivityCompatViewImpl() {
                     ).show()
                     getSharedPreferences("Finger", MODE_PRIVATE).edit().putBoolean("Finger", false)
                         .apply()
+                    tvEnableDecebleFP.text = getString(R.string.enable_fingerprint)
                 }
 
                 true -> {
 
                     checkFinger(fingerSwitch)
+                    tvEnableDecebleFP.text = getString(R.string.disable_fingerprint)
                 }
             }
         }

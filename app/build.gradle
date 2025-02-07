@@ -123,6 +123,8 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
     /* Latest update below dependency bu nilu - 18/Dec/24 */
+   /// implementation("com.google.android.play:review:2.0.2") Play store review and rating
+
     implementation 'com.hbb20:ccp:2.7.3'
     //  New Google Places Library
     implementation 'com.google.android.libraries.places:places:4.1.0'

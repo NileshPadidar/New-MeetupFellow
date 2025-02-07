@@ -179,6 +179,7 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
             chats.addAll(oldData);
 
             notifyItemRangeInserted(0, newData.size());
+            // when use notifyDataSetChanged Scroll view is affect without dataChang replay & Delete functionality affect
             notifyDataSetChanged();
 
             Log.e("Send_Msg%", "New data appended successfully");
@@ -191,7 +192,6 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
     }
 
     public void removeChats(int pos) {
-
         this.chats.remove(pos);
         notifyItemRemoved(pos);
         notifyItemRangeChanged(0, chats.size());
@@ -1846,7 +1846,6 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
                 Log.e("isSelecting11", isSelecting.toString());
 
                 if (selectedPos.contains(String.valueOf(pos))) {
-
                     selectedPos.remove(String.valueOf(pos));
                     chatActivity.chatsToDelete(chats.get(pos).getChatId());
                     chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
@@ -1857,7 +1856,6 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
                     }
 
                 } else {
-
                     if (isSelecting) {
                         Log.e("Copy_Delet: ", "2");
                         chatActivity.chatsToDelete(chats.get(pos).getChatId());
@@ -1873,14 +1871,14 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
         holder.flFile.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-
                 holder.flFile.setClickable(false);
                 holder.flFile.setEnabled(false);
                 isSelecting = true;
-                holder.flFile.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
+              /*  holder.flFile.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
                 selectedPos.add(String.valueOf(pos));
                 chatActivity.chatsToDelete(chats.get(pos).getChatId());
                 chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+                */
                 //holder.selfChatLay.setClickable(true);
                 Log.e("Copy_Delet: ", "3");
                 Log.e("isSelecting22", isSelecting.toString());
@@ -1893,6 +1891,25 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
                     }
                 }, 500);
 
+
+                if (selectedPos.contains(String.valueOf(pos))) {
+                    selectedPos.remove(String.valueOf(pos));
+                    chatActivity.chatsToDelete(chats.get(pos).getChatId());
+                    chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+                    holder.flFile.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me));
+                    Log.e("Copy_Delet: ", "1");
+                    if (selectedPos.isEmpty()) {
+                        isSelecting = false;
+                    }
+
+                } else {
+                    holder.flFile.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
+                    selectedPos.add(String.valueOf(pos));
+                    chatActivity.chatsToDelete(chats.get(pos).getChatId());
+                    chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+
+                }
+
                 return false;
             }
         });
@@ -1904,11 +1921,12 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
                 holder.pdfPreviewImg.setClickable(false);
                 holder.pdfPreviewImg.setEnabled(false);
                 isSelecting = true;
-                holder.flFile.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
+              /*  holder.flFile.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
                 selectedPos.add(String.valueOf(pos));
                 chatActivity.chatsToDelete(chats.get(pos).getChatId());
                 chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
-                //holder.selfChatLay.setClickable(true);
+               */
+
                 Log.e("Copy_Delet: ", "4");
                 Log.e("isSelecting33", isSelecting.toString());
 
@@ -1919,6 +1937,27 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
 
                     }
                 }, 500);
+
+
+                if (selectedPos.contains(String.valueOf(pos))) {
+
+                    selectedPos.remove(String.valueOf(pos));
+                    chatActivity.chatsToDelete(chats.get(pos).getChatId());
+                    chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+                    holder.flFile.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me));
+                    Log.e("Copy_Delet: ", "5");
+                    if (selectedPos.isEmpty()) {
+
+                        isSelecting = false;
+                    }
+
+                } else {
+                    holder.flFile.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
+                    selectedPos.add(String.valueOf(pos));
+                    chatActivity.chatsToDelete(chats.get(pos).getChatId());
+                    chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+
+                }
 
                 return false;
             }
@@ -1963,10 +2002,11 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
                 holder.fileIconIv.setClickable(false);
                 holder.fileIconIv.setEnabled(false);
                 isSelecting = true;
-                holder.flFile.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
+               /* holder.flFile.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
                 selectedPos.add(String.valueOf(pos));
                 chatActivity.chatsToDelete(chats.get(pos).getChatId());
                 chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+              */
                 //holder.selfChatLay.setClickable(true);
                 Log.e("Copy_Delet: ", "7");
                 Log.e("isSelecting44", isSelecting.toString());
@@ -1979,7 +2019,29 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
                     }
                 }, 500);
 
-                return false;
+                if (selectedPos.contains(String.valueOf(pos))) {
+                    Log.e("Copy_Delet: ", "8");
+                    selectedPos.remove(String.valueOf(pos));
+                    chatActivity.chatsToDelete(chats.get(pos).getChatId());
+                    chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+                    holder.flFile.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me));
+
+                    if (selectedPos.isEmpty()) {
+
+                        isSelecting = false;
+                    }
+
+                } else {
+                    holder.flFile.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
+                    selectedPos.add(String.valueOf(pos));
+                    chatActivity.chatsToDelete(chats.get(pos).getChatId());
+                    chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+
+                }
+
+
+
+                    return false;
             }
         });
 
@@ -2022,10 +2084,11 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
                 holder.fileNameTv.setClickable(false);
                 holder.fileNameTv.setEnabled(false);
                 isSelecting = true;
-                holder.flFile.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
+               /* holder.flFile.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
                 selectedPos.add(String.valueOf(pos));
                 chatActivity.chatsToDelete(chats.get(pos).getChatId());
                 chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+               */
                 //holder.selfChatLay.setClickable(true);
                 Log.e("Copy_Delet: ", "10");
                 Log.e("isSelecting66", isSelecting.toString());
@@ -2037,6 +2100,27 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
 
                     }
                 }, 500);
+
+
+                if (selectedPos.contains(String.valueOf(pos))) {
+                    Log.e("Copy_Delet: ", "11");
+                    selectedPos.remove(String.valueOf(pos));
+                    chatActivity.chatsToDelete(chats.get(pos).getChatId());
+                    chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+                    holder.flFile.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me));
+
+                    if (selectedPos.isEmpty()) {
+
+                        isSelecting = false;
+                    }
+
+                } else {
+                    holder.flFile.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
+                    selectedPos.add(String.valueOf(pos));
+                    chatActivity.chatsToDelete(chats.get(pos).getChatId());
+                    chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+
+                }
 
                 return false;
             }
@@ -2081,10 +2165,11 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
                 holder.fileBgIv.setClickable(false);
                 holder.fileBgIv.setEnabled(false);
                 isSelecting = true;
-                holder.flFile.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
+             /*   holder.flFile.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
                 selectedPos.add(String.valueOf(pos));
                 chatActivity.chatsToDelete(chats.get(pos).getChatId());
                 chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+               */
                 //holder.selfChatLay.setClickable(true);
                 Log.e("Copy_Delet: ", "13");
                 Log.d("isSelecting77", isSelecting.toString());
@@ -2096,6 +2181,26 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
 
                     }
                 }, 500);
+
+                if (selectedPos.contains(String.valueOf(pos))) {
+                    Log.e("Copy_Delet: ", "14");
+                    selectedPos.remove(String.valueOf(pos));
+                    chatActivity.chatsToDelete(chats.get(pos).getChatId());
+                    chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+                    holder.flFile.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me));
+
+                    if (selectedPos.isEmpty()) {
+
+                        isSelecting = false;
+                    }
+
+                } else {
+                    holder.flFile.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
+                    selectedPos.add(String.valueOf(pos));
+                    chatActivity.chatsToDelete(chats.get(pos).getChatId());
+                    chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+
+                }
 
                 return false;
             }
@@ -2268,35 +2373,6 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
             }
         });
 
-
-        holder.selfChatLay.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-
-                holder.selfChatLay.setClickable(false);
-                holder.selfChatLay.setEnabled(false);
-                isSelecting = true;
-                holder.selfChatLay.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
-                selectedPos.add(String.valueOf(pos));
-                chatActivity.chatsToDelete(chats.get(pos).getChatId());
-                chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
-                //holder.selfChatLay.setClickable(true);
-                Log.e("Copy_Delet: ", "16");
-                Log.d("isSelecting99", isSelecting.toString());
-
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        holder.selfChatLay.setEnabled(true);
-
-                    }
-                }, 500);
-
-
-                return false;
-            }
-        });
-
         holder.gifViewLay.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
@@ -2304,10 +2380,11 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
                 holder.gifViewLay.setClickable(false);
                 holder.gifViewLay.setEnabled(false);
                 isSelecting = true;
-                holder.gifViewLay.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
+              /*  holder.gifViewLay.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
                 selectedPos.add(String.valueOf(pos));
                 chatActivity.chatsToDelete(chats.get(pos).getChatId());
                 chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+               */
                 //holder.selfChatLay.setClickable(true);
                 Log.e("Copy_Delet: ", "17");
 
@@ -2318,6 +2395,26 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
 
                     }
                 }, 500);
+
+                if (selectedPos.contains(String.valueOf(pos))) {
+                    Log.e("Copy_Delet: ", "18");
+                    selectedPos.remove(String.valueOf(pos));
+                    chatActivity.chatsToDelete(chats.get(pos).getChatId());
+                    chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+                    holder.gifViewLay.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me));
+
+                    if (selectedPos.isEmpty()) {
+
+                        isSelecting = false;
+                    }
+
+                } else {
+                    holder.gifViewLay.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
+                    selectedPos.add(String.valueOf(pos));
+                    chatActivity.chatsToDelete(chats.get(pos).getChatId());
+                    chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+
+                }
 
                 return false;
             }
@@ -2373,10 +2470,11 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
                 holder.gifViewLayO.setClickable(false);
                 holder.gifViewLayO.setEnabled(false);
                 isSelecting = true;
-                holder.gifViewLayO.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
+              /*  holder.gifViewLayO.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
                 selectedPos.add(String.valueOf(pos));
                 chatActivity.chatsToDelete(chats.get(pos).getChatId());
                 chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+               */
                 //holder.selfChatLay.setClickable(true);
                 Log.e("Copy_Delet: ", "Other_17");
 
@@ -2388,7 +2486,27 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
                     }
                 }, 500);
 
-                return false;
+                if (selectedPos.contains(String.valueOf(pos))) {
+                    Log.e("Copy_Delet: ", "other_18");
+                    selectedPos.remove(String.valueOf(pos));
+                    chatActivity.chatsToDelete(chats.get(pos).getChatId());
+                    chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+                    holder.gifViewLayO.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me));
+
+                    if (selectedPos.isEmpty()) {
+
+                        isSelecting = false;
+                    }
+
+                } else {
+                    holder.gifViewLayO.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
+                    selectedPos.add(String.valueOf(pos));
+                    chatActivity.chatsToDelete(chats.get(pos).getChatId());
+                    chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+
+                }
+
+                    return false;
             }
         });
 
@@ -2452,7 +2570,8 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
                         isSelecting = false;
                     }
 
-                } else {
+                }
+                else {
 
                     if (isSelecting) {
                         Log.e("Copy_Delet: ", "21");
@@ -2479,17 +2598,65 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
             }
         });
 
+        holder.selfChatLay.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+
+                holder.selfChatLay.setClickable(false);
+                holder.selfChatLay.setEnabled(false);
+                isSelecting = true;
+               /* holder.selfChatLay.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
+                selectedPos.add(String.valueOf(pos));
+                chatActivity.chatsToDelete(chats.get(pos).getChatId());
+                chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+*/
+                //holder.selfChatLay.setClickable(true);
+                Log.e("Copy_Delet: ", "16");
+                Log.d("isSelecting99", isSelecting.toString());
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        holder.selfChatLay.setEnabled(true);
+
+                    }
+                }, 500);
+
+                if (selectedPos.contains(String.valueOf(pos))) {
+                    Log.e("Copy_Delet: ", "New_ADD");
+                    selectedPos.remove(String.valueOf(pos));
+                    chatActivity.chatsToDelete(chats.get(pos).getChatId());
+                    chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+                    holder.selfChatLay.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me));
+
+                    if (selectedPos.isEmpty()) {
+                        isSelecting = false;
+                    }
+
+                }
+                else {
+
+                    holder.selfChatLay.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_me_selected));
+                    selectedPos.add(String.valueOf(pos));
+                    chatActivity.chatsToDelete(chats.get(pos).getChatId());
+                    chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+
+                }
+                return false;
+            }
+        });
+
         holder.othersChatLay.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
                 holder.othersChatLay.setClickable(false);
                 holder.othersChatLay.setEnabled(false);
                 isSelecting = true;
-                holder.othersChatLay.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_other_selected));
+               /* holder.othersChatLay.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_other_selected));
                 selectedPos.add(String.valueOf(pos));
                 chatActivity.chatsToDelete(chats.get(pos).getChatId());
                 chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
-                Log.d("isSelecting12", isSelecting.toString());
+                Log.d("isSelecting12", isSelecting.toString());*/
                 Log.e("Copy_Delet: ", "222");
                 new Handler().postDelayed(new Runnable() {
                     @Override
@@ -2497,6 +2664,26 @@ public class RecycleViewPersonalChatAdapter extends RecyclerView.Adapter<Recycle
                         holder.othersChatLay.setEnabled(true);
                     }
                 }, 500);
+
+                if (selectedPos.contains(String.valueOf(pos))) {
+                    Log.e("Copy_Delet: ", "New_ADD_Second_last");
+                    selectedPos.remove(String.valueOf(pos));
+                    chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+                    chatActivity.chatsToDelete(chats.get(pos).getChatId());
+                    holder.othersChatLay.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_other));
+
+                    if (selectedPos.isEmpty()) {
+
+                        isSelecting = false;
+                    }
+
+                }else {
+                    holder.othersChatLay.setBackground(context.getResources().getDrawable(R.drawable.drawable_chat_other_selected));
+                    selectedPos.add(String.valueOf(pos));
+                    chatActivity.chatsToDelete(chats.get(pos).getChatId());
+                    chatActivity.showCopyOption(chats.get(pos).getLastMsg(), chats.get(pos).getUserName(), dateTimeChatR, chats.get(pos).getChatId());
+                    Log.d("isSelecting12", isSelecting.toString());
+                }
 
                 return false;
             }
