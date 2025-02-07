@@ -1729,9 +1729,8 @@ class ChatActivity : CustomAppActivityCompatViewImpltouch(), UploadMediaInterfac
     fun mantanScrollPostion(
         newDataSize: Int, chats: ArrayList<RecycleModel>
     ) {
-        /// recycleModel.clear()
-        /// recycleModel.addAll(chats)
-
+         recycleModel.clear()
+         recycleModel.addAll(chats)
         // Screen width and height in pixels
         //    val screenHeight = resources.displayMetrics.heightPixels
         loadMoreDataSize = newDataSize
@@ -1743,7 +1742,7 @@ class ChatActivity : CustomAppActivityCompatViewImpltouch(), UploadMediaInterfac
                         firstVisiblePosition + newDataSize, topOffset
                     )
                     // Restore the previous scrollY position of the NestedScrollView
-                    /// nestedScrollView.scrollTo(0, targetPosition)
+                   ///  binding!!.nestedScrollView.scrollTo(0, firstVisiblePosition + newDataSize)
                 }
                 loadMoreGloble = true
             }
@@ -2007,29 +2006,26 @@ class ChatActivity : CustomAppActivityCompatViewImpltouch(), UploadMediaInterfac
 
         if (deleteChatsArr.isNotEmpty()) {
             binding!!.header.deleteChat.visibility = View.VISIBLE
+            binding!!.header.copyChat.visibility = View.VISIBLE
         } else {
             binding!!.header.deleteChat.visibility = View.GONE
+            binding!!.header.copyChat.visibility = View.GONE
         }
         /// chatDeleteIc.isVisible = !deleteChatsArr.isEmpty()
         //  binding!!.header.deleteChat.isVisible = deleteChatsArr.isNotEmpty()
-
     }
 
     fun showCopyOption(msg: String, senderName: String, msgTime: String, msgId: String) {
-
         ///  val tempMsg = "[$msgTime] $senderName : $msg\n"
         val tempMsg = msg
         Log.d("CopyMsg@#11", tempMsg)
         if (msgToCopy.contains(tempMsg)) {
-
             if (msgIdArr.contains(msgId)) {
-
                 Log.d("CopyMsgT", tempMsg)
 
                 msgToCopy = msgToCopy.replace(tempMsg, "")
                 msgIdArr.remove(msgId)
             } else {
-
                 Log.d("CopyMsgET", tempMsg)
 
                 msgToCopy += tempMsg
@@ -2047,8 +2043,10 @@ class ChatActivity : CustomAppActivityCompatViewImpltouch(), UploadMediaInterfac
         Log.e("CopyMsgA%", msgToCopy)
         if (msgToCopy.isNotBlank()) {
             binding!!.header.copyChat.visibility = View.VISIBLE
+            binding!!.header.deleteChat.visibility = View.VISIBLE
         } else {
             binding!!.header.copyChat.visibility = View.GONE
+            binding!!.header.deleteChat.visibility = View.GONE
         }
         //   copyMenuItem.isVisible = msgToCopy.isNotBlank()
         ///  binding!!.header.copyChat.isVisible = msgToCopy.isNotBlank()
@@ -2187,7 +2185,7 @@ class ChatActivity : CustomAppActivityCompatViewImpltouch(), UploadMediaInterfac
                         msgToCopy = ""
                         /// chatDeleteIc.isVisible = false
                         binding!!.header.deleteChat.visibility = View.GONE
-
+                        binding!!.header.copyChat.visibility = View.GONE
                         deleteChatsArr.clear()
                     }
                 }
@@ -5606,7 +5604,6 @@ class ChatActivity : CustomAppActivityCompatViewImpltouch(), UploadMediaInterfac
         val mngr = getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
 
         val taskList = mngr.getRunningTasks(10)
-
         if (taskList[0].numActivities == 1 && taskList[0].topActivity!!.className == this::class.java.name) {
             Log.e(TAG, "This is the last activity in the stack")
             val intent = Intent(
@@ -5618,7 +5615,6 @@ class ChatActivity : CustomAppActivityCompatViewImpltouch(), UploadMediaInterfac
             Log.e(TAG, "activity allready exist in the stack")
             finish()
         }
-
     }
 
     override fun onResume() {
@@ -5700,7 +5696,6 @@ class ChatActivity : CustomAppActivityCompatViewImpltouch(), UploadMediaInterfac
         // Showing Alert Message
         alertDialog.show()
     }
-
 
     /*override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         conversation?.apply {
@@ -6006,7 +6001,6 @@ class ChatActivity : CustomAppActivityCompatViewImpltouch(), UploadMediaInterfac
         confirm.text = "Accept"
 
         cancelBtn.setOnClickListener {
-
             dialog.dismiss()
             clearRoom(roomId)
         }
@@ -6030,7 +6024,6 @@ class ChatActivity : CustomAppActivityCompatViewImpltouch(), UploadMediaInterfac
                 askPermissions()
             }
         }
-
         dialog.show()
 
     }

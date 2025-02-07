@@ -648,22 +648,17 @@ class ProfileFragment : CustomFragment() {
 
     }
 
-
     @SuppressLint("MissingInflatedId")
     private fun openActionBottomSheet() {
         // on below line we are creating a new bottom sheet dialog.
         val dialog = BottomSheetDialog(requireActivity(), R.style.BottomSheetStyle)
         val view = layoutInflater.inflate(R.layout.profile_action_bottom_sheet, null)
-        val btnDisconnect = view.findViewById<Button>(R.id.btn_disconnectUser)
-        val btnReport = view.findViewById<Button>(R.id.btn_report)
-        val btnBlock = view.findViewById<Button>(R.id.iv_blockUser)
-        val ll_cancel = view.findViewById<LinearLayout>(R.id.ll_cancel)
+        val btnDisconnect = view.findViewById<LinearLayout>(R.id.btn_disconnectUser)
+        val btnReport = view.findViewById<LinearLayout>(R.id.btn_report)
+        val btnBlock = view.findViewById<LinearLayout>(R.id.iv_blockUser)
 
         btnDisconnect.setOnClickListener {
             showAlertDisconnectDialog("disconnect")
-            dialog.dismiss()
-        }
-        ll_cancel.setOnClickListener {
             dialog.dismiss()
         }
         btnReport.setOnClickListener {
@@ -1919,10 +1914,7 @@ class ProfileFragment : CustomFragment() {
         val dialog = Dialog(userProfileActivity)
 
         dialog.setCancelable(true)
-
         val view = layoutInflater.inflate(R.layout.custom_exit_dialog, null)
-
-
         dialog.setContentView(view)
 
         dialog.window!!.attributes.windowAnimations = R.style.DialogAnimation

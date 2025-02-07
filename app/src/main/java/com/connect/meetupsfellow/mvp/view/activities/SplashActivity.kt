@@ -130,7 +130,6 @@ class SplashActivity : CustomAppActivityCompatViewImpl() {
     private fun splash() {/*DisplayImage.with(this@SplashActivity)
             .shape(DisplayImage.Shape.GIF).into(splashGif).build()*/
 
-
         splashTimeout()
     }
 
@@ -306,7 +305,6 @@ class SplashActivity : CustomAppActivityCompatViewImpl() {
             })
     }
 
-
     private fun showFingerScanner() {
 
         val executor = ContextCompat.getMainExecutor(this)
@@ -427,7 +425,6 @@ class SplashActivity : CustomAppActivityCompatViewImpl() {
         biometricPrompt.authenticate(promptInfo)
     }
 
-
     private fun getIntentData() {
         isNotification = intent.hasExtra(Constants.Notification.COLLAPSE_KEY)
     }
@@ -483,7 +480,7 @@ class SplashActivity : CustomAppActivityCompatViewImpl() {
                         if (RoomId != null) {
                             //  universalToast(RoomId)
                             val intent = Intent(
-                                context, HomeActivity::class.java
+                                context, ChatActivity::class.java
                             )
                             intent.putExtra("ChatRoomId", RoomId)
                             intent.putExtra("otherUserId", senderIdN)
@@ -496,7 +493,6 @@ class SplashActivity : CustomAppActivityCompatViewImpl() {
                         }
                     }
                 }
-
                 Constants.Notification.ProfileLike, Constants.Notification.Favourite, Constants.Notification.Following, Constants.Notification.BirthdayWish, Constants.Notification.NewUser, Constants.Notification.Connection -> {
                     senderIdN?.let {
                         // universalToast(senderIdN)
@@ -632,7 +628,6 @@ class SplashActivity : CustomAppActivityCompatViewImpl() {
 
     override fun onResume() {
         super.onResume()
-
         sharedPreferencesUtil.saveTimmerTime("")
 
     }

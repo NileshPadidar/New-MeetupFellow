@@ -3,6 +3,7 @@ package com.connect.meetupsfellow.mvp.view.activities
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.method.LinkMovementMethod
@@ -38,6 +39,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapView
 import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.gson.Gson
@@ -190,11 +192,11 @@ class EventDetailsActivity : CustomAppActivityCompatViewImpl(), OnMapReadyCallba
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        getIntentData()
         component.inject(this@EventDetailsActivity)
         binding = ActivityEventDetailBinding.inflate(layoutInflater)
         setContentView(binding!!.root)
         progressBar = binding!!.includedLoading.rlProgress
+        getIntentData()
         //setContentView(R.layout.activity_event_detail)
         if (null == eventDetails && eventId == -1) {
             universalToast("No event details found")
@@ -218,19 +220,34 @@ class EventDetailsActivity : CustomAppActivityCompatViewImpl(), OnMapReadyCallba
         mapView.onCreate(mapViewBundle)
         mapView.getMapAsync(this@EventDetailsActivity)
     }
+    private fun reloadMap() {
+        val mapFragment = supportFragmentManager.findFragmentById(R.id.mapView) as? SupportMapFragment
+        mapFragment?.getMapAsync(this)
+    }
 
     override fun onMapReady(map: GoogleMap) {
-        googleMap = map
-        Log.e("Event_Detail", "Set_Map_location: " + eventDetails!!.location)
-        // Add a marker and move the camera
+        Handler().postDelayed(object : Runnable {
+            override fun run() {
+                if (null == eventDetails) {
+                    reloadMap()
+                } else {
+                googleMap = map
+                Log.e("Event_Detail", "Set_Map_location: " + eventDetails!!.location)
+                // Add a marker and move the camera
+                ///  val location = LatLng(37.7749, -122.4194) // Example: San Francisco
+                val location = LatLng(
+                    eventDetails!!.locationLat.toDouble(),
+                    eventDetails!!.locationLong.toDouble()
+                ) // Example: San Francisco
+                googleMap.addMarker(
+                    MarkerOptions().position(location).title(eventDetails!!.location)
+                )
+                googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 10f))
+            }
+        }
+        }, 1200)
 
-        ///  val location = LatLng(37.7749, -122.4194) // Example: San Francisco
-        val location = LatLng(
-            eventDetails!!.locationLat.toDouble(),
-            eventDetails!!.locationLong.toDouble()
-        ) // Example: San Francisco
-        googleMap.addMarker(MarkerOptions().position(location).title(eventDetails!!.location))
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 10f))
+
     }
 
     // Handle MapView lifecycle
@@ -363,23 +380,23 @@ class EventDetailsActivity : CustomAppActivityCompatViewImpl(), OnMapReadyCallba
 
         if (intent.hasExtra(Constants.IntentDataKeys.EventId)) {
             eventId = intent.getIntExtra(Constants.IntentDataKeys.EventId, -1)
+            Log.e("Event_Detail", "eventId: " + eventId)
         }
+
     }
 
     private fun init() {
-
-        if (null != binding!!.ivEventImage.layoutParams) binding!!.ivEventImage.layoutParams.height =
-            (DEVICE_HEIGHT / 3)
-
-        if (null != binding!!.llInterestedPeople.layoutParams) binding!!.llInterestedPeople.layoutParams.height =
-            (DEVICE_HEIGHT / 9)
-
         if (null == eventDetails) {
             showProgressView(progressBar)
             fetchEventDetails()
         } else {
             setEventDetailsData()
         }
+        if (null != binding!!.ivEventImage.layoutParams) binding!!.ivEventImage.layoutParams.height =
+            (DEVICE_HEIGHT / 3)
+
+        if (null != binding!!.llInterestedPeople.layoutParams) binding!!.llInterestedPeople.layoutParams.height =
+            (DEVICE_HEIGHT / 9)
 
         binding!!.eventBackBtn.setOnClickListener {
 
@@ -405,8 +422,6 @@ class EventDetailsActivity : CustomAppActivityCompatViewImpl(), OnMapReadyCallba
                     }
                 }).build()
         }
-
-
     }
 
     private fun setEventDetailsData() {
@@ -638,7 +653,6 @@ class EventDetailsActivity : CustomAppActivityCompatViewImpl(), OnMapReadyCallba
 
     private fun eventInterested() {
         if (null == mPresenter) mPresenter = EventDetailPresenter(presenter)
-
         run {
             showProgressView(progressBar)
             mPresenter!!.addLikeEventObject("${eventDetails!!.id}")
